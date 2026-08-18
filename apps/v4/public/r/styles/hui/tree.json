@@ -1,0 +1,6 @@
+{
+  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "name": "tree",
+  "files": [],
+  "type": "registry:ui"
+}

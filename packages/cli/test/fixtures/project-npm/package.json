@@ -1,0 +1,7 @@
+{
+  "name": "test-cli-project-npm",
+  "version": "1.0.0",
+  "author": "hui",
+  "license": "MIT",
+  "main": "index.js"
+}

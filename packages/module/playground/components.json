@@ -1,0 +1,17 @@
+{
+  "$schema": "http://localhost:3000/schema.json",
+  "style": "default",
+  "typescript": true,
+  "tsConfigPath": ".nuxt/tsconfig.json",
+  "tailwind": {
+    "config": "tailwind.config.js",
+    "css": "assets/css/tailwind.css",
+    "baseColor": "slate",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils"
+  }
+}
