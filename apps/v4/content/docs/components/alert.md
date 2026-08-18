@@ -32,7 +32,7 @@ previewClass: h-auto sm:h-[22rem] p-6
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add alert
+npx hui-kit@latest add alert
 ```
 
 ::
@@ -40,7 +40,7 @@ npx hui-vue@latest add alert
 ::::tabs-content{value="manual"}
   :::steps
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/alert) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/alert) into your project.
     ::
 
     ::step

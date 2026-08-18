@@ -10,7 +10,7 @@
 //   4. Stay under 53 bits total (JS safe integer limit).
 //
 // Ported from hui-ui/packages/hui/src/preset/preset.ts, with
-// value arrays matching hui-vue's registry (see apps/v4/registry/*).
+// value arrays matching hui-kit's registry (see apps/v4/registry/*).
 
 // Value arrays — order matters for backward compat. Never reorder, only append.
 export const PRESET_BASES = ['reka'] as const

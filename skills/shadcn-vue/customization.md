@@ -67,19 +67,19 @@ export default defineNuxtConfig({
 
 ```bash
 # Apply a preset code from localhost:3000.
-npx hui-vue@latest apply --preset a2r6bw
+npx hui-kit@latest apply --preset a2r6bw
 
 # Positional shorthand also works.
-npx hui-vue@latest apply a2r6bw
+npx hui-kit@latest apply a2r6bw
 
 # Switch to a named preset and overwrite existing components.
-npx hui-vue@latest apply --preset nova
+npx hui-kit@latest apply --preset nova
 
 # Preserve existing components instead.
-npx hui-vue@latest init --preset nova --force --no-reinstall
+npx hui-kit@latest init --preset nova --force --no-reinstall
 
 # Use a custom theme URL.
-npx hui-vue@latest apply --preset "http://localhost:3000/init?base=reka&style=nova&..."
+npx hui-kit@latest apply --preset "http://localhost:3000/init?base=reka&style=nova&..."
 ```
 
 Or edit CSS variables directly in `globals.css`.
@@ -88,7 +88,7 @@ Or edit CSS variables directly in `globals.css`.
 
 ## Adding Custom Colors
 
-Add variables to the file at `tailwindCssFile` from `npx hui-vue@latest info` (typically `globals.css`). Never create a new CSS file for this.
+Add variables to the file at `tailwindCssFile` from `npx hui-kit@latest info` (typically `globals.css`). Never create a new CSS file for this.
 
 ```css
 /* 1. Define in the global CSS file. */
@@ -110,7 +110,7 @@ Add variables to the file at `tailwindCssFile` from `npx hui-vue@latest info` (t
 }
 ```
 
-When `tailwindVersion` is `"v3"` (check via `npx hui-vue@latest info`), register in `tailwind.config.js` instead:
+When `tailwindVersion` is `"v3"` (check via `npx hui-kit@latest info`), register in `tailwind.config.js` instead:
 
 ```js
 // 2b. Register with Tailwind v3 (tailwind.config.js).
@@ -171,7 +171,7 @@ warning: "bg-warning text-warning-foreground hover:bg-warning/90",
 
 ### 4. Wrapper components
 
-Compose hui-vue primitives into higher-level components:
+Compose hui-kit primitives into higher-level components:
 
 ```js
 <script setup lang="ts">

@@ -80,7 +80,7 @@ export default defineNuxtModule<ModuleOptions>({
       }
 
       // Tell Nuxt to not scan `componentsDir` for auto imports as we will do it manually
-      // See https://github.com/unovue/hui-vue/pull/528#discussion_r1590206268
+      // See https://github.com/unovue/hui-kit/pull/528#discussion_r1590206268
       addComponentsDir({
         path: componentsPath,
         extensions: [],

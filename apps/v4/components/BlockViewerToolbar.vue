@@ -102,13 +102,13 @@ const { copy, copied } = useClipboard()
         class="w-fit gap-1 px-2 shadow-none"
         size="sm"
         @click="() => {
-          copy(`npx hui-vue@latest add ${item.name}`)
+          copy(`npx hui-kit@latest add ${item.name}`)
 
         }"
       >
         <Check v-if="copied" />
         <Terminal v-else />
-        <span>npx hui-vue add {{ item.name }}</span>
+        <span>npx hui-kit add {{ item.name }}</span>
       </Button>
     </div>
   </div>

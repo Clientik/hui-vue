@@ -53,7 +53,7 @@ Select your MCP client and follow the instructions to configure the hui MCP serv
 **Run the following command** in your project:
 
 ```bash
-npx hui-vue@latest mcp init --client claude
+npx hui-kit@latest mcp init --client claude
 ```
 
 **Restart Claude Code** and try the following prompts:
@@ -68,7 +68,7 @@ npx hui-vue@latest mcp init --client claude
 **Run the following command** in your project:
 
 ```bash
-npx hui-vue@latest mcp init --client cursor
+npx hui-kit@latest mcp init --client cursor
 ```
 
 Open **Cursor Settings** and **Enable the MCP server** for hui. Then try the following prompts:
@@ -81,7 +81,7 @@ Open **Cursor Settings** and **Enable the MCP server** for hui. Then try the fol
 **Run the following command** in your project:
 
 ```bash
-npx hui-vue@latest mcp init --client vscode
+npx hui-kit@latest mcp init --client vscode
 ```
 
 Open `.vscode/mcp.json` and click **Start** next to the hui server. Then try the following prompts with GitHub Copilot:
@@ -92,13 +92,13 @@ Open `.vscode/mcp.json` and click **Start** next to the hui server. Then try the
 
 :::tabs-content{value="codex"}
   ::callout{type="warning"}
-  **Note:** The `hui-vue` CLI cannot automatically update `~/.codex/config.toml`. You'll need to add the configuration manually for Codex.
+  **Note:** The `hui-kit` CLI cannot automatically update `~/.codex/config.toml`. You'll need to add the configuration manually for Codex.
   ::
 
 **Run the following command** in your project:
 
 ```bash
-npx hui-vue@latest mcp init --client codex
+npx hui-kit@latest mcp init --client codex
 ```
 
 **Then, add the following configuration** to `~/.codex/config.toml`:
@@ -106,7 +106,7 @@ npx hui-vue@latest mcp init --client codex
 ```json title=".mcp.json" showLineNumbers
 [mcp_servers.hui]
 command = "npx"
-args = ["hui-vue@latest", "mcp"]
+args = ["hui-kit@latest", "mcp"]
 ```
 
 **Restart Codex** and try the following prompts:
@@ -122,7 +122,7 @@ To install check [Opencode Documentation](https://opencode.ai/)
 
 **Run the following command** in your project:
 ```bash
-npx hui-vue@latest mcp init --client opencode
+npx hui-kit@latest mcp init --client opencode
 ```
 **Restart opencode** and try the following prompts:
 - Show me all available components in the hui registry
@@ -151,7 +151,7 @@ npx hui-vue@latest mcp init --client opencode
 
 The MCP server acts as a bridge between your AI assistant, component registries and the hui CLI.
 
-1. **Registry Connection** - MCP connects to configured registries (hui-vue, private registries, third-party sources)
+1. **Registry Connection** - MCP connects to configured registries (hui-kit, private registries, third-party sources)
 2. **Natural Language** - You describe what you need in plain English
 3. **AI Processing** - The assistant translates your request into registry commands
 4. **Component Delivery** - Resources are fetched and installed in your project
@@ -162,7 +162,7 @@ The MCP server acts as a bridge between your AI assistant, component registries 
 
 The hui MCP server works out of the box with any hui-compatible registry.
 
-- **hui-vue Registry** - The default registry with all hui-vue components
+- **hui-kit Registry** - The default registry with all hui-kit components
 - **Third-Party Registries** - Any registry following the hui registry specification
 - **Private Registries** - Your company's internal component libraries
 - **Namespaced Registries** - Multiple registries configured with `@namespace` syntax
@@ -182,7 +182,7 @@ To use the hui MCP server with Claude Code, add the following configuration to y
   "mcpServers": {
     "hui": {
       "command": "npx",
-      "args": ["hui-vue@latest", "mcp"]
+      "args": ["hui-kit@latest", "mcp"]
     }
   }
 }
@@ -201,7 +201,7 @@ To configure MCP in Cursor, add the hui server to your project's `.cursor/mcp.js
   "mcpServers": {
     "hui": {
       "command": "npx",
-      "args": ["hui-vue@latest", "mcp"]
+      "args": ["hui-kit@latest", "mcp"]
     }
   }
 }
@@ -222,7 +222,7 @@ To configure MCP in VS Code with GitHub Copilot, add the hui server to your proj
   "mcpServers": {
     "hui": {
       "command": "npx",
-      "args": ["hui-vue@latest", "mcp"]
+      "args": ["hui-kit@latest", "mcp"]
     }
   }
 }
@@ -235,7 +235,7 @@ See the [VS Code MCP documentation](https://code.visualstudio.com/docs/copilot/c
 ### Codex
 
 ::callout{type="warning"}
-**Note:** The `hui-vue` CLI cannot automatically update `~/.codex/config.toml`. You'll need to add the configuration manually.
+**Note:** The `hui-kit` CLI cannot automatically update `~/.codex/config.toml`. You'll need to add the configuration manually.
 ::
 
 To configure MCP in Codex, add the hui server to `~/.codex/config.toml`:
@@ -243,7 +243,7 @@ To configure MCP in Codex, add the hui server to `~/.codex/config.toml`:
 ```toml title="~/.codex/config.toml" showLineNumbers
 [mcp_servers.hui]
 command = "npx"
-args = ["hui-vue@latest", "mcp"]
+args = ["hui-kit@latest", "mcp"]
 ```
 
 After adding the configuration, restart Codex to load the MCP server.
@@ -259,7 +259,7 @@ To configure MCP in opencode add the hui server to `opencode.json`:
         "huiVue": {
             "type": "local",
             "enabled": true,
-            "command": ["npx", "hui-vue@latest", "mcp"]
+            "command": ["npx", "hui-kit@latest", "mcp"]
         }
     }
 }
@@ -289,7 +289,7 @@ Configure additional registries in your `components.json`:
 ```
 
 ::callout{type="info"}
-**Note:** No configuration is needed to access the standard hui-vue registry.
+**Note:** No configuration is needed to access the standard hui-kit registry.
 ::
 
 ---
@@ -338,7 +338,7 @@ If the MCP server isn't responding to prompts:
 
 1. **Check Configuration** - Verify the MCP server is properly configured and enabled in your MCP client
 2. **Restart MCP Client** - Restart your MCP client after configuration changes
-3. **Verify Installation** - Ensure `hui-vue` is installed in your project
+3. **Verify Installation** - Ensure `hui-kit` is installed in your project
 4. **Check Network** - Confirm you can access the configured registries
 
 ### Registry Access Issues

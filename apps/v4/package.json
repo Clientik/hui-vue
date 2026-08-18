@@ -48,7 +48,7 @@
     "dnd-kit-vue": "^0.0.2",
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-vue": "^8.6.0",
-    "hui-vue": "workspace:*",
+    "hui-kit": "workspace:*",
     "nuxt": "^4.5.1",
     "nuxt-og-image": "6.7.5",
     "qrcode": "catalog:",

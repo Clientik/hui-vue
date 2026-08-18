@@ -64,7 +64,7 @@ async function buildRegistryContentType(
 
   await writeFile(
     outputPath,
-    `import type { Registry } from "hui-vue/schema"
+    `import type { Registry } from "hui-kit/schema"
 
 export const ${contentType.name}: Registry["items"] = ${JSON.stringify(result ?? '', null, 2)}`,
   )
@@ -413,7 +413,7 @@ async function main() {
     await buildStyles()
 
     // Publish per-style registries to public/r/styles/reka-{style}/<comp>.json
-    // so end users can install via `npx hui-vue add @reka-luma/<comp>` etc.
+    // so end users can install via `npx hui-kit add @reka-luma/<comp>` etc.
     await buildStylesRegistry()
 
     // eslint-disable-next-line no-console

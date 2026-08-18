@@ -37,7 +37,7 @@ It does **not** own your messages, AI state, transport, or model — it is a hea
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add message-scroller
+npx hui-kit@latest add message-scroller
 ```
 
 ::
@@ -45,7 +45,7 @@ npx hui-vue@latest add message-scroller
 ::::tabs-content{value="manual"}
   :::steps
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/bases/reka/ui/message-scroller) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/bases/reka/ui/message-scroller) into your project.
     ::
 
     ::step

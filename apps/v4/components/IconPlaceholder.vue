@@ -2,7 +2,7 @@
 import { SquareIcon } from '@lucide/vue'
 import { computed, defineAsyncComponent } from 'vue'
 
-// manually type from  `import type { IconLibraryName } from 'hui-vue/icons'`
+// manually type from  `import type { IconLibraryName } from 'hui-kit/icons'`
 const props = defineProps<{
   lucide?: string
   tabler?: string

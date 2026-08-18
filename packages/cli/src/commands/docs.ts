@@ -26,7 +26,7 @@ export const docs = new Command()
     try {
       const cwd = path.resolve(opts.cwd)
       const config = await getConfig(cwd)
-      // hui-vue only ships the `reka` base today; derive from config.style
+      // hui-kit only ships the `reka` base today; derive from config.style
       // when provided (styles are namespaced as e.g. `reka/vega`).
       const baseFromStyle = config?.style?.split('/')?.[0]
       const base = opts.base ?? baseFromStyle ?? 'reka'
@@ -51,13 +51,13 @@ export const docs = new Command()
           logger.error(
             `Component ${highlighter.info(
               component,
-            )} not found in the hui-vue registry.`,
+            )} not found in the hui-kit registry.`,
           )
           process.exit(1)
         }
 
         // Use meta.links from the registry if available, otherwise generate
-        // default documentation links from the hui-vue website URL.
+        // default documentation links from the hui-kit website URL.
         const metaLinks = (
           item.meta?.links as Record<string, Record<string, string>> | undefined
         )?.[base]

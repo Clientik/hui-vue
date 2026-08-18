@@ -24,7 +24,7 @@ export const STYLES = [
   {
     name: "vega",
     label: "Vega",
-    description: "The classic hui-vue look. Clean, neutral, and familiar.",
+    description: "The classic hui-kit look. Clean, neutral, and familiar.",
   },
   {
     name: "neva",
@@ -59,7 +59,7 @@ export const STYLES = [
 ] as const
 
 // Available fonts with Google Fonts configuration.
-// Names match the hui-vue web registry font items
+// Names match the hui-kit web registry font items
 // (apps/v4/registry/fonts.ts, stripped of the "font-" prefix).
 export const FONTS = [
   {

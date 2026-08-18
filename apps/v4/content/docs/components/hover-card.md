@@ -34,7 +34,7 @@ previewClass: h-80
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add hover-card
+npx hui-kit@latest add hover-card
 ```
 
 ::
@@ -50,7 +50,7 @@ npx hui-vue@latest add hover-card
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/hover-card) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/hover-card) into your project.
     ::
 
     ::step

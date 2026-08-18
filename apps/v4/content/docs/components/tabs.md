@@ -34,7 +34,7 @@ previewClass: h-[32rem] sm:h-[30rem]
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add tabs
+npx hui-kit@latest add tabs
 ```
 
 ::
@@ -50,7 +50,7 @@ npx hui-vue@latest add tabs
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/tabs) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/tabs) into your project.
     ::
 
     ::step

@@ -41,10 +41,10 @@ const commands = computed(() => {
   const pointerFlag = params.pointer.value ? ' --pointer' : ''
   const flags = `--preset ${presetId.value} --template ${params.template.value ?? 'nuxt'}${pointerFlag}`
   return {
-    pnpm: `pnpm dlx hui-vue@latest init ${flags}`,
-    npm: `npx hui-vue@latest init ${flags}`,
-    yarn: `yarn dlx hui-vue@latest init ${flags}`,
-    bun: `bunx --bun hui-vue@latest init ${flags}`,
+    pnpm: `pnpm dlx hui-kit@latest init ${flags}`,
+    npm: `npx hui-kit@latest init ${flags}`,
+    yarn: `yarn dlx hui-kit@latest init ${flags}`,
+    bun: `bunx --bun hui-kit@latest init ${flags}`,
   }
 })
 

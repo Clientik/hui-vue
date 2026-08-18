@@ -21,7 +21,7 @@ export const TEMPLATES = {
 
 export type TemplateType = keyof typeof TEMPLATES
 
-const REPO = 'github:unovue/hui-vue'
+const REPO = 'github:unovue/hui-kit'
 
 export async function createProject(
   options: Pick<

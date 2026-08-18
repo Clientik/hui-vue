@@ -136,7 +136,7 @@ The `<Form />` component is a wrapper around the `vee-validate` library. It prov
   ::tabs-content{value="cli"}
 
   ```bash
-  npx hui-vue@latest add form
+  npx hui-kit@latest add form
   ```
 
   ::
@@ -153,7 +153,7 @@ The `<Form />` component is a wrapper around the `vee-validate` library. It prov
       ```
 
       ::step
-      Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/form) into your project.
+      Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/form) into your project.
       ::
 
       ::step

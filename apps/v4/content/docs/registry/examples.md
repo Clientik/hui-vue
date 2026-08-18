@@ -5,9 +5,9 @@ description: "Examples of registry items: styles, components, css vars, etc."
 
 ## registry:style
 
-### Custom style that extends hui-vue
+### Custom style that extends hui-kit
 
-The following registry item is a custom style that extends hui-vue. On `npx hui-vue init`, it will:
+The following registry item is a custom style that extends hui-kit. On `npx hui-kit init`, it will:
 
 - Install `@iconify/vue` as a dependency.
 - Add the `Login01` block and `calendar` component to the project.
@@ -42,14 +42,14 @@ The following registry item is a custom style that extends hui-vue. On `npx hui-
 
 ### Custom style from scratch
 
-The following registry item is a custom style that doesn't extend hui-vue. See the `extends: none` field.
+The following registry item is a custom style that doesn't extend hui-kit. See the `extends: none` field.
 
 It can be used to create a new style from scratch i.e custom components, css vars, dependencies, etc.
 
-On `npx hui-vue add`, the following will:
+On `npx hui-kit add`, the following will:
 
 - Install `tailwind-merge` and `clsx` as dependencies.
-- Add the `utils` registry item from the hui-vue registry.
+- Add the `utils` registry item from the hui-kit registry.
 - Add the `button`, `input`, `label`, and `select` components from a remote registry.
 - Install new css vars: `main`, `bg`, `border`, `text`, `ring`.
 
@@ -125,7 +125,7 @@ On `npx hui-vue add`, the following will:
 
 ### Custom colors
 
-The following style will init using hui-vue defaults and then add a custom `brand` color.
+The following style will init using hui-kit defaults and then add a custom `brand` color.
 
 ```json showLineNumbers title="example-style.json"
 {
@@ -147,7 +147,7 @@ The following style will init using hui-vue defaults and then add a custom `bran
 
 ### Custom block
 
-This blocks installs the `Login01` block from the hui-vue registry.
+This blocks installs the `Login01` block from the hui-kit registry.
 
 ```json showLineNumbers title="Login01.json"
 {
@@ -174,11 +174,11 @@ This blocks installs the `Login01` block from the hui-vue registry.
 
 ### Install a block and override primitives
 
-You can install a block fromt the hui-vue registry and override the primitives using your custom ones.
+You can install a block fromt the hui-kit registry and override the primitives using your custom ones.
 
-On `npx hui-vue add`, the following will:
+On `npx hui-kit add`, the following will:
 
-- Add the `Login01` block from the hui-vue registry.
+- Add the `Login01` block from the hui-kit registry.
 - Override the `button`, `input`, and `label` primitives with the ones from the remote registry.
 
 ```json showLineNumbers title="example-style.json"

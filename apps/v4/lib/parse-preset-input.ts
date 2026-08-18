@@ -1,4 +1,4 @@
-import { isPresetCode } from 'hui-vue/preset'
+import { isPresetCode } from 'hui-kit/preset'
 
 const PRESET_FLAG_PATTERN = /^--preset\s+(\S+)$/i
 

@@ -4,7 +4,7 @@ import { onMounted, ref, watch } from 'vue'
 const { path } = toRefs(useRoute())
 const carbonOptions = {
   code: 'CW7DK27U',
-  placement: 'wwwhui-vuecom',
+  placement: 'wwwhui-kitcom',
 }
 const container = ref()
 

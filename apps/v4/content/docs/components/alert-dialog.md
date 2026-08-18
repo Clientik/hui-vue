@@ -15,8 +15,8 @@ description: An alert dialog that asks for user confirmation
 ---
 ::
 
-::vue-school-link{class="mt-6" lesson="dialogs-and-alerts-with-hui-vue" placement="top"}
-Watch a Vue School video about dialogs and alerts in hui-vue.
+::vue-school-link{class="mt-6" lesson="dialogs-and-alerts-with-hui-kit" placement="top"}
+Watch a Vue School video about dialogs and alerts in hui-kit.
 ::
 
 ## Installation
@@ -38,7 +38,7 @@ Watch a Vue School video about dialogs and alerts in hui-vue.
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add alert-dialog
+npx hui-kit@latest add alert-dialog
 ```
 
 ::
@@ -54,7 +54,7 @@ npx hui-vue@latest add alert-dialog
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/alert-dialog) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/alert-dialog) into your project.
     ::
 
     ::step

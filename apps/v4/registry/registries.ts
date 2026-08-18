@@ -19,8 +19,8 @@ export interface RegistryEntry {
 export const registries: RegistryEntry[] = [
   {
     name: "@hui",
-    title: "hui-vue",
-    description: "The official hui-vue registry of components, blocks, and charts.",
+    title: "hui-kit",
+    description: "The official hui-kit registry of components, blocks, and charts.",
     url: "http://localhost:3000/r/styles/{style}/{name}.json",
     homepage: "http://localhost:3000",
     author: "unovue",

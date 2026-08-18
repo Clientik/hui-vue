@@ -1,4 +1,4 @@
-import type { registryItemFileSchema } from 'hui-vue/schema'
+import type { registryItemFileSchema } from 'hui-kit/schema'
 import type { z } from 'zod'
 import { promises as fs } from 'node:fs'
 import { tmpdir } from 'node:os'
@@ -6,7 +6,7 @@ import path from 'node:path'
 
 // import { Project, ScriptKind } from 'ts-morph'
 
-import { registryItemSchema } from 'hui-vue/schema'
+import { registryItemSchema } from 'hui-kit/schema'
 import { fixImport } from '~/lib/registry-utils'
 import { Index } from '~/registry/__index__'
 import { blockMeta } from '~/registry/hui/blocks/_meta'

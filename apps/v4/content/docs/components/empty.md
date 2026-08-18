@@ -30,7 +30,7 @@ previewClass: h-96 p-0
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add empty
+npx hui-kit@latest add empty
 ```
 
 ::
@@ -38,7 +38,7 @@ npx hui-vue@latest add empty
 ::::tabs-content{value="manual"}
   :::steps
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/empty) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/empty) into your project.
     ::
 
     ::step

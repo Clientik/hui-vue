@@ -33,7 +33,7 @@ description: A toggle group component.
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add toggle-group
+npx hui-kit@latest add toggle-group
 ```
 
 ::
@@ -49,7 +49,7 @@ npx hui-vue@latest add toggle-group
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/toggle-group) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/toggle-group) into your project.
     ::
 
     ::step

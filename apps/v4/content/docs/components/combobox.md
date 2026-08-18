@@ -40,7 +40,7 @@ A combobox can be built in two ways:
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add combobox
+npx hui-kit@latest add combobox
 ```
 
 ::
@@ -56,7 +56,7 @@ npx hui-vue@latest add combobox
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/combobox) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/combobox) into your project.
     ::
 
     ::step

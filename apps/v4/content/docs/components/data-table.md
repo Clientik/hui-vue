@@ -13,8 +13,8 @@ previewClass: items-start h-auto px-4 md:px-8
 ---
 ::
 
-::vue-school-link{class="mt-6" lesson="data-tables-and-sonner-in-hui-vue" placement="top"}
-Watch a Vue School video about data tables in hui-vue.
+::vue-school-link{class="mt-6" lesson="data-tables-and-sonner-in-hui-kit" placement="top"}
+Watch a Vue School video about data tables in hui-kit.
 ::
 
 ## Introduction
@@ -54,7 +54,7 @@ This guide will show you how to use [TanStack Table](https://tanstack.com/table)
 1. Add the `<Table />` component to your project:
 
 ```bash
-npx hui-vue@latest add table
+npx hui-kit@latest add table
 ```
 
 2. Add the `@tanstack/vue-table` dependency. This guide uses **TanStack Table v9**:

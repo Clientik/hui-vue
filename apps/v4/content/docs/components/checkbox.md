@@ -34,7 +34,7 @@ previewClass: h-88 sm:h-80
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add checkbox
+npx hui-kit@latest add checkbox
 ```
 
 ::
@@ -50,7 +50,7 @@ npx hui-vue@latest add checkbox
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/checkbox) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/checkbox) into your project.
     ::
 
     ::step

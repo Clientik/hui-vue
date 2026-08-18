@@ -35,14 +35,14 @@ packages
 | `apps/v4/components`      | The Vue components for the website.               |
 | `apps/v4/content`      | The content for the website.               |
 | `apps/v4/registry` | The registry for the components.           |
-| `packages/cli`              | The `hui-vue` package.                  |
+| `packages/cli`              | The `hui-kit` package.                  |
 
 ## Development
 
 ### Start by cloning the repository:
 
 ```
-git clone git@github.com:unovue/hui-vue.git
+git clone git@github.com:unovue/hui-kit.git
 ```
 
 ### Install dependencies
@@ -63,7 +63,7 @@ You can use the `pnpm --filter=[WORKSPACE]` command to start the development pro
 pnpm dev
 ```
 
-2. To run the `hui-vue` cli package:
+2. To run the `hui-kit` cli package:
 
 ```
 pnpm dev:cli
@@ -135,7 +135,7 @@ If you have a request for a new component, please open a discussion on GitHub. W
 
 ## CLI
 
-The `hui-vue` package is a CLI for adding components to your project. You can find the documentation for the CLI [here](http://localhost:3000/docs/cli).
+The `hui-kit` package is a CLI for adding components to your project. You can find the documentation for the CLI [here](http://localhost:3000/docs/cli).
 
 Any changes to the CLI should be made in the `packages/cli` directory. If you can, it would be great if you could add tests for your changes.
 

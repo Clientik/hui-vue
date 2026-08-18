@@ -71,7 +71,7 @@ interface WithFileCopyBackupOptions {
  *
  * Unlike hui-ui's `withFileBackup` (which renames), this copies so the
  * original file stays readable by code that re-reads it during the task —
- * hui-vue's `runInit` reads `components.json` from disk via
+ * hui-kit's `runInit` reads `components.json` from disk via
  * `getProjectConfig`, so the original must stay in place.
  */
 export async function withFileCopyBackup<T>(

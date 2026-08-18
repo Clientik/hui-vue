@@ -7,13 +7,13 @@ description: Run your own component registry.
 
   **Note:** This feature is currently experimental. Help us improve it by
   testing it out and sending feedback. If you have any questions, please [reach
-  out to us](https://github.com/unovue/hui-vue/discussions).
+  out to us](https://github.com/unovue/hui-kit/discussions).
 
 </Callout>
 
-You can use the `hui-vue` CLI to run your own component registry. Running your own registry allows you to distribute your custom components, hooks, pages, and other files to any Vue project.
+You can use the `hui-kit` CLI to run your own component registry. Running your own registry allows you to distribute your custom components, hooks, pages, and other files to any Vue project.
 
-Registry items are automatically compatible with the `hui-vue` CLI.
+Registry items are automatically compatible with the `hui-kit` CLI.
 
 ## Requirements
 

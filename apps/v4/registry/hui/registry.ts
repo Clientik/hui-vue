@@ -1,5 +1,5 @@
-import type { Registry } from "hui-vue/schema"
-import { registryItemSchema } from "hui-vue/schema"
+import type { Registry } from "hui-kit/schema"
+import { registryItemSchema } from "hui-kit/schema"
 import { z } from "zod"
 import { fonts } from "@/registry/fonts"
 

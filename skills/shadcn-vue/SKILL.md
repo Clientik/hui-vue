@@ -1,27 +1,27 @@
 ---
-name: hui-vue
-description: Manages hui-vue components and projects — adding, searching, fixing, debugging, styling, and composing UI. Provides project context, component docs, and usage examples. Applies when working with hui-vue, component registries, presets, --preset codes, or any project with a components.json file. Also triggers for "hui-vue init", "create an app with --preset", or "switch to --preset".
+name: hui-kit
+description: Manages hui-kit components and projects — adding, searching, fixing, debugging, styling, and composing UI. Provides project context, component docs, and usage examples. Applies when working with hui-kit, component registries, presets, --preset codes, or any project with a components.json file. Also triggers for "hui-kit init", "create an app with --preset", or "switch to --preset".
 user-invocable: false
-allowed-tools: Bash(npx hui-vue@latest *), Bash(pnpm dlx hui-vue@latest *), Bash(bunx --bun hui-vue@latest *)
+allowed-tools: Bash(npx hui-kit@latest *), Bash(pnpm dlx hui-kit@latest *), Bash(bunx --bun hui-kit@latest *)
 ---
 
-# hui-vue
+# hui-kit
 
 A framework for building ui, components and design systems. Components are added as source code to the user's project via the CLI.
 
-> **IMPORTANT:** Run all CLI commands using the project's package runner: `npx hui-vue@latest`, `pnpm dlx hui-vue@latest`, or `bunx --bun hui-vue@latest` — based on the project's `packageManager`. Examples below use `npx hui-vue@latest` but substitute the correct runner for the project.
+> **IMPORTANT:** Run all CLI commands using the project's package runner: `npx hui-kit@latest`, `pnpm dlx hui-kit@latest`, or `bunx --bun hui-kit@latest` — based on the project's `packageManager`. Examples below use `npx hui-kit@latest` but substitute the correct runner for the project.
 
 ## Current Project Context
 
 ```json
-!`npx hui-vue@latest info --json`
+!`npx hui-kit@latest info --json`
 ```
 
-The JSON above contains the project config and installed components. Use `npx hui-vue@latest docs <component>` to get documentation and example URLs for any component.
+The JSON above contains the project config and installed components. Use `npx hui-kit@latest docs <component>` to get documentation and example URLs for any component.
 
 ## Principles
 
-1. **Use existing components first.** Use `npx hui-vue@latest search` to check registries before writing custom UI. Check community registries too.
+1. **Use existing components first.** Use `npx hui-kit@latest search` to check registries before writing custom UI. Check community registries too.
 2. **Compose, don't reinvent.** Settings page = Tabs + Card + form controls. Dashboard = Sidebar + Card + Chart + Table.
 3. **Use built-in variants before custom styles.** `variant="outline"`, `size="sm"`, etc.
 4. **Use semantic colors.** `bg-primary`, `text-muted-foreground` — never raw values like `bg-blue-500`.
@@ -76,11 +76,11 @@ These rules are **always enforced**. Each links to a file with Incorrect/Correct
 
 ### CLI
 
-- **Apply preset codes directly with the CLI.** Use `npx hui-vue@latest apply <code>` for existing projects, or `npx hui-vue@latest init --preset <code>` when initializing.
+- **Apply preset codes directly with the CLI.** Use `npx hui-kit@latest apply <code>` for existing projects, or `npx hui-kit@latest init --preset <code>` when initializing.
 
 ## Key Patterns
 
-These are the most common patterns that differentiate correct hui-vue code. For edge cases, see the linked rule files above.
+These are the most common patterns that differentiate correct hui-kit code. For edge cases, see the linked rule files above.
 
 ```html
 <!-- Form layout: FieldGroup + Field, not div + Label. -->
@@ -147,42 +147,42 @@ The injected project context contains these key fields:
 - **`iconLibrary`** → determines icon imports. Use `@lucide/vue` for `lucide`, `@tabler/icons-vue` for `tabler`, etc. Never assume `@lucide/vue`.
 - **`resolvedPaths`** → exact file-system destinations for components, utils, hooks, etc.
 - **`framework`** → routing and file conventions (e.g. Nuxt vs Vite SPA).
-- **`packageManager`** → use this for any non-hui-vue dependency installs (e.g. `pnpm add date-fns` vs `npm install date-fns`).
+- **`packageManager`** → use this for any non-hui-kit dependency installs (e.g. `pnpm add date-fns` vs `npm install date-fns`).
 
 See [cli.md — `info` command](./cli.md) for the full field reference.
 
 ## Component Docs, Examples, and Usage
 
-Run `npx hui-vue@latest docs <component>` to get the URLs for a component's documentation, examples, and API reference. Fetch these URLs to get the actual content.
+Run `npx hui-kit@latest docs <component>` to get the URLs for a component's documentation, examples, and API reference. Fetch these URLs to get the actual content.
 
 ```bash
-npx hui-vue@latest docs button dialog select
+npx hui-kit@latest docs button dialog select
 ```
 
-**When creating, fixing, debugging, or using a component, always run `npx hui-vue@latest docs` and fetch the URLs first.** This ensures you're working with the correct API and usage patterns rather than guessing.
+**When creating, fixing, debugging, or using a component, always run `npx hui-kit@latest docs` and fetch the URLs first.** This ensures you're working with the correct API and usage patterns rather than guessing.
 
 ## Workflow
 
-1. **Get project context** — already injected above. Run `npx hui-vue@latest info` again if you need to refresh.
+1. **Get project context** — already injected above. Run `npx hui-kit@latest info` again if you need to refresh.
 2. **Check installed components first** — before running `add`, always check the `components` list from project context or list the `resolvedPaths.ui` directory. Don't import components that haven't been added, and don't re-add ones already installed.
-3. **Find components** — `npx hui-vue@latest search`.
-4. **Get docs and examples** — run `npx hui-vue@latest docs <component>` to get URLs, then fetch them. Use `npx hui-vue@latest view` to browse registry items you haven't installed. To preview changes to installed components, use `npx hui-vue@latest add --diff`.
-5. **Install or update** — `npx hui-vue@latest add`. When updating existing components, use `--dry-run` and `--diff` to preview changes first (see [Updating Components](#updating-components) below).
-6. **Fix imports in third-party components** — After adding components from community registries, check the added non-UI files for hardcoded import paths like `@/components/ui/...`. These won't match the project's actual aliases. Use `npx hui-vue@latest info` to get the correct `ui` alias (e.g. `@workspace/ui/components`) and rewrite the imports accordingly. The CLI rewrites imports for its own UI files, but third-party registry components may use default paths that don't match the project.
+3. **Find components** — `npx hui-kit@latest search`.
+4. **Get docs and examples** — run `npx hui-kit@latest docs <component>` to get URLs, then fetch them. Use `npx hui-kit@latest view` to browse registry items you haven't installed. To preview changes to installed components, use `npx hui-kit@latest add --diff`.
+5. **Install or update** — `npx hui-kit@latest add`. When updating existing components, use `--dry-run` and `--diff` to preview changes first (see [Updating Components](#updating-components) below).
+6. **Fix imports in third-party components** — After adding components from community registries, check the added non-UI files for hardcoded import paths like `@/components/ui/...`. These won't match the project's actual aliases. Use `npx hui-kit@latest info` to get the correct `ui` alias (e.g. `@workspace/ui/components`) and rewrite the imports accordingly. The CLI rewrites imports for its own UI files, but third-party registry components may use default paths that don't match the project.
 7. **Review added components** — After adding a component or block from any registry, **always read the added files and verify they are correct**. Check for missing sub-components (e.g. `SelectItem` without `SelectGroup`), missing imports, incorrect composition, or violations of the [Critical Rules](#critical-rules). Also replace any icon imports with the project's `iconLibrary` from the project context (e.g. if the registry item uses `@lucide/vue` but the project uses `hugeicons`, swap the imports and icon names accordingly). Fix all issues before moving on.
 8. **Registry must be explicit** — When the user asks to add a block or component, **do not guess the registry**. If no registry is specified (e.g. user says "add a login block" without specifying `@hui`, etc.), ask which registry to use. Never default to a registry on behalf of the user.
 9. **Switching presets** — Ask the user first: **overwrite**, **merge**, or **skip**?
-   - **Overwrite**: `npx hui-vue@latest apply <code>`. Overwrites detected components, fonts, and CSS variables.
-   - **Merge**: `npx hui-vue@latest init --preset <code> --force --no-reinstall`, then run `npx hui-vue@latest info` to list installed components, then for each installed component use `--dry-run` and `--diff` to [smart merge](#updating-components) it individually.
-   - **Skip**: `npx hui-vue@latest init --preset <code> --force --no-reinstall`. Only updates config and CSS, leaves components as-is.
+   - **Overwrite**: `npx hui-kit@latest apply <code>`. Overwrites detected components, fonts, and CSS variables.
+   - **Merge**: `npx hui-kit@latest init --preset <code> --force --no-reinstall`, then run `npx hui-kit@latest info` to list installed components, then for each installed component use `--dry-run` and `--diff` to [smart merge](#updating-components) it individually.
+   - **Skip**: `npx hui-kit@latest init --preset <code> --force --no-reinstall`. Only updates config and CSS, leaves components as-is.
    - **Important**: Always run preset commands inside the user's project directory. `apply` only works in an existing project with a `components.json` file. The CLI automatically preserves the current base (`reka`) from `components.json`. If you must use a scratch/temp directory (e.g. for `--dry-run` comparisons), pass `--base <current-base>` explicitly — preset codes do not encode the base.
 
 ## Updating Components
 
 When the user asks to update a component from upstream while keeping their local changes, use `--dry-run` and `--diff` to intelligently merge. **NEVER fetch raw files from GitHub manually — always use the CLI.**
 
-1. Run `npx hui-vue@latest add <component> --dry-run` to see all files that would be affected.
-2. For each file, run `npx hui-vue@latest add <component> --diff <file>` to see what changed upstream vs local.
+1. Run `npx hui-kit@latest add <component> --dry-run` to see all files that would be affected.
+2. For each file, run `npx hui-kit@latest add <component> --diff <file>` to see what changed upstream vs local.
 3. Decide per file based on the diff:
    - No local changes → safe to overwrite.
    - Has local changes → read the local file, analyze the diff, and apply upstream updates while preserving local modifications.
@@ -193,28 +193,28 @@ When the user asks to update a component from upstream while keeping their local
 
 ```bash
 # Create a new project.
-npx hui-vue@latest init --name my-app --preset nova
-npx hui-vue@latest init --name my-app --preset a2r6bw --template vite
+npx hui-kit@latest init --name my-app --preset nova
+npx hui-kit@latest init --name my-app --preset a2r6bw --template vite
 
 # Initialize existing project.
-npx hui-vue@latest init --preset nova
-npx hui-vue@latest init --defaults  # shortcut: --template=nuxt --preset=nova (base style implied)
+npx hui-kit@latest init --preset nova
+npx hui-kit@latest init --defaults  # shortcut: --template=nuxt --preset=nova (base style implied)
 
 # Apply a preset to an existing project.
-npx hui-vue@latest apply a2r6bw
+npx hui-kit@latest apply a2r6bw
 
 # Add components.
-npx hui-vue@latest add button card dialog
-npx hui-vue@latest add --all
+npx hui-kit@latest add button card dialog
+npx hui-kit@latest add --all
 
 # Search registries.
-npx hui-vue@latest search @hui -q "sidebar"
+npx hui-kit@latest search @hui -q "sidebar"
 
 # Get component docs and example URLs.
-npx hui-vue@latest docs button dialog select
+npx hui-kit@latest docs button dialog select
 
 # View registry item details (for items not yet installed).
-npx hui-vue@latest view @hui/button
+npx hui-kit@latest view @hui/button
 ```
 
 **Named presets:** `nova`, `vega`, `maia`, `lyra`, `mira`, `luma`

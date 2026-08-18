@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "hui-vue/tailwind.css";
+@import "hui-kit/tailwind.css";
 
 @import "./themes.css";
 @import "./fonts.css";

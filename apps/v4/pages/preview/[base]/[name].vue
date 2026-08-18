@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { RegistryItem } from 'hui-vue/schema'
+import type { RegistryItem } from 'hui-kit/schema'
 import { useMounted } from '@vueuse/core'
 
 const route = useRoute()

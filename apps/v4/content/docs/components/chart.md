@@ -63,7 +63,7 @@ We do not wrap Unovis. This means you're not locked into an abstraction. When a 
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add chart
+npx hui-kit@latest add chart
 ```
 
 ::
@@ -80,7 +80,7 @@ npx hui-vue@latest add chart
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/chart) into your project
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/chart) into your project
     ::
 
     ::step

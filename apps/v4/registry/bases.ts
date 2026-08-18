@@ -1,4 +1,4 @@
-import type { registryItemSchema } from "hui-vue/schema"
+import type { registryItemSchema } from "hui-kit/schema"
 import type { z } from "zod"
 
 export const BASES: z.infer<typeof registryItemSchema>[] = [

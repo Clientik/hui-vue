@@ -171,7 +171,7 @@ FontPicker sets param
 ## Out of scope
 
 - `apps/v4/registry/fonts.ts` — CLI-facing registry for consumers of the
-  `hui-vue` CLI; separate concern, untouched.
+  `hui-kit` CLI; separate concern, untouched.
 - The in-progress theme-color edits currently in the working tree
   (`main.css` oklch tweaks) — unrelated, left alone.
 - Self-hosting fonts / build-time generation — not needed; Bunny CDN is used at

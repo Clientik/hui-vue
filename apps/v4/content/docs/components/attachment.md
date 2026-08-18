@@ -33,7 +33,7 @@ The `Attachment` component displays a file or image attachment, its media, name,
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add attachment
+npx hui-kit@latest add attachment
 ```
 
 ::
@@ -41,7 +41,7 @@ npx hui-vue@latest add attachment
 ::::tabs-content{value="manual"}
   :::steps
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/bases/reka/ui/attachment) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/bases/reka/ui/attachment) into your project.
     ::
 
     ::step

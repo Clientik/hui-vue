@@ -30,7 +30,7 @@ const CLIENTS = [
       mcpServers: {
         huiVue: {
           command: 'npx',
-          args: [`hui-vue@${HUI_MCP_VERSION}`, 'mcp'],
+          args: [`hui-kit@${HUI_MCP_VERSION}`, 'mcp'],
         },
       },
     },
@@ -43,7 +43,7 @@ const CLIENTS = [
       mcpServers: {
         huiVue: {
           command: 'npx',
-          args: [`hui-vue@${HUI_MCP_VERSION}`, 'mcp'],
+          args: [`hui-kit@${HUI_MCP_VERSION}`, 'mcp'],
         },
       },
     },
@@ -56,7 +56,7 @@ const CLIENTS = [
       servers: {
         huiVue: {
           command: 'npx',
-          args: [`hui-vue@${HUI_MCP_VERSION}`, 'mcp'],
+          args: [`hui-kit@${HUI_MCP_VERSION}`, 'mcp'],
         },
       },
     },
@@ -67,7 +67,7 @@ const CLIENTS = [
     configPath: '.codex/config.toml',
     config: `[mcp_servers.hui_vue]
 command = "npx"
-args = ["hui-vue@${HUI_MCP_VERSION}", "mcp"]
+args = ["hui-kit@${HUI_MCP_VERSION}", "mcp"]
 `,
   },
   {
@@ -80,14 +80,14 @@ args = ["hui-vue@${HUI_MCP_VERSION}", "mcp"]
         huiVue: {
           type: 'local',
           enabled: true,
-          command: ['npx', `hui-vue@${HUI_MCP_VERSION}`, 'mcp'],
+          command: ['npx', `hui-kit@${HUI_MCP_VERSION}`, 'mcp'],
         },
       },
     },
   },
 ] as const
 
-const DEPENDENCIES = [`hui-vue@${HUI_MCP_VERSION}`]
+const DEPENDENCIES = [`hui-kit@${HUI_MCP_VERSION}`]
 
 export const mcp = new Command()
   .name('mcp')
@@ -168,7 +168,7 @@ mcp
         }
 
         logger.break()
-        logger.log('To configure the hui-vue MCP server in Codex:')
+        logger.log('To configure the hui-kit MCP server in Codex:')
         logger.break()
         logger.log(
           `1. Open or create the file ${highlighter.info(
@@ -179,7 +179,7 @@ mcp
         logger.log()
         logger.info(`[mcp_servers.hui_vue]
 command = "npx"
-args = ["hui-vue@${HUI_MCP_VERSION}", "mcp"]`)
+args = ["hui-kit@${HUI_MCP_VERSION}", "mcp"]`)
         logger.break()
         logger.info('3. Restart Codex to load the MCP server')
         logger.break()

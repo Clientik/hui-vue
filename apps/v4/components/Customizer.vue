@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { RegistryItem } from 'hui-vue/schema'
+import type { RegistryItem } from 'hui-kit/schema'
 import { FONT_HEADING_OPTIONS, FONTS } from '@/lib/fonts'
 import { getThemesForBaseColor, STYLES } from '@/registry/config'
 

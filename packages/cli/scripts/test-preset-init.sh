@@ -40,7 +40,7 @@ if ! curl -fsS -o /dev/null "http://localhost:3000/init?preset=$PRESET&track=0";
   exit 1
 fi
 
-WORK_DIR="$(mktemp -d -t hui-vue-preset-XXXXXX)"
+WORK_DIR="$(mktemp -d -t hui-kit-preset-XXXXXX)"
 trap 'rm -rf "$WORK_DIR"' EXIT
 
 echo "→ Copying fixture to $WORK_DIR"

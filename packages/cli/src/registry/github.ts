@@ -115,7 +115,7 @@ async function fetchGitHubSourceFile(
       timeout: GITHUB_FILE_FETCH_TIMEOUT,
       headers: {
         "Accept-Encoding": "identity",
-        "User-Agent": "hui-vue",
+        "User-Agent": "hui-kit",
       },
     })
   }

@@ -35,7 +35,7 @@ previewClass: h-96
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add navigation-menu
+npx hui-kit@latest add navigation-menu
 ```
 
 ::
@@ -51,7 +51,7 @@ npx hui-vue@latest add navigation-menu
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/navigation-menu) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/navigation-menu) into your project.
     ::
 
     ::step

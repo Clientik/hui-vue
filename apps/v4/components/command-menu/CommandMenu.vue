@@ -65,7 +65,7 @@ function handlePageHighlight(isComponent: boolean, item: { path: string, title?:
   if (isComponent) {
     const componentName = item.path.split('/').pop()
     selectedType.value = 'component'
-    copyPayload.value = `${pmToDlxCommand[packageManager]} hui-vue@latest add ${componentName}`
+    copyPayload.value = `${pmToDlxCommand[packageManager]} hui-kit@latest add ${componentName}`
   }
   else {
     selectedType.value = 'page'
@@ -80,7 +80,7 @@ function handleColorHighlight(color: Color) {
 
 function handleBlockHighlight(block: { name: string, description: string, categories: string[] }) {
   selectedType.value = 'block'
-  copyPayload.value = `${pmToDlxCommand[packageManager]} hui-vue@latest add ${block.name}`
+  copyPayload.value = `${pmToDlxCommand[packageManager]} hui-kit@latest add ${block.name}`
 }
 
 function runCommand(command: () => unknown) {

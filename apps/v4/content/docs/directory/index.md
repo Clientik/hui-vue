@@ -1,11 +1,11 @@
 ---
 title: Registry Directory
-description: Discover community registries for hui-vue components and blocks.
+description: Discover community registries for hui-kit components and blocks.
 navigation:
   title: Directory
 ---
 
-These registries are built into the CLI with no additional configuration required. To add a component, run: `npx hui-vue@latest add @<registry>/<component>`.
+These registries are built into the CLI with no additional configuration required. To add a component, run: `npx hui-kit@latest add @<registry>/<component>`.
 
 ::callout{class="bg-muted font-semibold"}
 Community registries are maintained by third-party developers. Always review code on installation to ensure it meets your security and quality standards.
@@ -18,7 +18,7 @@ Don't see a registry? Learn how to [add it here](/docs/registry/getting-started)
 
 ## Documentation
 
-You can use the `hui-vue` CLI to run your own code registry. Running your own registry allows you to distribute your custom components, hooks, pages, config, rules and other files to any project.
+You can use the `hui-kit` CLI to run your own code registry. Running your own registry allows you to distribute your custom components, hooks, pages, config, rules and other files to any project.
 
 <div class="mt-6 grid gap-4 sm:grid-cols-2">
   <linked-card href="/docs/registry/getting-started" class="items-start text-sm md:p-6">

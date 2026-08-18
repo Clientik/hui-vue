@@ -3,7 +3,7 @@ import type { registryItemSchema, searchResultsSchema } from '@/src/schema'
 import { detectPackageManager } from 'nypm'
 import { getRegistriesConfig } from '@/src/registry/api'
 
-const HUI_CLI_COMMAND = 'hui-vue'
+const HUI_CLI_COMMAND = 'hui-kit'
 
 export async function npxHuiVue(command: string) {
   const packageRunner = await detectPackageManager(process.cwd())

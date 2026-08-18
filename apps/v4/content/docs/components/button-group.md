@@ -30,7 +30,7 @@ class: '[&_.preview]:min-h-[400px]'
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add button-group
+npx hui-kit@latest add button-group
 ```
 
 ::
@@ -46,7 +46,7 @@ npx hui-vue@latest add button-group
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/button-group) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/button-group) into your project.
     ::
 
     ::step

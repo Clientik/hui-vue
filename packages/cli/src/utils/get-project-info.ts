@@ -378,9 +378,9 @@ export async function getProjectTailwindVersionFromConfig(config: {
 /**
  * Returns the list of installed UI component names for a project by scanning
  * the resolved `ui` directory in `components.json` and cross-referencing
- * discovered names against the hui-vue registry index.
+ * discovered names against the hui-kit registry index.
  *
- * hui-vue stores components as folders (`ui/button/Button.vue`), so
+ * hui-kit stores components as folders (`ui/button/Button.vue`), so
  * candidates come from immediate subdirectories of `ui/` that contain at
  * least one renderable `.vue`/`.tsx`/`.jsx` file, plus any flat `.vue`
  * single-file components. Names are then filtered against the registry to

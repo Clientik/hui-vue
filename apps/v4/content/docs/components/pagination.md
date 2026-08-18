@@ -33,7 +33,7 @@ description: A pagination component.
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add pagination
+npx hui-kit@latest add pagination
 ```
 
 ::
@@ -49,7 +49,7 @@ npx hui-vue@latest add pagination
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/pagination) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/pagination) into your project.
     ::
 
     ::step

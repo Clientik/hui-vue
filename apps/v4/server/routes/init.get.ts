@@ -1,4 +1,4 @@
-import { registryItemSchema } from 'hui-vue/schema'
+import { registryItemSchema } from 'hui-kit/schema'
 import { parseDesignSystemConfig } from '@/lib/parse-design-system-config'
 import { buildRegistryBase } from '@/registry/config'
 

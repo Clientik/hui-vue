@@ -112,7 +112,7 @@ export default defineNuxtConfig({
       deployConfig: true,
       nodeCompat: true,
       wrangler: {
-        name: 'hui-vue-nuxt',
+        name: 'hui-kit-nuxt',
         d1_databases: [
           {
             binding: 'DB',

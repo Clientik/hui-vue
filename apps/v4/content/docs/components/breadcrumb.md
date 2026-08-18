@@ -31,7 +31,7 @@ description: A breadcrumb with a collapsible dropdown.
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add breadcrumb
+npx hui-kit@latest add breadcrumb
 ```
 
 ::
@@ -39,7 +39,7 @@ npx hui-vue@latest add breadcrumb
 ::::tabs-content{value="manual"}
   :::steps
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/breadcrumb) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/breadcrumb) into your project.
     ::
 
     ::step

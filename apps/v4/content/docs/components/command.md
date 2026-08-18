@@ -35,7 +35,7 @@ previewClass: h-[24.5rem]
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add command
+npx hui-kit@latest add command
 ```
 
 ::
@@ -51,7 +51,7 @@ npx hui-vue@latest add command
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/command) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/command) into your project.
     ::
 
     ::step

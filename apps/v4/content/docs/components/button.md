@@ -12,8 +12,8 @@ description: A button
 ---
 ::
 
-::vue-school-link{class="mt-6" lesson="buttons-variants-and-the-as-child-prop-with-hui-vue" placement="top"}
-Watch a Vue School video about buttons, variants, and the as-child prop in hui-vue.
+::vue-school-link{class="mt-6" lesson="buttons-variants-and-the-as-child-prop-with-hui-kit" placement="top"}
+Watch a Vue School video about buttons, variants, and the as-child prop in hui-kit.
 ::
 
 ## Installation
@@ -35,7 +35,7 @@ Watch a Vue School video about buttons, variants, and the as-child prop in hui-v
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add button
+npx hui-kit@latest add button
 ```
 
 ::
@@ -51,7 +51,7 @@ npx hui-vue@latest add button
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/button) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/button) into your project.
     ::
 
     ::step
@@ -82,7 +82,7 @@ Tailwind v4 [switched](https://tailwindcss.com/docs/upgrade-guide#buttons-use-th
 
 If you want to keep the `cursor: pointer` behavior, add the following code to your CSS file:
 
-You can also enable this during project setup with `npx hui-vue@latest init --pointer`.
+You can also enable this during project setup with `npx hui-kit@latest init --pointer`.
 
 ```css showLineNumbers title="tailwind.css"
 @layer base {

@@ -1,6 +1,6 @@
-# hui-vue
+# hui-kit
 
-> hui-vue is a collection of beautifully-designed, accessible components and a code distribution platform. It is built with Vue 3, TypeScript, Tailwind CSS v4, and Reka UI primitives. It supports multiple frameworks including Vite, Nuxt, Astro, and Laravel. Open Source. Open Code. AI-Ready. It also comes with a command-line tool to install and manage components and a registry system to publish and distribute code.
+> hui-kit is a collection of beautifully-designed, accessible components and a code distribution platform. It is built with Vue 3, TypeScript, Tailwind CSS v4, and Reka UI primitives. It supports multiple frameworks including Vite, Nuxt, Astro, and Laravel. Open Source. Open Code. AI-Ready. It also comes with a command-line tool to install and manage components and a registry system to publish and distribute code.
 
 ## Overview
 
@@ -9,17 +9,17 @@
 - [components.json](http://localhost:3000/docs/components-json): Configuration file for customizing the CLI and component installation.
 - [Theming](http://localhost:3000/docs/theming): Guide to customizing colors, typography, and design tokens.
 - [Changelog](http://localhost:3000/docs/changelog): Release notes and version history.
-- [Skills](http://localhost:3000/docs/skills): Deep hui-vue knowledge for AI assistants like Claude Code.
+- [Skills](http://localhost:3000/docs/skills): Deep hui-kit knowledge for AI assistants like Claude Code.
 - [About](http://localhost:3000/docs/about): Credits and project information.
 
 ## Installation
 
-- [Vite](http://localhost:3000/docs/installation/vite): Install hui-vue in a Vite project.
-- [Nuxt](http://localhost:3000/docs/installation/nuxt): Install hui-vue in a Nuxt project.
-- [Astro](http://localhost:3000/docs/installation/astro): Install hui-vue in an Astro project.
-- [Laravel](http://localhost:3000/docs/installation/laravel): Install hui-vue in a Laravel project.
-- [Manual Installation](http://localhost:3000/docs/installation/manual): Manually install hui-vue without the CLI.
-- [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=Selemondev.hui-vue): Official VSCode extension by @selemondev for easy component installation and snippets.
+- [Vite](http://localhost:3000/docs/installation/vite): Install hui-kit in a Vite project.
+- [Nuxt](http://localhost:3000/docs/installation/nuxt): Install hui-kit in a Nuxt project.
+- [Astro](http://localhost:3000/docs/installation/astro): Install hui-kit in an Astro project.
+- [Laravel](http://localhost:3000/docs/installation/laravel): Install hui-kit in a Laravel project.
+- [Manual Installation](http://localhost:3000/docs/installation/manual): Manually install hui-kit without the CLI.
+- [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=Selemondev.hui-kit): Official VSCode extension by @selemondev for easy component installation and snippets.
 
 ## Components
 
@@ -118,13 +118,13 @@
 
 ## Forms
 
-- [Forms Overview](http://localhost:3000/docs/forms): Guide to building forms with hui-vue.
-- [VeeValidate](http://localhost:3000/docs/forms/vee-validate): Using hui-vue with VeeValidate.
-- [TanStack Form](http://localhost:3000/docs/forms/tanstack-form): Using hui-vue with TanStack Form.
+- [Forms Overview](http://localhost:3000/docs/forms): Guide to building forms with hui-kit.
+- [VeeValidate](http://localhost:3000/docs/forms/vee-validate): Using hui-kit with VeeValidate.
+- [TanStack Form](http://localhost:3000/docs/forms/tanstack-form): Using hui-kit with TanStack Form.
 
 ## Advanced
 
-- [JavaScript](http://localhost:3000/docs/javascript): Using hui-vue with JavaScript (no TypeScript).
+- [JavaScript](http://localhost:3000/docs/javascript): Using hui-kit with JavaScript (no TypeScript).
 - [Figma](http://localhost:3000/docs/figma): Figma design resources.
 - [Legacy](http://localhost:3000/docs/legacy): Information about legacy versions.
 
@@ -144,9 +144,9 @@
 - [Registry Schema](http://localhost:3000/schema/registry.json): JSON Schema for registry index files. Defines the structure for a collection of components, hooks, pages, etc. Requires name, homepage, and items array.
 - [Registry Item Schema](http://localhost:3000/schema/registry-item.json): JSON Schema for individual registry items. Defines components, hooks, themes, and other distributable code with properties for dependencies, files, Tailwind config, CSS variables, and more.
 
-## Key Differences from hui-vue
+## Key Differences from hui-kit
 
-hui-vue is a Vue/Nuxt port of hui-vue with the following key differences:
+hui-kit is a Vue/Nuxt port of hui-kit with the following key differences:
 
 ### Framework Support
 - **Vue-based**: Built for Vue 3 and Nuxt 3 instead of React
@@ -165,8 +165,8 @@ hui-vue is a Vue/Nuxt port of hui-vue with the following key differences:
 - **Charts**: Uses Unovis for charts instead of Recharts
 
 ### CLI Command
-- Uses `hui-vue` instead of `hui` for CLI commands
-- Example: `npx hui-vue@latest init` instead of `npx hui@latest init`
+- Uses `hui-kit` instead of `hui` for CLI commands
+- Example: `npx hui-kit@latest init` instead of `npx hui@latest init`
 
 ### Credits
 - Maintained by [unovue](https://github.com/unovue)

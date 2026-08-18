@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { RegistryItem } from 'hui-vue/schema'
+import type { RegistryItem } from 'hui-kit/schema'
 import { ChevronDownIcon, SearchIcon } from '@lucide/vue'
 import { Button } from '@/registry/hui/ui/button'
 import {

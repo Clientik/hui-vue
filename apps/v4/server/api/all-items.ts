@@ -1,4 +1,4 @@
-import type { RegistryItem } from 'hui-vue/schema'
+import type { RegistryItem } from 'hui-kit/schema'
 import { Index } from '~/registry/__index__'
 
 export default cachedEventHandler(async (event) => {

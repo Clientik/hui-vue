@@ -1,4 +1,4 @@
-import type { RegistryItem } from 'hui-vue/schema'
+import type { RegistryItem } from 'hui-kit/schema'
 
 type RegistryFile = NonNullable<RegistryItem['files']>[number]
 import { readdir, readFile } from 'node:fs/promises'

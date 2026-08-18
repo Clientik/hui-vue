@@ -1,5 +1,5 @@
 import type { DesignSystemConfig } from '@/registry/config'
-import { decodePreset, isPresetCode } from 'hui-vue/preset'
+import { decodePreset, isPresetCode } from 'hui-kit/preset'
 import { designSystemConfigSchema } from '@/registry/config'
 
 // Parses design system config from URL search params (either a `preset` code

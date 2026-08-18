@@ -253,10 +253,10 @@ function quoteShellArg(value: string) {
 
 export function getInitCommand(preset?: string) {
   if (!preset) {
-    return 'hui-vue init'
+    return 'hui-kit init'
   }
 
-  return `hui-vue init --preset ${quoteShellArg(preset)}`
+  return `hui-kit init --preset ${quoteShellArg(preset)}`
 }
 
 /**
@@ -264,7 +264,7 @@ export function getInitCommand(preset?: string) {
  * (e.g. `reka-vega` → `reka`). Falls back to the first registered base
  * (`reka`) when the style is empty or unrecognised.
  *
- * Mirrors hui-ui's `getBase` helper but adapted to hui-vue's
+ * Mirrors hui-ui's `getBase` helper but adapted to hui-kit's
  * `${base}-${visualStyle}` style id convention.
  */
 export function getBase(style: string | undefined): string {
@@ -287,7 +287,7 @@ export function getBase(style: string | undefined): string {
  * current `base` and `rtl` are forced onto the resulting URL so applying a
  * preset never silently switches the user's component library or RTL setting.
  *
- * This is the hui-vue equivalent of hui-ui's `resolveApplyInitUrl`.
+ * This is the hui-kit equivalent of hui-ui's `resolveApplyInitUrl`.
  */
 export function resolveApplyInitUrl(
   presetArg: string,
@@ -296,7 +296,7 @@ export function resolveApplyInitUrl(
   if (isUrl(presetArg)) {
     const url = new URL(presetArg)
 
-    // Record an init run for first-party hui-vue /init URLs only.
+    // Record an init run for first-party hui-kit /init URLs only.
     if (
       url.pathname === '/init'
       && presetArg.startsWith(HUI_VUE_URL)

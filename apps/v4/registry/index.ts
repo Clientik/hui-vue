@@ -1,5 +1,5 @@
-import type { Registry } from "hui-vue/schema"
-import { registryItemSchema } from "hui-vue/schema"
+import type { Registry } from "hui-kit/schema"
+import { registryItemSchema } from "hui-kit/schema"
 import { z } from "zod"
 
 import { themes } from "~/registry/_legacy-themes"
@@ -29,7 +29,7 @@ const NEW_YORK_V4_STYLE = {
 }
 
 export const registry = {
-  name: "hui-vue",
+  name: "hui-kit",
   homepage: "http://localhost:3000",
   items: z.array(registryItemSchema).parse(
     [

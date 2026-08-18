@@ -33,7 +33,7 @@ description: A label
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add label
+npx hui-kit@latest add label
 ```
 
 ::
@@ -49,7 +49,7 @@ npx hui-vue@latest add label
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/label) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/label) into your project.
     ::
 
     ::step

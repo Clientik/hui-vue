@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { registryItemSchema } from 'hui-vue/schema'
+import type { registryItemSchema } from 'hui-kit/schema'
 import type { z } from 'zod'
 import { fixImport } from '~/lib/registry-utils'
 import { cn } from '~/lib/utils'

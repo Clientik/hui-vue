@@ -33,7 +33,7 @@ description: A sheet component.
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add sheet
+npx hui-kit@latest add sheet
 ```
 
 ::
@@ -49,7 +49,7 @@ npx hui-vue@latest add sheet
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/sheet) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/sheet) into your project.
     ::
 
     ::step

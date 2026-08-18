@@ -1,3 +1,3 @@
-import type { Registry } from "hui-vue/schema"
+import type { Registry } from "hui-kit/schema"
 
 export const components: Registry["items"] = []

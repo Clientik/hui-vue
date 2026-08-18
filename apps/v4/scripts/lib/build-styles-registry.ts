@@ -13,13 +13,13 @@ import { runHuiVueCli } from './run-formatters'
  *   1. Take the authored `bases/reka/ui` registry items (one entry per
  *      component with its dependencies + file list)
  *   2. Rewrite each file's `path` from `ui/<comp>/<file>` to
- *      `styles/reka-<style>/ui/<comp>/<file>` so the local hui-vue CLI
+ *      `styles/reka-<style>/ui/<comp>/<file>` so the local hui-kit CLI
  *      reads from the codegen'd output (where `cn-*` tokens are already
  *      expanded and IconPlaceholder is already replaced with @lucide/vue)
  *   3. Write `apps/v4/public/r/styles/reka-<style>/registry.json`
  *   4. Write a temporary `apps/v4/registry-reka-<style>.json` at the project
  *      root (the CLI's `build` command takes a JSON file path as input)
- *   5. Spawn the local hui-vue CLI to emit per-component JSONs at
+ *   5. Spawn the local hui-kit CLI to emit per-component JSONs at
  *      `public/r/styles/reka-<style>/<name>.json`
  *   6. Remove the temp registry file
  *
@@ -31,7 +31,7 @@ import { runHuiVueCli } from './run-formatters'
  */
 
 const SOURCE_BASE = 'reka'
-const REGISTRY_NAME = 'hui-vue'
+const REGISTRY_NAME = 'hui-kit'
 const REGISTRY_HOMEPAGE = 'http://localhost:3000'
 const PUBLIC_OUTPUT_BASE = 'public/r/styles'
 
@@ -120,7 +120,7 @@ async function publishStyle(styleName: string) {
     'utf8',
   )
 
-  // 3. Spawn the local hui-vue CLI to emit per-component JSONs.
+  // 3. Spawn the local hui-kit CLI to emit per-component JSONs.
   try {
     const { stderr } = await runHuiVueCli([
       'build',

@@ -34,7 +34,7 @@ previewClass: h-96
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add scroll-area
+npx hui-kit@latest add scroll-area
 ```
 
 ::
@@ -50,7 +50,7 @@ npx hui-vue@latest add scroll-area
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/scroll-area) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/scroll-area) into your project.
     ::
 
     ::step

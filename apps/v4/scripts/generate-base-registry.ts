@@ -39,8 +39,8 @@ async function generateBaseRegistryFile(base: RegistryBase) {
   }
 
   // Add additional imports
-  const additionalImports = `import type { Registry } from "hui-vue/schema"
-import { registryItemSchema } from "hui-vue/schema"
+  const additionalImports = `import type { Registry } from "hui-kit/schema"
+import { registryItemSchema } from "hui-kit/schema"
 import { z } from "zod"
 import { fonts } from "@/registry/fonts"`
 
@@ -126,7 +126,7 @@ async function generateSubdirectoryRegistry(
     return
   }
 
-  const registryContent = `import type { Registry } from "hui-vue/schema"
+  const registryContent = `import type { Registry } from "hui-kit/schema"
 
 ${imports.join('\n')}
 

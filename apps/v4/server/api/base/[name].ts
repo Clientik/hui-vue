@@ -1,5 +1,5 @@
 import type { H3Event } from 'h3'
-import type { RegistryItem } from 'hui-vue/schema'
+import type { RegistryItem } from 'hui-kit/schema'
 import { Index } from '~/registry/bases/__index__'
 
 export default cachedEventHandler(async (event) => {

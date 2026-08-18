@@ -1,4 +1,4 @@
-import type { RegistryItem } from 'hui-vue/schema'
+import type { RegistryItem } from 'hui-kit/schema'
 
 export interface RegistryContentType {
   /** The name of the content type (e.g., 'ui', 'blocks', 'charts') */

@@ -1,8 +1,8 @@
-# hui-vue CLI Reference
+# hui-kit CLI Reference
 
 Configuration is read from `components.json`.
 
-> **IMPORTANT:** Always run commands using the project's package runner: `npx hui-vue@latest`, `pnpm dlx hui-vue@latest`, or `bunx --bun hui-vue@latest`. Check `packageManager` from project context to choose the right one. Examples below use `npx hui-vue@latest` but substitute the correct runner for the project.
+> **IMPORTANT:** Always run commands using the project's package runner: `npx hui-kit@latest`, `pnpm dlx hui-kit@latest`, or `bunx --bun hui-kit@latest`. Check `packageManager` from project context to choose the right one. Examples below use `npx hui-kit@latest` but substitute the correct runner for the project.
 > **IMPORTANT:** Only use the flags documented below. Do not invent or guess flags — if a flag isn't listed here, it doesn't exist. The CLI auto-detects the package manager from the project's lockfile; there is no `--package-manager` flag.
 
 ## Contents
@@ -19,10 +19,10 @@ Configuration is read from `components.json`.
 ### `init` — Initialize or create a project
 
 ```bash
-npx hui-vue@latest init [components...] [options]
+npx hui-kit@latest init [components...] [options]
 ```
 
-Initializes hui-vue in an existing project or creates a new project (when `--name` is provided). Optionally installs components in the same step.
+Initializes hui-kit in an existing project or creates a new project (when `--name` is provided). Optionally installs components in the same step.
 
 | Flag                    | Short | Description                                         | Default |
 | ----------------------- | ----- | --------------------------------------------------- | ------- |
@@ -37,12 +37,12 @@ Initializes hui-vue in an existing project or creates a new project (when `--nam
 | `--rtl`                 |       | Enable RTL support                                  | —       |
 | `--reinstall`           |       | Re-install existing UI components                   | `false` |
 
-`npx hui-vue@latest create` is an alias for `npx hui-vue@latest init`.
+`npx hui-kit@latest create` is an alias for `npx hui-kit@latest init`.
 
 ### `apply` — Apply a preset to an existing project
 
 ```bash
-npx hui-vue@latest apply [preset] [options]
+npx hui-kit@latest apply [preset] [options]
 ```
 
 Applies a preset to an existing project, overwriting preset-driven config, fonts, CSS variables, and detected UI components.
@@ -62,7 +62,7 @@ If no preset is provided, the CLI offers to open the custom preset builder on `l
 > **IMPORTANT:** NEVER fetch raw files from GitHub or other sources manually. The CLI handles registry resolution, file paths, and CSS diffing automatically.
 
 ```bash
-npx hui-vue@latest add [components...] [options]
+npx hui-kit@latest add [components...] [options]
 ```
 
 Accepts component names, registry-prefixed names (`@magicui/shimmer-button`), URLs, or local paths.
@@ -83,10 +83,10 @@ See [Updating Components in SKILL.md](./SKILL.md#updating-components) for the fu
 ### `search` — Search registries
 
 ```bash
-npx hui-vue@latest search <registries...> [options]
+npx hui-kit@latest search <registries...> [options]
 ```
 
-Fuzzy search across registries. Also aliased as `npx hui-vue@latest list`. Without `-q`, lists all items.
+Fuzzy search across registries. Also aliased as `npx hui-kit@latest list`. Without `-q`, lists all items.
 
 | Flag                | Short | Description            | Default |
 | ------------------- | ----- | ---------------------- | ------- |
@@ -98,20 +98,20 @@ Fuzzy search across registries. Also aliased as `npx hui-vue@latest list`. Witho
 ### `view` — View item details
 
 ```bash
-npx hui-vue@latest view <items...> [options]
+npx hui-kit@latest view <items...> [options]
 ```
 
-Displays item info including file contents. Example: `npx hui-vue@latest view @hui/button`.
+Displays item info including file contents. Example: `npx hui-kit@latest view @hui/button`.
 
 ### `docs` — Get component documentation URLs
 
 ```bash
-npx hui-vue@latest docs <components...> [options]
+npx hui-kit@latest docs <components...> [options]
 ```
 
 Outputs resolved URLs for component documentation, examples, and API references. Accepts one or more component names. Fetch the URLs to get the actual content.
 
-Example output for `npx hui-vue@latest docs input button`:
+Example output for `npx hui-kit@latest docs input button`:
 
 ```text
 input
@@ -127,12 +127,12 @@ Some components include an `api` link to the underlying library (e.g. `reka-ui` 
 
 ### `diff` — Check for updates
 
-Do not use this command. Use `npx hui-vue@latest add --diff` instead.
+Do not use this command. Use `npx hui-kit@latest add --diff` instead.
 
 ### `info` — Project information
 
 ```bash
-npx hui-vue@latest info [options]
+npx hui-kit@latest info [options]
 ```
 
 Displays project info and `components.json` configuration. Run this first to discover the project's framework, aliases, Tailwind version, and resolved paths.
@@ -175,12 +175,12 @@ Displays project info and `components.json` configuration. Run this first to dis
 
 **Links fields:**
 
-The `info` output includes a **Links** section with templated URLs for component docs, source, and examples. For resolved URLs, use `npx hui-vue@latest docs <component>` instead.
+The `info` output includes a **Links** section with templated URLs for component docs, source, and examples. For resolved URLs, use `npx hui-kit@latest docs <component>` instead.
 
 ### `build` — Build a custom registry
 
 ```bash
-npx hui-vue@latest build [registry] [options]
+npx hui-kit@latest build [registry] [options]
 ```
 
 Builds `registry.json` into individual JSON files for distribution. Default input: `./registry.json`, default output: `./public/r`.
@@ -211,15 +211,15 @@ Three ways to specify a preset via `--preset`:
 2. **Code:** `--preset a2r6bw` (version-prefixed base62 string, e.g. `a2r6bw`)
 3. **URL:** `--preset "http://localhost:3000/init?base=reka&style=nova&..."`
 
-> **IMPORTANT:** Never try to decode, fetch, or resolve preset codes manually. Preset codes are opaque — pass them directly to `npx hui-vue@latest init --preset <code>` and let the CLI handle resolution.
-> Use `npx hui-vue@latest apply --preset <code>` when overwriting an existing project's preset.
+> **IMPORTANT:** Never try to decode, fetch, or resolve preset codes manually. Preset codes are opaque — pass them directly to `npx hui-kit@latest init --preset <code>` and let the CLI handle resolution.
+> Use `npx hui-kit@latest apply --preset <code>` when overwriting an existing project's preset.
 
 ## Switching Presets
 
 Ask the user first: **overwrite**, **merge**, or **skip** existing components?
 
-- **Overwrite / Re-install** → `npx hui-vue@latest apply --preset <code>`. Overwrites all detected component files with the new preset styles. Use when the user hasn't customized components.
-- **Merge** → `npx hui-vue@latest init --preset <code> --force --no-reinstall`, then run `npx hui-vue@latest info` to get the list of installed components and use the [smart merge workflow](./SKILL.md#updating-components) to update them one by one, preserving local changes. Use when the user has customized components.
-- **Skip** → `npx hui-vue@latest init --preset <code> --force --no-reinstall`. Only updates config and CSS variables, leaves existing components as-is.
+- **Overwrite / Re-install** → `npx hui-kit@latest apply --preset <code>`. Overwrites all detected component files with the new preset styles. Use when the user hasn't customized components.
+- **Merge** → `npx hui-kit@latest init --preset <code> --force --no-reinstall`, then run `npx hui-kit@latest info` to get the list of installed components and use the [smart merge workflow](./SKILL.md#updating-components) to update them one by one, preserving local changes. Use when the user has customized components.
+- **Skip** → `npx hui-kit@latest init --preset <code> --force --no-reinstall`. Only updates config and CSS variables, leaves existing components as-is.
 
 Always run preset commands inside the user's project directory. `apply` only works in an existing project with a `components.json` file. The CLI automatically preserves the current base (`base`) from `components.json`. If you must use a scratch/temp directory (e.g. for `--dry-run` comparisons), pass `--base <current-base>` explicitly — preset codes do not encode the base.

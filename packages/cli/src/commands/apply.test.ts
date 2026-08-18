@@ -100,18 +100,18 @@ describe('getBase', () => {
 
 describe('getInitCommand', () => {
   it('returns the bare init command when no preset is provided', () => {
-    expect(getInitCommand()).toBe('hui-vue init')
+    expect(getInitCommand()).toBe('hui-kit init')
   })
 
   it('appends a simple preset name without quoting', () => {
-    expect(getInitCommand('neva')).toBe('hui-vue init --preset nova')
+    expect(getInitCommand('neva')).toBe('hui-kit init --preset nova')
   })
 
   it('quotes preset values that contain shell-unsafe characters', () => {
     expect(
       getInitCommand('https://example.com/init?style=nova&base=reka'),
     ).toBe(
-      'hui-vue init --preset "https://example.com/init?style=nova&base=reka"',
+      'hui-kit init --preset "https://example.com/init?style=nova&base=reka"',
     )
   })
 })

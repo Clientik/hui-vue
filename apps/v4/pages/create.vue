@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { RegistryItem } from 'hui-vue/schema'
+import type { RegistryItem } from 'hui-kit/schema'
 import { ALLOWED_ITEM_TYPES } from '~/lib/constants'
 
 const params = useDesignSystemSearchParams()
@@ -17,7 +17,7 @@ const items = computed(() => {
 
 const title = 'New Project'
 const description
-  = 'Customize everything. Pick your component library, icons, base color, theme, fonts and create your own version of hui-vue.'
+  = 'Customize everything. Pick your component library, icons, base color, theme, fonts and create your own version of hui-kit.'
 
 useSeoMeta({
   title,

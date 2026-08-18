@@ -1,9 +1,9 @@
 ---
 title: Skills
-description: Give your AI assistant deep knowledge of hui-vue components, patterns, and best practices.
+description: Give your AI assistant deep knowledge of hui-kit components, patterns, and best practices.
 ---
 
-Skills give AI assistants like Claude Code project-aware context about hui-vue. When installed, your AI assistant knows how to find, install, compose, and customize components using the correct APIs and patterns for your project.
+Skills give AI assistants like Claude Code project-aware context about hui-kit. When installed, your AI assistant knows how to find, install, compose, and customize components using the correct APIs and patterns for your project.
 
 For example, you can ask your AI assistant to:
 
@@ -19,10 +19,10 @@ The skill reads your project's `components.json` and provides the assistant with
 ## Install
 
 ```bash
-npx skills add unovue/hui-vue
+npx skills add unovue/hui-kit
 ```
 
-This installs the hui-vue skill into your project. Once installed, your AI assistant automatically loads it when working with hui-vue components.
+This installs the hui-kit skill into your project. Once installed, your AI assistant automatically loads it when working with hui-kit components.
 
 Learn more about skills at [skills.sh](https://skills.sh).
 
@@ -34,7 +34,7 @@ The skill provides your AI assistant with the following knowledge:
 
 ### Project Context
 
-On every interaction, the skill runs `hui-vue info --json` to get your project's configuration: framework, Tailwind version, aliases, base library (`reka`), icon library, installed components, and resolved file paths.
+On every interaction, the skill runs `hui-kit info --json` to get your project's configuration: framework, Tailwind version, aliases, base library (`reka`), icon library, installed components, and resolved file paths.
 
 ### CLI Commands
 
@@ -50,16 +50,16 @@ How to build and publish custom component registries: `registry.json` format, it
 
 ### MCP Server
 
-Setup and tools for the hui-vue MCP server, which lets AI assistants search, browse, and install components from registries.
+Setup and tools for the hui-kit MCP server, which lets AI assistants search, browse, and install components from registries.
 
 ---
 
 ## How It Works
 
 1. **Project detection** — The skill activates when it finds a `components.json` file in your project.
-2. **Context injection** — It runs `hui-vue info --json` to read your project configuration and injects the result into the assistant's context.
-3. **Pattern enforcement** — The assistant follows hui-vue composition rules: using `FieldGroup` for forms, `ToggleGroup` for option sets, semantic colors, and correct base-specific APIs.
-4. **Component discovery** — The assistant uses `hui-vue docs`, `hui-vue search`, or MCP tools to find components and their documentation before generating code.
+2. **Context injection** — It runs `hui-kit info --json` to read your project configuration and injects the result into the assistant's context.
+3. **Pattern enforcement** — The assistant follows hui-kit composition rules: using `FieldGroup` for forms, `ToggleGroup` for option sets, semantic colors, and correct base-specific APIs.
+4. **Component discovery** — The assistant uses `hui-kit docs`, `hui-kit search`, or MCP tools to find components and their documentation before generating code.
 
 ## Learn More
 

@@ -34,7 +34,7 @@ For AI apps, you can render reasoning steps, tool calls and assistant messages u
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add message
+npx hui-kit@latest add message
 ```
 
 ::
@@ -42,7 +42,7 @@ npx hui-vue@latest add message
 ::::tabs-content{value="manual"}
   :::steps
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/message) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/message) into your project.
     ::
 
     ::step

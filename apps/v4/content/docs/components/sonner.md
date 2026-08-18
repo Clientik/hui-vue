@@ -13,8 +13,8 @@ description: A sonner toast component.
 ---
 ::
 
-::vue-school-link{class="mt-6" lesson="data-tables-and-sonner-in-hui-vue" placement="top"}
-Watch a Vue School video about data tables and Sonner in hui-vue.
+::vue-school-link{class="mt-6" lesson="data-tables-and-sonner-in-hui-kit" placement="top"}
+Watch a Vue School video about data tables and Sonner in hui-kit.
 ::
 
 ## Installation
@@ -36,7 +36,7 @@ Watch a Vue School video about data tables and Sonner in hui-vue.
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add sonner
+npx hui-kit@latest add sonner
 ```
 
 ::
@@ -52,7 +52,7 @@ npx hui-vue@latest add sonner
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/sonner) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/sonner) into your project.
     ::
 
     ::step

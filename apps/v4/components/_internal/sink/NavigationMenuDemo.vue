@@ -63,7 +63,7 @@ const components: { title: string, href: string, description: string }[] = [
                 <NavigationMenuLink as-child class="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md">
                   <a href="/">
                     <div class="mt-4 mb-2 text-lg font-medium">
-                      hui-vue
+                      hui-kit
                     </div>
                     <p class="text-muted-foreground text-sm leading-tight">
                       Beautifully designed components built with Tailwind CSS.

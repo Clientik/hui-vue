@@ -11,7 +11,7 @@ It assumes you already have a project with components and would like to turn it 
 
 ## registry.json
 
-The `registry.json` file is only required if you're using the `hui-vue` CLI to build your registry.
+The `registry.json` file is only required if you're using the `hui-kit` CLI to build your registry.
 
 If you're using a different build system, you can skip this step as long as your build system produces valid JSON files that conform to the [registry-item schema specification](/docs/registry/registry-item-json).
 
@@ -122,12 +122,12 @@ You can read more about the registry item schema and file types in the [registry
 
 <Steps>
 
-### Install the hui-vue CLI
+### Install the hui-kit CLI
 
-Note: the `build` command is currently only available in the `hui-vue@canary` version of the CLI.
+Note: the `build` command is currently only available in the `hui-kit@canary` version of the CLI.
 
 ```bash
-npm install hui-vue@latest
+npm install hui-kit@latest
 ```
 
 ### Add a build script
@@ -137,7 +137,7 @@ Add a `registry:build` script to your `package.json` file.
 ```json showLineNumbers title="package.json"
 {
   "scripts": {
-    "registry:build": "hui-vue build"
+    "registry:build": "hui-kit build"
   }
 }
 ```
@@ -154,7 +154,7 @@ npm run registry:build
 
 **Note:** By default, the build script will generate the registry JSON files in `public/r` e.g `public/r/hello-world.json`.
 
-You can change the output directory by passing the `--output` option. See the [hui-vue build command](/docs/cli#build) for more information.
+You can change the output directory by passing the `--output` option. See the [hui-kit build command](/docs/cli#build) for more information.
 
 </Callout>
 
@@ -176,7 +176,7 @@ To make your registry available to other developers, you can publish it by deplo
 
 ## Adding Auth
 
-The `hui-vue` CLI does not offer a built-in way to add auth to your registry. We recommend handling authorization on your registry server.
+The `hui-kit` CLI does not offer a built-in way to add auth to your registry. We recommend handling authorization on your registry server.
 
 A common simple approach is to use a `token` query parameter to authenticate requests to your registry. e.g. `http://localhost:3000/r/hello-world.json?token=[SECURE_TOKEN_HERE]`.
 
@@ -199,10 +199,10 @@ Here are some guidelines to follow when building components for a registry.
 
 ## Install using the CLI
 
-To install a registry item using the `hui-vue` CLI, use the `add` command followed by the URL of the registry item.
+To install a registry item using the `hui-kit` CLI, use the `add` command followed by the URL of the registry item.
 
 ```bash
-npx hui-vue@latest add http://localhost:3000/r/hello-world.json
+npx hui-kit@latest add http://localhost:3000/r/hello-world.json
 ```
 
 ## Install from GitHub
@@ -212,7 +212,7 @@ at its root, you do not have to build, host or configure anything. The CLI can
 read it directly:
 
 ```bash
-npx hui-vue@latest add owner/repo/hello-world
+npx hui-kit@latest add owner/repo/hello-world
 ```
 
 The CLI resolves the repository's default branch, reads `registry.json` from the
@@ -225,9 +225,9 @@ mid-install cannot give you a half-updated component.
 Append `#ref` to install from somewhere other than the default branch:
 
 ```bash
-npx hui-vue@latest add owner/repo/hello-world#main
-npx hui-vue@latest add owner/repo/hello-world#v1.2.0
-npx hui-vue@latest add owner/repo/hello-world#1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b
+npx hui-kit@latest add owner/repo/hello-world#main
+npx hui-kit@latest add owner/repo/hello-world#v1.2.0
+npx hui-kit@latest add owner/repo/hello-world#1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b
 ```
 
 Branches win over tags when a name is ambiguous, and an annotated tag resolves to
@@ -236,7 +236,7 @@ the commit it points at.
 ### Listing what a repository publishes
 
 ```bash
-npx hui-vue@latest search owner/repo
+npx hui-kit@latest search owner/repo
 ```
 
 ### Only install from repositories you trust
@@ -248,7 +248,7 @@ enough to install from a repository you have never looked at.
 
 A registry item can list npm `dependencies`, which the CLI installs with your
 package manager, which in turn runs that package's install scripts. It can also
-write files into your project. Treat `npx hui-vue@latest add owner/repo/item`
+write files into your project. Treat `npx hui-kit@latest add owner/repo/item`
 with the same care as `npm install owner-repo` — read the registry first if you
 do not know who owns it.
 
@@ -267,7 +267,7 @@ is not a sandbox.
 - **Git is required.** The CLI shells out to `git ls-remote` to resolve the ref,
   which is what lets it find the default branch instead of guessing `main`.
 - **`registryDependencies` are resolved the usual way.** A full URL is fetched
-  as-is; a bare name such as `button` resolves against the default `hui-vue`
+  as-is; a bare name such as `button` resolves against the default `hui-kit`
   registry, exactly as it does for any other registry item. Note that a
   dependency can point anywhere, so trusting a repository means trusting what it
   depends on too.
@@ -286,5 +286,5 @@ alternative to the GitHub form above rather than a shorthand for it:
 ```
 
 ```bash
-npx hui-vue@latest add @acme/hello-world
+npx hui-kit@latest add @acme/hello-world
 ```

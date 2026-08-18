@@ -35,7 +35,7 @@ For full-featured chat interfaces, use the [`Message`](/docs/components/message)
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add bubble
+npx hui-kit@latest add bubble
 ```
 
 ::
@@ -43,7 +43,7 @@ npx hui-vue@latest add bubble
 ::::tabs-content{value="manual"}
   :::steps
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/bubble) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/bubble) into your project.
     ::
 
     ::step

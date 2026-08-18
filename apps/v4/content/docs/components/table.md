@@ -32,7 +32,7 @@ previewClass: h-[30rem]
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add table
+npx hui-kit@latest add table
 ```
 
 ::
@@ -40,7 +40,7 @@ npx hui-vue@latest add table
 ::::tabs-content{value="manual"}
   :::steps
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/table) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/table) into your project.
     ::
 
     ::step

@@ -14,7 +14,7 @@ class: '[&_.preview]:h-[800px] [&_.preview]:p-6 md:[&_.preview]:h-[850px]'
 ## Installation
 
 ```bash
-npx hui-vue@latest add field
+npx hui-kit@latest add field
 ```
 
 ## Usage

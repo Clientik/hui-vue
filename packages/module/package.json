@@ -2,7 +2,7 @@
   "name": "hui-nuxt",
   "type": "module",
   "version": "2.8.2",
-  "description": "Add hui-vue module to Nuxt",
+  "description": "Add hui-kit module to Nuxt",
   "publishConfig": {
     "access": "public"
   },

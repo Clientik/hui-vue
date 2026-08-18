@@ -489,4 +489,4 @@ The registry build system has been successfully transformed into a modern, maint
 **Documentation**: Complete  
 **Backward Compatibility**: 100%
 
-Built with ❤️ for the hui-vue community 🎉
+Built with ❤️ for the hui-kit community 🎉

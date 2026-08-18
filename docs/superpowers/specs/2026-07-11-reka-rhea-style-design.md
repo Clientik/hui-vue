@@ -5,9 +5,9 @@
 
 ## Goal
 
-Add a new style, `rhea`, to hui-vue that faithfully mirrors hui-ui React's
+Add a new style, `rhea`, to hui-kit that faithfully mirrors hui-ui React's
 `base-rhea` style, so users can pick the look that is closest to upstream
-hui-vue. The style must be fully integrated: authored token map, generated
+hui-kit. The style must be fully integrated: authored token map, generated
 per-style components, published registry JSON, runtime-scoped preview, and
 selectable in the customizer/style switcher.
 
@@ -86,7 +86,7 @@ Append a `STYLES` entry:
 {
   name: "rhea",
   title: "Rhea",
-  description: "The latest hui-vue look. Refined spacing and modern defaults.",
+  description: "The latest hui-kit look. Refined spacing and modern defaults.",
   icon: `<svg … 24×24 …>` // authored to match the existing icon set's visual language; user may swap
 }
 ```
@@ -132,7 +132,7 @@ These are build outputs, committed like the other `reka-*` style outputs.
   additive/selectable.
 - **Homepage cards repoint** (`@/styles/reka-neva/*` → `@/styles/reka-neva/*`)
   is an **optional follow-up**, not part of this task. Can be done after `rhea`
-  is verified if the landing page should visually match upstream hui-vue.
+  is verified if the landing page should visually match upstream hui-kit.
 - **Full token reconciliation** of drift-named edge components — deferred.
 
 ## Verification plan

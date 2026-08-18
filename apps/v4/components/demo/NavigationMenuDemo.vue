@@ -65,7 +65,7 @@ const components: { title: string, href: string, description: string }[] = [
                   href="/"
                 >
                   <div class="mt-4 mb-2 text-lg font-medium">
-                    hui-vue
+                    hui-kit
                   </div>
                   <p class="text-muted-foreground text-sm leading-tight">
                     Beautifully designed components built with Tailwind CSS.

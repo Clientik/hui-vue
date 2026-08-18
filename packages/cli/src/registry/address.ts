@@ -62,7 +62,7 @@ export type ResolvedGitHubItemAddress = Extract<
 //
 // Tradeoff worth knowing about: a bare name with two or more slashes is read
 // as `owner/repo/item`, so the default registry can never publish an item
-// literally named e.g. "charts/area/stacked". No item name in the hui-vue
+// literally named e.g. "charts/area/stacked". No item name in the hui-kit
 // registry contains a slash today, so nothing currently collides.
 export function resolveItemAddress(address: string) {
   if (isUrl(address)) {

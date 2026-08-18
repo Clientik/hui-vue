@@ -10,14 +10,14 @@ component: true
 ---
 title: Sidebar
 name: sidebar-07
-description: A composable, themeable and customizable sidebar component built using hui-vue
+description: A composable, themeable and customizable sidebar component built using hui-kit
 class: 'w-full'
 type: block
 ---
 ::
 
-::vue-school-link{class="mt-6" lesson="sidebars-in-hui-vue" placement="top"}
-Watch a Vue School video about building sidebars with hui-vue.
+::vue-school-link{class="mt-6" lesson="sidebars-in-hui-kit" placement="top"}
+Watch a Vue School video about building sidebars with hui-kit.
 ::
 
 Sidebars are one of the most complex components to build. They are central
@@ -50,7 +50,7 @@ Customizable.
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add sidebar
+npx hui-kit@latest add sidebar
 ```
 
 ::
@@ -63,7 +63,7 @@ npx hui-vue@latest add sidebar
     ::
 
     ```bash
-    npx hui-vue@latest add sidebar
+    npx hui-kit@latest add sidebar
     ```
 
     ::step
@@ -351,7 +351,7 @@ Let's start with the most basic sidebar A collapsible sidebar with a menu.
 
 ## Components
 
-The components in the `Sidebar*.vue` files are built to be composable i.e you build your sidebar by putting the provided components together. They also compose well with other hui-vue components such as `DropdownMenu`, `Collapsible`, `Dialog`, etc.
+The components in the `Sidebar*.vue` files are built to be composable i.e you build your sidebar by putting the provided components together. They also compose well with other hui-kit components such as `DropdownMenu`, `Collapsible`, `Dialog`, etc.
 
 **If you need to change the code in the `Sidebar*.vue` files, you are encourage to do so. The code is yours. Use the provided components as a starting point to build your own**
 

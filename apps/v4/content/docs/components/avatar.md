@@ -34,7 +34,7 @@ description: An avatar with a fallback.
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add avatar
+npx hui-kit@latest add avatar
 ```
 
 ::
@@ -50,7 +50,7 @@ npx hui-vue@latest add avatar
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/avatar) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/avatar) into your project.
     ::
 
     ::step

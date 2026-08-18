@@ -1,10 +1,10 @@
-import type { IconLibrary, IconLibraryName } from "hui-vue/icons"
+import type { IconLibrary, IconLibraryName } from "hui-kit/icons"
 import type { BaseColor } from "@/registry/base-colors"
 import type { Base } from "@/registry/bases"
 
 import type { Style } from "@/registry/styles"
 import type { Theme } from "@/registry/themes"
-import { iconLibraries } from "hui-vue/icons"
+import { iconLibraries } from "hui-kit/icons"
 import { z } from "zod"
 import { BASE_COLORS } from "@/registry/base-colors"
 import { BASES } from "@/registry/bases"
@@ -277,7 +277,7 @@ export function buildRegistryBase(
 
   // Build dependencies.
   const dependencies = [
-    `hui-vue@${HUI_VERSION}`,
+    `hui-kit@${HUI_VERSION}`,
     "class-variance-authority",
     "tw-animate-css",
     ...(baseItem.dependencies ?? []),
@@ -285,7 +285,7 @@ export function buildRegistryBase(
   ]
 
   // Fonts are applied CLI-side via getFontImport(config.font) from the
-  // local FONTS constant — hui-vue's registry does not publish font-*
+  // local FONTS constant — hui-kit's registry does not publish font-*
   // items, so we intentionally do not add them as registryDependencies.
   const registryDependencies = ["utils"]
 
@@ -308,7 +308,7 @@ export function buildRegistryBase(
   if (fontItem) {
     themeVars[fontItem.font.variable] = fontItem.font.family
     // Map the font's target variable to a Tailwind utility class.
-    // hui-vue fonts all target --font-sans today (jetbrains-mono included),
+    // hui-kit fonts all target --font-sans today (jetbrains-mono included),
     // but we handle --font-mono / --font-serif for future-proofing.
     const applyClass
       = fontItem.font.variable === "--font-mono"
@@ -360,7 +360,7 @@ export function buildRegistryBase(
     },
     css: {
       "@import \"tw-animate-css\"": {},
-      "@import \"hui-vue/tailwind.css\"": {},
+      "@import \"hui-kit/tailwind.css\"": {},
       "@layer base": {
         "*": { "@apply border-border outline-ring/50": {} },
         "body": bodyRules,

@@ -1,4 +1,4 @@
-import type { IconLibraryName } from "hui-vue/icons"
+import type { IconLibraryName } from "hui-kit/icons"
 import type { Component, SVGAttributes } from "vue"
 import { HugeiconsIcon } from "@hugeicons/vue"
 import { defineComponent, h, ref, shallowRef, watchEffect } from "vue"

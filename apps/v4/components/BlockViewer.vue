@@ -22,7 +22,7 @@ export const [useBlockViewer, provideBlockViewerContext] = createContext<BlockVi
 </script>
 
 <script setup lang="ts">
-import type { registryItemFileSchema, registryItemSchema } from 'hui-vue/schema'
+import type { registryItemFileSchema, registryItemSchema } from 'hui-kit/schema'
 import type { SplitterPanel as ResizablePanel } from 'reka-ui'
 import type { z } from 'zod'
 import type { createFileTreeForRegistryItemFiles } from '~/lib/registry'

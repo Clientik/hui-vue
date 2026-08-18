@@ -1,4 +1,4 @@
-# hui-vue
+# hui-kit
 
 A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own. Open Source. Open Code. **Use this to build your own component library**.
 
@@ -14,4 +14,4 @@ Please read the [contributing guide](/CONTRIBUTING.md).
 
 ## License
 
-Licensed under the [MIT license](https://github.com/unovue/hui-vue/blob/dev/LICENSE).
+Licensed under the [MIT license](https://github.com/unovue/hui-kit/blob/dev/LICENSE).

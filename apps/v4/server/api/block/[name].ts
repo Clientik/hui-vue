@@ -1,5 +1,5 @@
 import type { H3Event } from 'h3'
-import type { registryItemFileSchema } from 'hui-vue/schema'
+import type { registryItemFileSchema } from 'hui-kit/schema'
 import type { z } from 'zod'
 import { createFileTreeForRegistryItemFiles, getRegistryItem } from '~/lib/registry'
 

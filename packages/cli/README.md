@@ -1,4 +1,4 @@
-# hui-vue
+# hui-kit
 
 A CLI for adding components to your project.
 
@@ -6,16 +6,16 @@ A CLI for adding components to your project.
 
 ### create
 
-Use the `create` command to scaffold a new Vue project with hui-vue pre-configured.
+Use the `create` command to scaffold a new Vue project with hui-kit pre-configured.
 
 ```bash
-npx hui-vue create
+npx hui-kit create
 ```
 
 The `create` command will:
 - Create a new Vue project (Nuxt, Vite, or Vite + Vue Router)
 - Configure Tailwind CSS
-- Set up hui-vue with your chosen design system
+- Set up hui-kit with your chosen design system
 
 #### Options
 
@@ -34,13 +34,13 @@ The `create` command will:
 
 ```bash
 # Interactive mode
-npx hui-vue create
+npx hui-kit create
 
 # Use a preset
-npx hui-vue create --preset reka-neva
+npx hui-kit create --preset reka-neva
 
 # Full customization
-npx hui-vue create --template nuxt --style maia --icon-library hugeicons --font figtree
+npx hui-kit create --template nuxt --style maia --icon-library hugeicons --font figtree
 ```
 
 ### init
@@ -50,7 +50,7 @@ Use the `init` command to initialize dependencies for an existing project.
 The `init` command installs dependencies, adds the `cn` util, configures `tailwind.config.js`, and CSS variables for the project.
 
 ```bash
-npx hui-vue init
+npx hui-kit init
 ```
 
 #### Options
@@ -72,28 +72,28 @@ Use the `add` command to add components to your project.
 The `add` command adds a component to your project and installs all required dependencies.
 
 ```bash
-npx hui-vue add [component]
+npx hui-kit add [component]
 ```
 
 #### Example
 
 ```bash
-npx hui-vue add alert-dialog
+npx hui-kit add alert-dialog
 ```
 
 You can also run the command without any arguments to view a list of all available components:
 
 ```bash
-npx hui-vue add
+npx hui-kit add
 ```
 
 ## Visual Styles
 
-hui-vue supports 5 visual styles that transform how components look:
+hui-kit supports 5 visual styles that transform how components look:
 
 | Style | Description |
 |-------|-------------|
-| **Vega** | The classic hui-vue look. Clean, neutral, and familiar. |
+| **Vega** | The classic hui-kit look. Clean, neutral, and familiar. |
 | **Neva** | Reduced padding and margins for compact layouts. |
 | **Maia** | Soft and rounded, with generous spacing. |
 | **Lyra** | Boxy and sharp. Pairs well with mono fonts. |
@@ -117,4 +117,4 @@ Visit http://localhost:3000 to view the documentation.
 
 ## License
 
-Licensed under the [MIT license](https://github.com/hui-vue/blob/main/LICENSE.md).
+Licensed under the [MIT license](https://github.com/hui-kit/blob/main/LICENSE.md).

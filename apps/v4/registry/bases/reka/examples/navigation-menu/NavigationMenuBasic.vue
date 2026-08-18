@@ -25,7 +25,7 @@ import { Example } from "~/registry/bases/reka/components/example"
                     href="/"
                   >
                     <div class="mb-2 mt-4 text-lg font-medium">
-                      hui-vue
+                      hui-kit
                     </div>
                     <p class="text-sm leading-tight text-muted-foreground">
                       Beautifully designed components built with Radix UI and Tailwind CSS.

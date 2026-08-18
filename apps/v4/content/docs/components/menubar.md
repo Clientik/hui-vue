@@ -33,7 +33,7 @@ description: A menubar component.
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add menubar
+npx hui-kit@latest add menubar
 ```
 
 ::
@@ -49,7 +49,7 @@ npx hui-vue@latest add menubar
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/menubar) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/menubar) into your project.
     ::
 
     ::step

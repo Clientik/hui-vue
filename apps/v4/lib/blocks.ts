@@ -1,4 +1,4 @@
-import { registryItemSchema } from 'hui-vue/schema'
+import { registryItemSchema } from 'hui-kit/schema'
 import { z } from 'zod'
 
 export async function getAllBlockIds(

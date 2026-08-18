@@ -10,7 +10,7 @@ useHead({ htmlAttrs: { class: () => isDark.value ? 'dark' : '' } })
     <header class="border-b py-1 ">
       <div class="container flex justify-between items-center ">
         <h1 class="font-medium">
-          hui-vue Playground
+          hui-kit Playground
         </h1>
 
         <ClientOnly>

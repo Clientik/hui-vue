@@ -274,24 +274,24 @@ export const init = new Command()
   .option('--pointer', 'enable pointer cursor for buttons.')
   .option('--no-pointer', 'disable pointer cursor for buttons.')
   .action(async (components, opts) => {
-    // NOTE: --monorepo is not yet supported in hui-vue since Vue-specific
+    // NOTE: --monorepo is not yet supported in hui-kit since Vue-specific
     // monorepo templates aren't available. We keep the flag for parity so
     // users can discover it and we fail fast with a clear message.
     if (opts.monorepo === true) {
       logger.break()
       logger.warn(
-        'The --monorepo flag is not yet supported in hui-vue.',
+        'The --monorepo flag is not yet supported in hui-kit.',
       )
       process.exit(1)
     }
 
     // NOTE: --rtl is wired through to the config (`rtl: true`) but the
-    // hui-vue component templates don't yet ship with RTL-aware classes.
-    // Users can run `npx hui-vue migrate rtl` after init to transform
+    // hui-kit component templates don't yet ship with RTL-aware classes.
+    // Users can run `npx hui-kit migrate rtl` after init to transform
     // installed components.
     if (opts.rtl === true) {
       logger.info(
-        'RTL support enabled in config. Run `hui-vue migrate rtl` to transform installed components.',
+        'RTL support enabled in config. Run `hui-kit migrate rtl` to transform installed components.',
       )
     }
 

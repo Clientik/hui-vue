@@ -17,7 +17,7 @@ export const buildOptionsSchema = z.object({
 
 export const build = new Command()
   .name('build')
-  .description('build components for a hui-vue registry')
+  .description('build components for a hui-kit registry')
   .argument('[registry]', 'path to registry.json file', './registry.json')
   .option(
     '-o, --output <path>',

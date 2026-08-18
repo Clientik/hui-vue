@@ -259,7 +259,7 @@ importers:
       embla-carousel-vue:
         specifier: ^8.6.0
         version: 8.6.0(vue@3.5.40(typescript@5.9.3))
-      hui-vue:
+      hui-kit:
         specifier: workspace:*
         version: link:../../packages/cli
       nuxt:

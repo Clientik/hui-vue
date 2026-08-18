@@ -33,7 +33,7 @@ description: A dropdown menu with actions.
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add dropdown-menu
+npx hui-kit@latest add dropdown-menu
 ```
 
 ::
@@ -49,7 +49,7 @@ npx hui-vue@latest add dropdown-menu
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/dropdown-menu) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/dropdown-menu) into your project.
     ::
 
     ::step

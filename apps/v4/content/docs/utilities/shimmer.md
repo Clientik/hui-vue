@@ -12,19 +12,19 @@ name: ShimmerDemo
 
 ## Installation
 
-If your project was set up with `npx hui-vue@latest init`, you already have `shimmer`. It ships with the `hui-vue` package, which the CLI imports in your global CSS file.
+If your project was set up with `npx hui-kit@latest init`, you already have `shimmer`. It ships with the `hui-kit` package, which the CLI imports in your global CSS file.
 
-Otherwise, install the `hui-vue` package:
+Otherwise, install the `hui-kit` package:
 
 ```bash
-npm install hui-vue
+npm install hui-kit
 ```
 
 Then import the shared utilities in your global CSS file:
 
 ```css
 @import "tailwindcss";
-@import "hui-vue/tailwind.css";
+@import "hui-kit/tailwind.css";
 ```
 
 

@@ -124,7 +124,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
       {
         name: 'get_add_command_for_items',
         description:
-          'Get the hui-vue CLI add command for specific items in a registry. This is useful for adding one or more components to your project.',
+          'Get the hui-kit CLI add command for specific items in a registry. This is useful for adding one or more components to your project.',
         inputSchema: zodToJsonSchema(
           z.object({
             items: z

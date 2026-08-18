@@ -33,7 +33,7 @@ description: A drawer component.
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add drawer
+npx hui-kit@latest add drawer
 ```
 
 ::
@@ -49,7 +49,7 @@ npx hui-vue@latest add drawer
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/drawer) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/drawer) into your project.
     ::
 
     ::step

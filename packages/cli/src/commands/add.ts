@@ -73,16 +73,16 @@ export const add = new Command()
         ...opts,
       })
 
-      // TODO: Port hui-ui's dry-run / diff / view support to hui-vue.
+      // TODO: Port hui-ui's dry-run / diff / view support to hui-kit.
       // Requires a Vue-aware dry-run pipeline (see upstream
       // `src/utils/dry-run.ts` and `src/utils/dry-run-formatter.ts`).
       if (options.dryRun || options.diff || options.view) {
         logger.break()
         logger.warn(
-          'The --dry-run, --diff and --view options are not yet supported in hui-vue.',
+          'The --dry-run, --diff and --view options are not yet supported in hui-kit.',
         )
         logger.info(
-          'Follow https://github.com/unovue/hui-vue for updates.',
+          'Follow https://github.com/unovue/hui-kit for updates.',
         )
         logger.break()
         process.exit(1)

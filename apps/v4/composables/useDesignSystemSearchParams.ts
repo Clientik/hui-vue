@@ -1,8 +1,8 @@
-import type { PresetConfig } from 'hui-vue/preset'
+import type { PresetConfig } from 'hui-kit/preset'
 import type { WritableComputedRef } from 'vue'
 import type { BaseColorName, BaseName, FontValue, IconLibraryName, MenuAccentValue, MenuColorValue, RadiusValue, StyleName, ThemeName } from '@/registry/config'
 import { useRouteQuery } from '@vueuse/router'
-import { decodePreset, encodePreset } from 'hui-vue/preset'
+import { decodePreset, encodePreset } from 'hui-kit/preset'
 import { computed } from 'vue'
 import { DEFAULT_CONFIG } from '@/registry/config'
 

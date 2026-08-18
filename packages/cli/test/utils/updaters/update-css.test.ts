@@ -4,47 +4,47 @@ import { transformCss } from '../../../src/utils/updaters/update-css'
 describe('transformCss @import dedup', () => {
   it('does not duplicate an import that already exists with matching quotes', async () => {
     const input = `@import "tw-animate-css";
-@import "hui-vue/tailwind.css";
+@import "hui-kit/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
 `
     const css = {
       '@import "tw-animate-css"': {},
-      '@import "hui-vue/tailwind.css"': {},
+      '@import "hui-kit/tailwind.css"': {},
     }
 
     const result = await transformCss(input, css)
 
     expect((result.match(/@import ["']tw-animate-css["']/g) ?? []).length).toBe(1)
     expect(
-      (result.match(/@import ["']hui-vue\/tailwind\.css["']/g) ?? []).length,
+      (result.match(/@import ["']hui-kit\/tailwind\.css["']/g) ?? []).length,
     ).toBe(1)
   })
 
   it('does not duplicate an import when the existing file uses single quotes', async () => {
     // Mirrors the original report: an `apply` run was duplicating
-    // `tw-animate-css` / `hui-vue/tailwind.css` when the project's
+    // `tw-animate-css` / `hui-kit/tailwind.css` when the project's
     // `index.css` had been re-formatted with single quotes (e.g. by
     // Prettier) while the registry emits the same imports with double
     // quotes.
     const input = `@import 'tw-animate-css';
-@import 'hui-vue/tailwind.css';
+@import 'hui-kit/tailwind.css';
 `
     const css = {
       '@import "tw-animate-css"': {},
-      '@import "hui-vue/tailwind.css"': {},
+      '@import "hui-kit/tailwind.css"': {},
     }
 
     const result = await transformCss(input, css)
 
     expect((result.match(/@import ["']tw-animate-css["']/g) ?? []).length).toBe(1)
     expect(
-      (result.match(/@import ["']hui-vue\/tailwind\.css["']/g) ?? []).length,
+      (result.match(/@import ["']hui-kit\/tailwind\.css["']/g) ?? []).length,
     ).toBe(1)
   })
 
   it('adds a new import when not already present', async () => {
-    const input = `@import "hui-vue/tailwind.css";
+    const input = `@import "hui-kit/tailwind.css";
 `
     const css = {
       '@import "tw-animate-css"': {},
@@ -54,7 +54,7 @@ describe('transformCss @import dedup', () => {
 
     expect((result.match(/@import ["']tw-animate-css["']/g) ?? []).length).toBe(1)
     expect(
-      (result.match(/@import ["']hui-vue\/tailwind\.css["']/g) ?? []).length,
+      (result.match(/@import ["']hui-kit\/tailwind\.css["']/g) ?? []).length,
     ).toBe(1)
   })
 })

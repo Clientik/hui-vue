@@ -31,7 +31,7 @@ description: A form input component.
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add input
+npx hui-kit@latest add input
 ```
 
 ::
@@ -39,7 +39,7 @@ npx hui-vue@latest add input
 ::::tabs-content{value="manual"}
   :::steps
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/input) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/input) into your project.
     ::
 
     ::step

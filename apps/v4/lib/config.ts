@@ -1,12 +1,12 @@
 export const siteConfig = {
-  name: 'hui-vue',
+  name: 'hui-kit',
   url: 'http://localhost:3000',
   ogImage: 'http://localhost:3000/og.jpg',
   description:
     'A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.',
   links: {
     twitter: 'https://twitter.com/unovue',
-    github: 'https://github.com/unovue/hui-vue',
+    github: 'https://github.com/unovue/hui-kit',
   },
   navItems: [
     {

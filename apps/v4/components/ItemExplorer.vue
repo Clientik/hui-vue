@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { RegistryItem } from 'hui-vue/schema'
+import type { RegistryItem } from 'hui-kit/schema'
 import type { Base } from '~/registry/bases'
 import { ChevronRightIcon } from '@lucide/vue'
 import { cn } from '@/lib/utils'

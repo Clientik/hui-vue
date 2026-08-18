@@ -34,7 +34,7 @@ previewClass: h-[26rem]
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add aspect-ratio
+npx hui-kit@latest add aspect-ratio
 ```
 
 ::
@@ -50,7 +50,7 @@ npx hui-vue@latest add aspect-ratio
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/aspect-ratio) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/aspect-ratio) into your project.
     ::
 
     ::step

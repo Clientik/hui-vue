@@ -149,10 +149,10 @@ const commands = computed<Record<string, string> | null>(() => {
     return null
   const item = `${selectedRegistry.value.name}/[component]`
   return {
-    pnpm: `pnpm dlx hui-vue@latest add ${item}`,
-    npm: `npx hui-vue@latest add ${item}`,
-    yarn: `yarn dlx hui-vue@latest add ${item}`,
-    bun: `bunx --bun hui-vue@latest add ${item}`,
+    pnpm: `pnpm dlx hui-kit@latest add ${item}`,
+    npm: `npx hui-kit@latest add ${item}`,
+    yarn: `yarn dlx hui-kit@latest add ${item}`,
+    bun: `bunx --bun hui-kit@latest add ${item}`,
   }
 })
 </script>

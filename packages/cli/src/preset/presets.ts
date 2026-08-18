@@ -233,7 +233,7 @@ export function resolveInitUrl(
 }
 
 export async function promptForBase() {
-  // hui-vue currently has a single base ("reka"). This is a no-op prompt
+  // hui-kit currently has a single base ("reka"). This is a no-op prompt
   // kept for parity with hui-ui so the call site code mirrors directly.
   return 'reka' as const
 }

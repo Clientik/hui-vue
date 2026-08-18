@@ -36,7 +36,7 @@ previewClass: h-[27rem] sm:h-[25rem]
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add accordion
+npx hui-kit@latest add accordion
 ```
 
 ::
@@ -52,7 +52,7 @@ npx hui-vue@latest add accordion
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/accordion) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/accordion) into your project.
     ::
 
     ::step

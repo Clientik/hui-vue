@@ -38,7 +38,7 @@ If you're looking for a normal calendar, check out the [Calendar](./calendar.md)
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add range-calendar
+npx hui-kit@latest add range-calendar
 ```
 
 ::
@@ -54,7 +54,7 @@ npx hui-vue@latest add range-calendar
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/range-calendar) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/range-calendar) into your project.
     ::
 
     ::step

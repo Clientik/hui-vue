@@ -1,6 +1,6 @@
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
-import { registriesIndexSchema } from 'hui-vue/schema'
+import { registriesIndexSchema } from 'hui-kit/schema'
 import { registries } from '@/registry/registries'
 import { buildRegistriesIndex } from './lib/registries-index'
 

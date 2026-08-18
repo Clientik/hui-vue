@@ -30,7 +30,7 @@ description: A skeleton component.
 ::tabs-content{value="cli"}
 
 ```bash
-npx hui-vue@latest add skeleton
+npx hui-kit@latest add skeleton
 ```
 
 ::
@@ -38,7 +38,7 @@ npx hui-vue@latest add skeleton
 ::::tabs-content{value="manual"}
   :::steps
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-vue/tree/dev/apps/v4/registry/hui/ui/skeleton) into your project.
+    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/skeleton) into your project.
     ::
 
     ::step
