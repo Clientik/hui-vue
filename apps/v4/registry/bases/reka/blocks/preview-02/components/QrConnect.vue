@@ -13,7 +13,7 @@ import {
 const svgData = ref("")
 
 onMounted(async () => {
-  svgData.value = await QRCode.toString("http://localhost:3000", {
+  svgData.value = await QRCode.toString("https://clientik.github.io/hui-vue", {
     type: "svg",
     margin: 0,
   })

@@ -123,7 +123,7 @@ async function buildRegistry(opts: z.infer<typeof buildOptionsSchema>) {
 
       // Add the schema to the registry item.
       registryItem.$schema
-        = "http://localhost:3000/schema/registry-item.json"
+        = "https://clientik.github.io/hui-vue/schema/registry-item.json"
 
       for (const file of registryItem.files) {
         const absPath = path.resolve(resolvePaths.cwd, file.path)

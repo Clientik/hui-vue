@@ -1,5 +1,5 @@
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "ChartBarHorizontal",
   "dependencies": [
     "@unovis/vue",

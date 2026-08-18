@@ -5,7 +5,7 @@ import prompts from 'prompts'
 import { getRegistryItems } from '@/src/registry/api'
 import { buildUrlAndHeadersForRegistryItem } from '@/src/registry/builder'
 import { configWithDefaults } from '@/src/registry/config'
-import { HUI_VUE_URL } from '@/src/registry/constants'
+import { HUI_KIT_URL } from '@/src/registry/constants'
 import { isUrl } from '@/src/registry/utils'
 import { createConfig } from '@/src/utils/get-config'
 import { highlighter } from '@/src/utils/highlighter'
@@ -131,7 +131,7 @@ export function resolveCreateUrl(
     base: string
   }>,
 ) {
-  const url = new URL(`${HUI_VUE_URL}/create`)
+  const url = new URL(`${HUI_KIT_URL}/create`)
   const { rtl, pointer, ...params } = searchParams ?? {}
 
   for (const [key, value] of Object.entries(params)) {
@@ -229,7 +229,7 @@ export function resolveInitUrl(
   // Signal the server to record this init run.
   params.set('track', '1')
 
-  return `${HUI_VUE_URL}/init?${params.toString()}`
+  return `${HUI_KIT_URL}/init?${params.toString()}`
 }
 
 export async function promptForBase() {
@@ -263,7 +263,7 @@ export async function promptForPreset(options: {
       })),
       {
         title: 'Custom',
-        description: `Build your own at ${highlighter.info(`${HUI_VUE_URL}/create`)}`,
+        description: `Build your own at ${highlighter.info(`${HUI_KIT_URL}/create`)}`,
         value: 'custom',
       },
     ],
@@ -392,7 +392,7 @@ function isHuiVueInitUrl(url: string) {
   if (!isUrl(url))
     return false
   const parsed = new URL(url)
-  const trusted = new URL(HUI_VUE_URL)
+  const trusted = new URL(HUI_KIT_URL)
   return parsed.origin === trusted.origin && parsed.pathname === '/init'
 }
 

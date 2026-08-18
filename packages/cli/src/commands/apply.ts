@@ -11,7 +11,7 @@ import {
   resolveInitUrl,
   resolveRegistryBaseConfig,
 } from '@/src/preset/presets'
-import { BASES, HUI_VUE_URL } from '@/src/registry/constants'
+import { BASES, HUI_KIT_URL } from '@/src/registry/constants'
 import { clearRegistryContext } from '@/src/registry/context'
 import { isUrl } from '@/src/registry/utils'
 import { loadEnvFiles } from '@/src/utils/env-loader'
@@ -299,7 +299,7 @@ export function resolveApplyInitUrl(
     // Record an init run for first-party hui-kit /init URLs only.
     if (
       url.pathname === '/init'
-      && presetArg.startsWith(HUI_VUE_URL)
+      && presetArg.startsWith(HUI_KIT_URL)
     ) {
       url.searchParams.set('track', '1')
     }

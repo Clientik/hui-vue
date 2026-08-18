@@ -12,7 +12,7 @@
 # Prerequisites:
 #   - Start the web dev server first in a separate terminal:
 #       cd apps/v4 && pnpm dev
-#     Wait for "Local: http://localhost:3000/".
+#     Wait for "Local: https://clientik.github.io/hui-vue/".
 #   - Build the CLI before running this script:
 #       cd packages/cli && pnpm build
 #
@@ -34,8 +34,8 @@ if [[ ! -f "$CLI_BIN" ]]; then
   exit 1
 fi
 
-if ! curl -fsS -o /dev/null "http://localhost:3000/init?preset=$PRESET&track=0"; then
-  echo "error: http://localhost:3000/init is not reachable." >&2
+if ! curl -fsS -o /dev/null "https://clientik.github.io/hui-vue/init?preset=$PRESET&track=0"; then
+  echo "error: https://clientik.github.io/hui-vue/init is not reachable." >&2
   echo "       Start the web dev server: (cd apps/v4 && pnpm dev)" >&2
   exit 1
 fi
@@ -66,8 +66,8 @@ echo "→ Running: node dist/index.js init --preset $PRESET --template vite --ye
 INIT_STATUS=0
 (
   cd "$WORK_DIR" && \
-  HUI_VUE_URL=http://localhost:3000 \
-  REGISTRY_URL=http://localhost:3000/r \
+  HUI_KIT_URL=https://clientik.github.io/hui-vue \
+  REGISTRY_URL=https://clientik.github.io/hui-vue/r \
   node "$CLI_BIN" init --preset "$PRESET" --template vite --yes
 ) || INIT_STATUS=$?
 

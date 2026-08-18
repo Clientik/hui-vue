@@ -32,7 +32,7 @@ import { runHuiVueCli } from './run-formatters'
 
 const SOURCE_BASE = 'reka'
 const REGISTRY_NAME = 'hui-kit'
-const REGISTRY_HOMEPAGE = 'http://localhost:3000'
+const REGISTRY_HOMEPAGE = 'https://clientik.github.io/hui-vue'
 const PUBLIC_OUTPUT_BASE = 'public/r/styles'
 
 interface RegistryFile {

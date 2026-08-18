@@ -1,5 +1,13 @@
 import tailwindcss from '@tailwindcss/vite'
 
+/**
+ * GitHub Pages serves static files only, so the Pages build differs from the
+ * Cloudflare one in three ways that cannot be expressed with env vars alone:
+ * no D1 binding for @nuxt/content, a different Nitro preset, and a base URL of
+ * /<repo>/ because project pages are not served from the domain root.
+ */
+const isPages = process.env.DEPLOY_TARGET === 'github-pages'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-05',
@@ -24,10 +32,8 @@ export default defineNuxtConfig({
         highlight: false,
       },
     },
-    database: {
-      type: 'd1',
-      bindingName: 'DB',
-    },
+    // D1 is a Cloudflare binding; a static build has no runtime to bind it to.
+    ...(isPages ? {} : { database: { type: 'd1', bindingName: 'DB' } }),
     // required to prevent error related to better-sqlite3 during build and deploy
     experimental: {
       sqliteConnector: 'native',
@@ -100,7 +106,7 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    preset: 'cloudflare-module',
+    preset: isPages ? 'github-pages' : 'cloudflare-module',
     compressPublicAssets: true,
     prerender: {
       crawlLinks: true,
@@ -108,31 +114,36 @@ export default defineNuxtConfig({
       failOnError: false,
       autoSubfolderIndex: false,
     },
-    cloudflare: {
-      deployConfig: true,
-      nodeCompat: true,
-      wrangler: {
-        name: 'hui-kit-nuxt',
-        d1_databases: [
-          {
-            binding: 'DB',
-            database_id: '4c26cb33-9277-4c9b-8433-42f0a6e84b69',
+    ...(isPages
+      ? {}
+      : { cloudflare: {
+          deployConfig: true,
+          nodeCompat: true,
+          wrangler: {
+            name: 'hui-kit-nuxt',
+            d1_databases: [
+              {
+                binding: 'DB',
+                database_id: '4c26cb33-9277-4c9b-8433-42f0a6e84b69',
+              },
+            ],
+            observability: {
+              logs: {
+                enabled: true,
+                head_sampling_rate: 1,
+                invocation_logs: true,
+              },
+            },
           },
-        ],
-        observability: {
-          logs: {
-            enabled: true,
-            head_sampling_rate: 1,
-            invocation_logs: true,
-          },
-        },
-      },
-    },
+        } }),
     serverAssets: [
       { baseName: 'blocks', dir: '../registry/hui/blocks' },
     ],
   },
   app: {
+    // Project pages live at https://<user>.github.io/<repo>/, so every asset and
+    // link has to be prefixed or the deployed site loads nothing.
+    baseURL: isPages ? '/hui-vue/' : '/',
     head: {
       link: [
         { rel: 'manifest', href: '/site.webmanifest' },

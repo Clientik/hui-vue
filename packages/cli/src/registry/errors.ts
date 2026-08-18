@@ -243,7 +243,7 @@ export class RegistryValidationError extends RegistryError {
       context: { registryFile: options.registryFile, ...options.context },
       suggestion:
         options.suggestion
-        ?? "Update the registry so it matches the registry schema. See http://localhost:3000/schema/registry.json.",
+        ?? "Update the registry so it matches the registry schema. See https://clientik.github.io/hui-vue/schema/registry.json.",
     })
     this.name = "RegistryValidationError"
   }
@@ -290,7 +290,7 @@ export class RegistryParseError extends RegistryError {
       cause: parseError,
       context: { item },
       suggestion:
-        "The registry item may be corrupted or have an invalid format. Please make sure it returns a valid JSON object. See http://localhost:3000/schema/registry-item.json.",
+        "The registry item may be corrupted or have an invalid format. Please make sure it returns a valid JSON object. See https://clientik.github.io/hui-vue/schema/registry-item.json.",
     })
 
     this.parseError = parseError

@@ -113,7 +113,7 @@ Presets are pre-configured combinations of style, icons, and fonts:
 
 ## Documentation
 
-Visit http://localhost:3000 to view the documentation.
+Visit https://clientik.github.io/hui-vue to view the documentation.
 
 ## License
 

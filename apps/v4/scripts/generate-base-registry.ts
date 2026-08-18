@@ -51,7 +51,7 @@ ${imports.join('\n')}
 
 export const registry = {
   name: "${base.name}",
-  homepage: "http://localhost:3000",
+  homepage: "https://clientik.github.io/hui-vue",
   items: z
     .array(registryItemSchema)
     .parse([

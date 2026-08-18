@@ -1,11 +1,11 @@
 import type { z } from "zod"
 import type { registryConfigSchema } from "@/src/schema"
 
-export const HUI_VUE_URL
-  = process.env.HUI_VUE_URL ?? "http://localhost:3000"
+export const HUI_KIT_URL
+  = process.env.HUI_KIT_URL ?? "https://clientik.github.io/hui-vue"
 
 export const REGISTRY_URL
-  = process.env.REGISTRY_URL ?? `${HUI_VUE_URL}/r`
+  = process.env.REGISTRY_URL ?? `${HUI_KIT_URL}/r`
 
 export const FALLBACK_STYLE = "hui"
 

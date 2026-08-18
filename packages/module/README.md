@@ -18,7 +18,7 @@ Hui Vue module for Nuxt.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
 <!-- - [🏀 Online playground](https://stackblitz.com/github/unovue/hui-kit?file=playground%2Fapp.vue) -->
-- [📖 &nbsp;Documentation](http://localhost:3000/docs/installation/nuxt.html)
+- [📖 &nbsp;Documentation](https://clientik.github.io/hui-vue/docs/installation/nuxt.html)
 
 ## Features
 

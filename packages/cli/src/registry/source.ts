@@ -11,7 +11,7 @@ import { isUrl } from "@/src/registry/utils"
 import { registryItemSchema, registrySchema } from "@/src/schema"
 
 const REGISTRY_ITEM_SCHEMA_URL
-  = "http://localhost:3000/schema/registry-item.json"
+  = "https://clientik.github.io/hui-vue/schema/registry-item.json"
 
 // A registry item can declare dozens of files. Reading them all at once is a
 // good way to get rate limited by a remote source, so cap the fan-out.
@@ -260,7 +260,7 @@ function parseRegistry(content: string, registryFile: string) {
         registryFile,
         cause: result.error,
         suggestion:
-          "Update the registry.json file so it matches the registry schema. See http://localhost:3000/schema/registry.json.",
+          "Update the registry.json file so it matches the registry schema. See https://clientik.github.io/hui-vue/schema/registry.json.",
       },
     )
   }

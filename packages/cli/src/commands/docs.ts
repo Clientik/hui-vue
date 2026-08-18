@@ -2,7 +2,7 @@ import { Command } from 'commander'
 import consola from 'consola'
 import path from 'pathe'
 import { getHuiRegistryIndex } from '@/src/registry/api'
-import { HUI_VUE_URL } from '@/src/registry/constants'
+import { HUI_KIT_URL } from '@/src/registry/constants'
 import { getConfig } from '@/src/utils/get-config'
 import { handleError } from '@/src/utils/handle-error'
 import { highlighter } from '@/src/utils/highlighter'
@@ -67,7 +67,7 @@ export const docs = new Command()
           links = metaLinks
         }
         else {
-          const fallbackUrl = `${HUI_VUE_URL}/docs/components/${component}`
+          const fallbackUrl = `${HUI_KIT_URL}/docs/components/${component}`
           links = { docs: fallbackUrl }
         }
 

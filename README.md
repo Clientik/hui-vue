@@ -6,7 +6,7 @@ A set of beautifully designed components that you can customize, extend, and bui
 
 ## Documentation
 
-Visit http://localhost:3000/docs to view the documentation.
+Visit https://clientik.github.io/hui-vue/docs to view the documentation.
 
 ## Contributing
 

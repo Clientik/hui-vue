@@ -30,7 +30,7 @@ const NEW_YORK_V4_STYLE = {
 
 export const registry = {
   name: "hui-kit",
-  homepage: "http://localhost:3000",
+  homepage: "https://clientik.github.io/hui-vue",
   items: z.array(registryItemSchema).parse(
     [
       {

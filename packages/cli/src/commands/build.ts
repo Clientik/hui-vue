@@ -57,7 +57,7 @@ export const build = new Command()
 
         // Add the schema to the registry item.
         registryItem.$schema
-          = 'http://localhost:3000/schema/registry-item.json'
+          = 'https://clientik.github.io/hui-vue/schema/registry-item.json'
 
         // Loop through each file in the files array.
         for (const file of registryItem.files ?? []) {

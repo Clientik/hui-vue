@@ -9,7 +9,7 @@ import { ui } from "@/registry/hui/ui/_registry"
 
 export const registry = {
   name: "hui",
-  homepage: "http://localhost:3000",
+  homepage: "https://clientik.github.io/hui-vue",
   items: z
     .array(registryItemSchema)
     .parse([

@@ -16,7 +16,7 @@ const FILES_NEEDING_MANUAL_REVIEW = [
   'Calendar.vue',
 ]
 
-const RTL_DOCS_URL = 'http://localhost:3000/docs/rtl'
+const RTL_DOCS_URL = 'https://clientik.github.io/hui-vue/docs/rtl'
 
 // Per-file RTL transform. Exported for unit testing.
 // Runs ONLY the rtl plugin (not the full transformers/index.ts pipeline)

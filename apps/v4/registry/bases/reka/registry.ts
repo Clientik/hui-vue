@@ -10,7 +10,7 @@ import { fonts } from "@/registry/fonts"
 
 export const registry = {
   name: "reka",
-  homepage: "http://localhost:3000",
+  homepage: "https://clientik.github.io/hui-vue",
   items: z
     .array(registryItemSchema)
     .parse([

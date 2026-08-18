@@ -79,7 +79,7 @@ npx hui-kit@latest apply --preset nova
 npx hui-kit@latest init --preset nova --force --no-reinstall
 
 # Use a custom theme URL.
-npx hui-kit@latest apply --preset "http://localhost:3000/init?base=reka&style=nova&..."
+npx hui-kit@latest apply --preset "https://clientik.github.io/hui-vue/init?base=reka&style=nova&..."
 ```
 
 Or edit CSS variables directly in `globals.css`.

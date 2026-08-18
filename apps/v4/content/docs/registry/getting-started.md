@@ -23,7 +23,7 @@ Create a `registry.json` file in the root of your project. Your project can be a
 
 ```json showLineNumbers title="registry.json"
 {
-  "$schema": "http://localhost:3000/schema/registry.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry.json",
   "name": "acme",
   "homepage": "https://acme.com",
   "items": [
@@ -90,7 +90,7 @@ To add your component to the registry, you need to add your component definition
 
 ```json showLineNumbers title="registry.json"  {6-17}
 {
-  "$schema": "http://localhost:3000/schema/registry.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry.json",
   "name": "acme",
   "homepage": "https://acme.com",
   "items": [
@@ -168,7 +168,7 @@ If you're running your registry on Nuxt, you can now serve your registry by runn
 npm run dev
 ```
 
-Your files will now be served at `http://localhost:3000/r/[NAME].json` eg. `http://localhost:3000/r/hello-world.json`.
+Your files will now be served at `https://clientik.github.io/hui-vue/r/[NAME].json` eg. `https://clientik.github.io/hui-vue/r/hello-world.json`.
 
 ## Publish your registry
 
@@ -178,7 +178,7 @@ To make your registry available to other developers, you can publish it by deplo
 
 The `hui-kit` CLI does not offer a built-in way to add auth to your registry. We recommend handling authorization on your registry server.
 
-A common simple approach is to use a `token` query parameter to authenticate requests to your registry. e.g. `http://localhost:3000/r/hello-world.json?token=[SECURE_TOKEN_HERE]`.
+A common simple approach is to use a `token` query parameter to authenticate requests to your registry. e.g. `https://clientik.github.io/hui-vue/r/hello-world.json?token=[SECURE_TOKEN_HERE]`.
 
 Use the secure token to authenticate requests and return a 401 Unauthorized response if the token is invalid. Both the `hui` CLI and `Open in v0` will handle the 401 response and display a message to the user.
 
@@ -192,7 +192,7 @@ Here are some guidelines to follow when building components for a registry.
 
 - Place your registry item in the `registry/[STYLE]/[NAME]` directory. I'm using `new-york` as an example. It can be anything you want as long as it's nested under the `registry` directory.
 - The following properties are required for the block definition: `name`, `description`, `type` and `files`.
-- Make sure to list all registry dependencies in `registryDependencies`. A registry dependency is the name of the component in the registry eg. `input`, `button`, `card`, etc or a URL to a registry item eg. `http://localhost:3000/r/editor.json`.
+- Make sure to list all registry dependencies in `registryDependencies`. A registry dependency is the name of the component in the registry eg. `input`, `button`, `card`, etc or a URL to a registry item eg. `https://clientik.github.io/hui-vue/r/editor.json`.
 - Make sure to list all dependencies in `dependencies`. A dependency is the name of the package in the registry eg. `zod`, `sonner`, etc. To set a version, you can use the `name@version` format eg. `zod@^3.20.0`.
 - **Imports should always use the `@/registry` path.** eg. `import { HelloWorld } from "@/registry/new-york/hello-world/hello-world"`
 - Ideally, place your files within a registry item in `components`, `hooks`, `lib` directories.
@@ -202,7 +202,7 @@ Here are some guidelines to follow when building components for a registry.
 To install a registry item using the `hui-kit` CLI, use the `add` command followed by the URL of the registry item.
 
 ```bash
-npx hui-kit@latest add http://localhost:3000/r/hello-world.json
+npx hui-kit@latest add https://clientik.github.io/hui-vue/r/hello-world.json
 ```
 
 ## Install from GitHub

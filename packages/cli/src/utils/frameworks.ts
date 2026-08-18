@@ -3,7 +3,7 @@ export const FRAMEWORKS = {
     name: 'vite',
     label: 'Vite',
     links: {
-      installation: 'http://localhost:3000/docs/installation/vite',
+      installation: 'https://clientik.github.io/hui-vue/docs/installation/vite',
       tailwind: 'https://tailwindcss.com/docs/guides/vite',
     },
   },
@@ -11,7 +11,7 @@ export const FRAMEWORKS = {
     name: 'nuxt3',
     label: 'Nuxt 3',
     links: {
-      installation: 'http://localhost:3000/docs/installation/nuxt',
+      installation: 'https://clientik.github.io/hui-vue/docs/installation/nuxt',
       tailwind: 'https://tailwindcss.com/docs/guides/nuxtjs',
     },
   },
@@ -19,7 +19,7 @@ export const FRAMEWORKS = {
     name: 'nuxt4',
     label: 'Nuxt 4',
     links: {
-      installation: 'http://localhost:3000/docs/installation/nuxt',
+      installation: 'https://clientik.github.io/hui-vue/docs/installation/nuxt',
       tailwind: 'https://tailwindcss.com/docs/guides/nuxtjs',
     },
   },
@@ -27,7 +27,7 @@ export const FRAMEWORKS = {
     name: 'astro',
     label: 'Astro',
     links: {
-      installation: 'http://localhost:3000/docs/installation/astro',
+      installation: 'https://clientik.github.io/hui-vue/docs/installation/astro',
       tailwind: 'https://tailwindcss.com/docs/guides/astro',
     },
   },
@@ -35,7 +35,7 @@ export const FRAMEWORKS = {
     name: 'laravel',
     label: 'Laravel',
     links: {
-      installation: 'http://localhost:3000/docs/installation/laravel',
+      installation: 'https://clientik.github.io/hui-vue/docs/installation/laravel',
       tailwind: 'https://tailwindcss.com/docs/guides/laravel',
     },
   },
@@ -43,7 +43,7 @@ export const FRAMEWORKS = {
     name: 'manual',
     label: 'Manual',
     links: {
-      installation: 'http://localhost:3000/docs/installation/manual',
+      installation: 'https://clientik.github.io/hui-vue/docs/installation/manual',
       tailwind: 'https://tailwindcss.com/docs/installation',
     },
   },
@@ -51,7 +51,7 @@ export const FRAMEWORKS = {
     name: 'inertia',
     label: 'Inertia',
     links: {
-      installation: 'http://localhost:3000/docs/installation/manual',
+      installation: 'https://clientik.github.io/hui-vue/docs/installation/manual',
       tailwind: 'https://tailwindcss.com/docs/installation',
     },
   },

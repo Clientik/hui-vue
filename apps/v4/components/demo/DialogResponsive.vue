@@ -69,7 +69,7 @@ const open = ref(false)
           </Label>
           <Input
             id="link"
-            default-value="http://localhost:3000/docs/installation"
+            default-value="https://clientik.github.io/hui-vue/docs/installation"
             read-only
           />
         </div>

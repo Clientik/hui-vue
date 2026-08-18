@@ -135,7 +135,7 @@ If you have a request for a new component, please open a discussion on GitHub. W
 
 ## CLI
 
-The `hui-kit` package is a CLI for adding components to your project. You can find the documentation for the CLI [here](http://localhost:3000/docs/cli).
+The `hui-kit` package is a CLI for adding components to your project. You can find the documentation for the CLI [here](https://clientik.github.io/hui-vue/docs/cli).
 
 Any changes to the CLI should be made in the `packages/cli` directory. If you can, it would be great if you could add tests for your changes.
 

@@ -17,7 +17,7 @@ The following registry item is a custom style that extends hui-kit. On `npx hui-
 
 ```json showLineNumbers title="example-style.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "example-style",
   "type": "registry:style",
   "dependencies": ["@iconify/vue"],
@@ -55,7 +55,7 @@ On `npx hui-kit add`, the following will:
 
 ```json showLineNumbers title="example-style.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "extends": "none",
   "name": "new-style",
   "type": "registry:style",
@@ -95,7 +95,7 @@ On `npx hui-kit add`, the following will:
 
 ```json showLineNumbers title="example-theme.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "custom-theme",
   "type": "registry:theme",
   "cssVars": {
@@ -129,7 +129,7 @@ The following style will init using hui-kit defaults and then add a custom `bran
 
 ```json showLineNumbers title="example-style.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "custom-style",
   "type": "registry:style",
   "cssVars": {
@@ -151,7 +151,7 @@ This blocks installs the `Login01` block from the hui-kit registry.
 
 ```json showLineNumbers title="Login01.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "Login01",
   "type": "registry:block",
   "description": "A simple login form.",
@@ -183,7 +183,7 @@ On `npx hui-kit add`, the following will:
 
 ```json showLineNumbers title="example-style.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "custom-login",
   "type": "registry:block",
   "registryDependencies": [
@@ -203,7 +203,7 @@ Add custom theme variables to the `theme` object.
 
 ```json showLineNumbers title="example-theme.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "custom-theme",
   "type": "registry:theme",
   "cssVars": {
@@ -219,7 +219,7 @@ Add custom theme variables to the `theme` object.
 
 ```json showLineNumbers title="example-theme.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "custom-theme",
   "type": "registry:theme",
   "cssVars": {
@@ -241,7 +241,7 @@ Add custom theme variables to the `theme` object.
 
 ```json showLineNumbers title="example-base.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "custom-style",
   "type": "registry:style",
   "css": {
@@ -261,7 +261,7 @@ Add custom theme variables to the `theme` object.
 
 ```json showLineNumbers title="example-card.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "custom-card",
   "type": "registry:component",
   "css": {
@@ -283,7 +283,7 @@ Add custom theme variables to the `theme` object.
 
 ```json showLineNumbers title="example-component.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "custom-component",
   "type": "registry:component",
   "css": {
@@ -298,7 +298,7 @@ Add custom theme variables to the `theme` object.
 
 ```json showLineNumbers title="example-utility.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "custom-component",
   "type": "registry:component",
   "css": {
@@ -317,7 +317,7 @@ Add custom theme variables to the `theme` object.
 
 ```json showLineNumbers title="example-functional.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "custom-component",
   "type": "registry:component",
   "css": {
@@ -334,7 +334,7 @@ Note: you need to define both `@keyframes` in css and `theme` in cssVars to use 
 
 ```json showLineNumbers title="example-component.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "custom-component",
   "type": "registry:component",
   "cssVars": {

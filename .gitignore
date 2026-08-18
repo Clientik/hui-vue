@@ -39,3 +39,7 @@ vite.config.ts.timestamp*
 **/temp.json
 
 .claude/*
+
+# Nuxt build output
+.output
+.nuxt

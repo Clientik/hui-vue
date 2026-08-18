@@ -1,5 +1,5 @@
 {
-  "$schema": "http://localhost:3000/schema.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema.json",
   "style": "default",
   "typescript": true,
   "tsConfigPath": ".nuxt/tsconfig.json",

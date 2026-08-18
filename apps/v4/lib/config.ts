@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'hui-kit',
-  url: 'http://localhost:3000',
-  ogImage: 'http://localhost:3000/og.jpg',
+  url: 'https://clientik.github.io/hui-vue',
+  ogImage: 'https://clientik.github.io/hui-vue/og.jpg',
   description:
     'A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.',
   links: {

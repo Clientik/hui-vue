@@ -115,11 +115,11 @@ Example output for `npx hui-kit@latest docs input button`:
 
 ```text
 input
-  docs      http://localhost:3000/docs/components/input
+  docs      https://clientik.github.io/hui-vue/docs/components/input
   examples  https://raw.githubusercontent.com/.../examples/InputExample.vue
 
 button
-  docs      http://localhost:3000/docs/components/button
+  docs      https://clientik.github.io/hui-vue/docs/components/button
   examples  https://raw.githubusercontent.com/.../examples/ButtonExample.vue
 ```
 
@@ -209,7 +209,7 @@ Three ways to specify a preset via `--preset`:
 
 1. **Named:** `--preset nova` or `--preset lyra`
 2. **Code:** `--preset a2r6bw` (version-prefixed base62 string, e.g. `a2r6bw`)
-3. **URL:** `--preset "http://localhost:3000/init?base=reka&style=nova&..."`
+3. **URL:** `--preset "https://clientik.github.io/hui-vue/init?base=reka&style=nova&..."`
 
 > **IMPORTANT:** Never try to decode, fetch, or resolve preset codes manually. Preset codes are opaque — pass them directly to `npx hui-kit@latest init --preset <code>` and let the CLI handle resolution.
 > Use `npx hui-kit@latest apply --preset <code>` when overwriting an existing project's preset.

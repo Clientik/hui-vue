@@ -11,7 +11,7 @@ Here's an example of a complex component that installs a page, two components, a
 
 ```json showLineNumbers
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "hello-world",
   "title": "Hello World",
   "type": "registry:block",
@@ -53,7 +53,7 @@ To add a new color you need to add it to `cssVars` and `tailwind.config.theme.ex
 
 ```json showLineNumbers  {10-19} {24-29}
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "hello-world",
   "title": "Hello World",
   "type": "registry:block",
@@ -96,7 +96,7 @@ To add a new animation you add it to `tailwind.config.theme.extend.animation` an
 
 ```json showLineNumbers  {14-22}
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "hello-world",
   "title": "Hello World",
   "type": "registry:block",

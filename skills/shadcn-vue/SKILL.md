@@ -219,7 +219,7 @@ npx hui-kit@latest view @hui/button
 
 **Named presets:** `nova`, `vega`, `maia`, `lyra`, `mira`, `luma`
 **Templates:** `nuxt`, `vite`, `astro` and `laravel`
-**Preset codes:** Version-prefixed base62 strings (e.g. `a2r6bw`), from [localhost:3000](http://localhost:3000).
+**Preset codes:** Version-prefixed base62 strings (e.g. `a2r6bw`), from [localhost:3000](https://clientik.github.io/hui-vue).
 
 ## Detailed References
 

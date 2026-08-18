@@ -801,7 +801,7 @@ async function promptForConfig(defaultConfig: Config | null = null, opts?: z.inf
   }
 
   return rawConfigSchema.parse({
-    $schema: 'http://localhost:3000/schema.json',
+    $schema: 'https://clientik.github.io/hui-vue/schema.json',
     style: composeStyleId(base, style),
     font,
     iconLibrary,

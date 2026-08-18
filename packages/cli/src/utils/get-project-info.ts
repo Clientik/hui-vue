@@ -334,7 +334,7 @@ export async function getProjectConfig(
   }
 
   const config: z.infer<typeof rawConfigSchema> = {
-    $schema: 'http://localhost:3000/schema.json',
+    $schema: 'https://clientik.github.io/hui-vue/schema.json',
     // rsc: projectInfo.isRSC,
     // tsx: projectInfo.isTsx,
     typescript: projectInfo.typescript,

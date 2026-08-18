@@ -7,7 +7,7 @@ The `registry-item.json` schema is used to define your custom registry items.
 
 ```json showLineNumbers title="registry-item.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "hello-world",
   "type": "registry:block",
   "title": "Hello World",
@@ -27,7 +27,7 @@ The `registry-item.json` schema is used to define your custom registry items.
 
 ## Definitions
 
-You can see the JSON Schema for `registry-item.json` [here](http://localhost:3000/schema/registry-item.json).
+You can see the JSON Schema for `registry-item.json` [here](https://clientik.github.io/hui-vue/schema/registry-item.json).
 
 ### $schema
 
@@ -35,7 +35,7 @@ The `$schema` property is used to specify the schema for the `registry-item.json
 
 ```json showLineNumbers title="registry-item.json"
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json"
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json"
 }
 ```
 

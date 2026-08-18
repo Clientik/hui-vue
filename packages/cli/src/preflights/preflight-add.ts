@@ -53,7 +53,7 @@ export async function preFlightAdd(options: z.infer<typeof addOptionsSchema>) {
     )
     logger.error(
       `Learn more at ${highlighter.info(
-        'http://localhost:3000/docs/components-json',
+        'https://clientik.github.io/hui-vue/docs/components-json',
       )}.`,
     )
     logger.break()

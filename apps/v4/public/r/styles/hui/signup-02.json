@@ -1,5 +1,5 @@
 {
-  "$schema": "http://localhost:3000/schema/registry-item.json",
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "signup-02",
   "description": "A two column signup page with a cover image.",
   "registryDependencies": [
