@@ -91,6 +91,7 @@
    product accent (#b1fc13) with lightness stepped around it. */
 @theme static {
   --color-graphite-0: #ffffff;
+  --color-graphite-100: #f5f5f5;
   --color-graphite-300: #cdcdcd;
   --color-graphite-450: #828282;
   --color-graphite-600: #575757;
@@ -165,19 +166,19 @@
 
 .dark {
   --background: var(--color-graphite-960);
-  --foreground: var(--color-graphite-300);
+  --foreground: var(--color-graphite-100);
   --card: var(--color-graphite-900);
-  --card-foreground: var(--color-graphite-300);
+  --card-foreground: var(--color-graphite-100);
   --popover: var(--color-graphite-900);
-  --popover-foreground: var(--color-graphite-300);
+  --popover-foreground: var(--color-graphite-100);
   --primary: var(--color-brand-400);
   --primary-foreground: var(--color-graphite-1000);
   --secondary: var(--color-graphite-860);
-  --secondary-foreground: var(--color-graphite-300);
+  --secondary-foreground: var(--color-graphite-100);
   --muted: var(--color-graphite-860);
   --muted-foreground: var(--color-graphite-450);
   --accent: var(--color-graphite-825);
-  --accent-foreground: var(--color-graphite-300);
+  --accent-foreground: var(--color-graphite-100);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.58 0.22 27);
   /* Borders sit one rung above the card so they separate without a visible line. */
@@ -190,7 +191,7 @@
   --chart-4: var(--color-brand-700);
   --chart-5: var(--color-brand-900);
   --sidebar: var(--color-graphite-960);
-  --sidebar-foreground: var(--color-graphite-300);
+  --sidebar-foreground: var(--color-graphite-100);
   --sidebar-primary: var(--color-brand-400);
   --sidebar-primary-foreground: var(--color-graphite-1000);
   --sidebar-accent: var(--color-graphite-825);
