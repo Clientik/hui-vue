@@ -19,15 +19,14 @@ useSeoMeta({
 <template>
   <div class="flex flex-1 flex-col">
     <PageHeader class="md:**:[.container]:pb-8 lg:**:[.container]:pb-12">
-      <Announcement />
       <PageHeaderHeading class="max-w-4xl">
         {{ title }}
       </PageHeaderHeading>
       <PageHeaderDescription>{{ description }}</PageHeaderDescription>
       <PageActions>
         <Button as-child size="sm" class="h-[31px] rounded-lg">
-          <NuxtLink href="/create">
-            Build Your Own <IconArrowRight data-icon="inline-end" />
+          <NuxtLink href="/docs/components">
+            Browse Components <IconArrowRight data-icon="inline-end" />
           </NuxtLink>
         </Button>
       </PageActions>

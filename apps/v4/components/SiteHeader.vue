@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import { PlusSignIcon } from '@hugeicons/core-free-icons'
-import { HugeiconsIcon } from '@hugeicons/vue'
 import { siteConfig } from '@/lib/config'
 import { Separator } from '@/registry/hui/ui/separator'
-import { Button } from '@/styles/reka-neva/ui/button'
 import { getColors } from '~/lib/colors'
 
 const { data } = await useNavigation()
@@ -32,16 +29,6 @@ const docData = computed(() => data.value!.find(i => i.stem === 'docs')!)
           <Separator orientation="vertical" />
           <ModeSwitcher />
           <!-- <DesignerActions /> -->
-
-          <div class="flex items-center gap-2 group-has-data-[slot=designer]/layout:hidden">
-            <Separator orientation="vertical" />
-            <Button as-child size="sm" class="h-[31px] rounded-lg">
-              <NuxtLink href="/create">
-                <HugeiconsIcon :icon="PlusSignIcon" />
-                New
-              </NuxtLink>
-            </Button>
-          </div>
         </div>
       </div>
     </div>

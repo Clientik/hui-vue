@@ -94,8 +94,13 @@
   --color-graphite-0: #ffffff;
   --color-graphite-100: #f5f5f5;
   --color-graphite-300: #cdcdcd;
+  --color-graphite-400: #9b9b9b;
   --color-graphite-450: #828282;
+  --color-graphite-550: #666666;
   --color-graphite-600: #575757;
+  --color-graphite-700: #454545;
+  --color-graphite-720: #414141;
+  --color-graphite-780: #323232;
   --color-graphite-800: #262626;
   --color-graphite-825: #232323;
   --color-graphite-860: #1f1f1f;
@@ -175,32 +180,35 @@
   --popover-foreground: var(--color-graphite-100);
   --primary: var(--color-brand-400);
   --primary-foreground: var(--color-graphite-1000);
-  --secondary: var(--color-graphite-860);
+  --secondary: var(--color-graphite-700);
   --secondary-foreground: var(--color-graphite-100);
-  --muted: var(--color-graphite-860);
-  --muted-foreground: var(--color-graphite-450);
+  --muted: var(--color-graphite-780);
+  --muted-foreground: var(--color-graphite-400);
   --foreground-tertiary: var(--color-graphite-600);
-  --accent: var(--color-graphite-825);
+  --accent: var(--color-graphite-780);
   --accent-foreground: var(--color-graphite-100);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.58 0.22 27);
-  /* Borders sit one rung above the card so they separate without a visible line. */
-  --border: var(--color-graphite-860);
-  --input: var(--color-graphite-860);
-  --ring: var(--color-graphite-600);
+  /* Contrast targets, measured against --card (#1b1b1b):
+     --border 1.7:1 for dividers, --input 3:1 because a control's boundary
+     has to clear WCAG 1.4.11, --ring the same so focus stays visible. */
+  --border: var(--color-graphite-720);
+  --input: var(--color-graphite-550);
+  --ring: var(--color-graphite-550);
   --chart-1: var(--color-brand-300);
   --chart-2: var(--color-brand-400);
   --chart-3: var(--color-brand-500);
   --chart-4: var(--color-brand-700);
   --chart-5: var(--color-brand-900);
-  --sidebar: var(--color-graphite-960);
+  /* One rung above the page so a rail or sidebar reads as its own surface. */
+  --sidebar: var(--color-graphite-930);
   --sidebar-foreground: var(--color-graphite-100);
   --sidebar-primary: var(--color-brand-400);
   --sidebar-primary-foreground: var(--color-graphite-1000);
-  --sidebar-accent: var(--color-graphite-825);
+  --sidebar-accent: var(--color-graphite-780);
   --sidebar-accent-foreground: var(--color-graphite-300);
-  --sidebar-border: var(--color-graphite-860);
-  --sidebar-ring: var(--color-graphite-600);
+  --sidebar-border: var(--color-graphite-720);
+  --sidebar-ring: var(--color-graphite-550);
   --surface: var(--color-graphite-940);
   --surface-foreground: var(--color-graphite-450);
   --code: var(--surface);
