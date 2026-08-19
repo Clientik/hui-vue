@@ -1,10 +1,6 @@
 packages:
   - apps/*
   - packages/*
-  # The Nuxt module's playground is a project of its own: pnpm already
-  # installs it, and listing it here is what lets it use the catalog and
-  # link the module by workspace protocol instead of a pinned version.
-  - packages/module/playground
 
 catalog:
   '@internationalized/date': ^3.12.2
@@ -23,7 +19,7 @@ catalog:
   class-variance-authority: ^0.7.1
   clsx: ^2.1.1
   date-fns: ^4.4.0
-  embla-carousel-vue: ^0.0.0
+  embla-carousel-vue: ^8.6.0
   giget: ^3.3.1
   open: ^11.0.0
   oxc-parser: ^0.102.0
