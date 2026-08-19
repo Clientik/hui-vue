@@ -55,11 +55,15 @@
     },
     "./tailwind.css": {
       "style": "./dist/tailwind.css"
+    },
+    "./theme.css": {
+      "style": "./styles/theme.css"
     }
   },
   "bin": "./dist/index.js",
   "files": [
-    "dist"
+    "dist",
+    "styles"
   ],
   "scripts": {
     "dev": "tsdown --watch",
