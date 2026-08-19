@@ -5,7 +5,7 @@ export { default as ToolRail } from "./ToolRail.vue"
 export { default as ToolRailButton } from "./ToolRailButton.vue"
 
 export const toolRailVariants = cva(
-  "group/tool-rail bg-sidebar border-sidebar-border flex w-fit shrink-0 flex-col overflow-hidden rounded-md border-[1.5px]",
+  "group/tool-rail bg-sidebar relative flex w-fit shrink-0 flex-col overflow-hidden rounded-md after:ring-sidebar-border after:pointer-events-none after:absolute after:inset-0 after:z-10 after:rounded-[inherit] after:ring-[1.5px] after:ring-inset",
   {
     variants: {
       orientation: {

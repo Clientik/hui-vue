@@ -34,11 +34,21 @@ const props = withDefaults(defineProps<Props>(), {
     :class="cn(toolRailButtonVariants({ position, active }), props.class)"
   >
     <slot />
-    <span
+    <svg
       v-if="showArrow"
       data-slot="tool-rail-button-arrow"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
       aria-hidden="true"
-      class="border-b-foreground-tertiary absolute right-1 bottom-1 size-0 border-r-[10px] border-b-[10px] border-r-transparent"
-    />
+      class="text-foreground-tertiary absolute right-1 bottom-1 size-2.5"
+    >
+      <path
+        d="M12 12L20.5858 3.41422C21.8457 2.15429 24 3.04662 24 4.82843V14C24 19.5228 19.5228 24 14 24H4.82843C3.04662 24 2.15428 21.8457 3.41421 20.5858L12 12Z"
+        fill="currentColor"
+      />
+    </svg>
   </Primitive>
 </template>
