@@ -1102,6 +1102,14 @@ export const ui: Registry["items"] = [
         type: "registry:ui",
       },
       {
+        path: "ui/icons/IconEye.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/icons/IconEyeOff.vue",
+        type: "registry:ui",
+      },
+      {
         path: "ui/icons/IconMove.vue",
         type: "registry:ui",
       },
@@ -2526,6 +2534,31 @@ export const ui: Registry["items"] = [
       },
       {
         path: "ui/tooltip/index.ts",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "tree",
+    type: "registry:ui",
+    dependencies: [
+      "reka-ui",
+    ],
+    files: [
+      {
+        path: "ui/tree/Tree.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/tree/TreeGroup.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/tree/TreeItem.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/tree/index.ts",
         type: "registry:ui",
       },
     ],

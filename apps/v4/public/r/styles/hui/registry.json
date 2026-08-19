@@ -1134,6 +1134,14 @@
           "type": "registry:ui"
         },
         {
+          "path": "registry/hui/ui/icons/IconEye.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/icons/IconEyeOff.vue",
+          "type": "registry:ui"
+        },
+        {
           "path": "registry/hui/ui/icons/IconMove.vue",
           "type": "registry:ui"
         },
@@ -2558,6 +2566,31 @@
         },
         {
           "path": "registry/hui/ui/tooltip/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "tree",
+      "dependencies": [
+        "reka-ui"
+      ],
+      "files": [
+        {
+          "path": "registry/hui/ui/tree/Tree.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/tree/TreeGroup.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/tree/TreeItem.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/tree/index.ts",
           "type": "registry:ui"
         }
       ],

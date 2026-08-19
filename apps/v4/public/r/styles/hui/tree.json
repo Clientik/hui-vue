@@ -1,6 +1,30 @@
 {
   "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
   "name": "tree",
-  "files": [],
+  "dependencies": [
+    "reka-ui"
+  ],
+  "files": [
+    {
+      "path": "registry/hui/ui/tree/Tree.vue",
+      "content": "<script setup lang=\"ts\">\nimport type { PrimitiveProps } from \"reka-ui\"\nimport type { HTMLAttributes } from \"vue\"\nimport { Primitive } from \"reka-ui\"\nimport { cn } from \"@/lib/utils\"\nimport { treeVariants } from \".\"\n\ninterface Props extends PrimitiveProps {\n  class?: HTMLAttributes[\"class\"]\n}\n\nconst props = withDefaults(defineProps<Props>(), {\n  as: \"div\",\n})\n</script>\n\n<template>\n  <Primitive\n    data-slot=\"tree\"\n    :as=\"as\"\n    :as-child=\"asChild\"\n    role=\"tree\"\n    :class=\"cn(treeVariants(), props.class)\"\n  >\n    <slot />\n  </Primitive>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/hui/ui/tree/TreeGroup.vue",
+      "content": "<script setup lang=\"ts\">\nimport type { PrimitiveProps } from \"reka-ui\"\nimport type { HTMLAttributes } from \"vue\"\nimport { Primitive } from \"reka-ui\"\nimport { cn } from \"@/lib/utils\"\n\ninterface Props extends PrimitiveProps {\n  class?: HTMLAttributes[\"class\"]\n}\n\nconst props = withDefaults(defineProps<Props>(), {\n  as: \"div\",\n})\n</script>\n\n<template>\n  <!-- One indent level: the padding steps the children in and the guide line\n       ties them back to the item that owns them. -->\n  <Primitive\n    data-slot=\"tree-group\"\n    :as=\"as\"\n    :as-child=\"asChild\"\n    role=\"group\"\n    :class=\"cn('relative flex flex-col pl-5', props.class)\"\n  >\n    <span\n      aria-hidden=\"true\"\n      data-slot=\"tree-group-guide\"\n      class=\"bg-foreground-tertiary/50 pointer-events-none absolute top-0 bottom-0 left-[9px] w-px\"\n    />\n    <slot />\n  </Primitive>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/hui/ui/tree/TreeItem.vue",
+      "content": "<script setup lang=\"ts\">\nimport type { HTMLAttributes } from \"vue\"\nimport { ChevronRight } from \"@lucide/vue\"\nimport { cn } from \"@/lib/utils\"\nimport { treeItemVariants } from \".\"\n\ninterface Props {\n  /** Leave unset for a leaf: the chevron slot stays, so labels keep their column. */\n  expandable?: boolean\n  expanded?: boolean\n  selected?: boolean\n  /** Dims the row for objects switched off in the scene. */\n  muted?: boolean\n  class?: HTMLAttributes[\"class\"]\n}\n\nconst props = withDefaults(defineProps<Props>(), {\n  expandable: false,\n  expanded: false,\n  selected: false,\n  muted: false,\n})\n\nconst emits = defineEmits<{\n  \"update:expanded\": [value: boolean]\n  \"select\": []\n}>()\n\nfunction toggle() {\n  emits(\"update:expanded\", !props.expanded)\n}\n</script>\n\n<template>\n  <div\n    data-slot=\"tree-item\"\n    role=\"treeitem\"\n    :aria-expanded=\"expandable ? expanded : undefined\"\n    :aria-selected=\"selected\"\n    :data-selected=\"selected ? '' : undefined\"\n    :data-muted=\"muted ? '' : undefined\"\n    tabindex=\"0\"\n    :class=\"cn(treeItemVariants({ selected, muted }), props.class)\"\n    @click=\"emits('select')\"\n    @keydown.enter.prevent=\"emits('select')\"\n    @keydown.space.prevent=\"emits('select')\"\n    @keydown.right.prevent=\"expandable && !expanded && toggle()\"\n    @keydown.left.prevent=\"expandable && expanded && toggle()\"\n  >\n    <button\n      v-if=\"expandable\"\n      type=\"button\"\n      data-slot=\"tree-item-trigger\"\n      :aria-label=\"expanded ? 'Collapse' : 'Expand'\"\n      class=\"text-foreground-tertiary hover:text-foreground flex size-5 shrink-0 items-center justify-center transition-colors\"\n      @click.stop=\"toggle\"\n    >\n      <ChevronRight\n        class=\"size-5 transition-transform duration-150\"\n        :class=\"expanded && 'rotate-90'\"\n      />\n    </button>\n    <span v-else aria-hidden=\"true\" class=\"size-5 shrink-0\" />\n\n    <span data-slot=\"tree-item-icon\" class=\"[&_svg]:size-5 flex size-5 shrink-0 items-center justify-center\">\n      <slot name=\"icon\" />\n    </span>\n\n    <span data-slot=\"tree-item-label\" class=\"min-w-0 flex-1 truncate\">\n      <slot />\n    </span>\n\n    <!-- Up to four toggles per row: any more and the label loses its width. -->\n    <span\n      v-if=\"$slots.actions\"\n      data-slot=\"tree-item-actions\"\n      class=\"[&>*]:size-5 [&_svg]:size-5 text-foreground-tertiary flex shrink-0 items-center gap-2\"\n      @click.stop\n    >\n      <slot name=\"actions\" />\n    </span>\n  </div>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/hui/ui/tree/index.ts",
+      "content": "import type { VariantProps } from \"class-variance-authority\"\nimport { cva } from \"class-variance-authority\"\n\nexport { default as Tree } from \"./Tree.vue\"\nexport { default as TreeGroup } from \"./TreeGroup.vue\"\nexport { default as TreeItem } from \"./TreeItem.vue\"\n\nexport const treeVariants = cva(\n  \"bg-sidebar border-sidebar-border flex w-full flex-col overflow-hidden rounded-md border p-2\",\n)\nexport type TreeVariants = VariantProps<typeof treeVariants>\n\nexport const treeItemVariants = cva(\n  \"group/tree-item flex h-9 w-full items-center gap-2 rounded-sm border border-transparent px-2 text-left text-lg outline-none transition-colors select-none focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:border-ring\",\n  {\n    variants: {\n      selected: {\n        true: \"bg-sidebar-accent border-sidebar-border\",\n        false: \"hover:bg-sidebar-accent\",\n      },\n      // Objects switched off in the scene stay in the tree but read as\n      // secondary, so the eye toggle is the only thing that stands out.\n      muted: {\n        true: \"text-foreground-tertiary\",\n        false: \"text-sidebar-foreground\",\n      },\n    },\n    defaultVariants: {\n      selected: false,\n      muted: false,\n    },\n  },\n)\nexport type TreeItemVariants = VariantProps<typeof treeItemVariants>\n",
+      "type": "registry:ui"
+    }
+  ],
   "type": "registry:ui"
 }

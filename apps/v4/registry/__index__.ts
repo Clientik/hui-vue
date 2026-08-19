@@ -1092,6 +1092,14 @@ export const Index: Record<string, any> = {
       type: "registry:ui",
       target: ""
     },{
+      path: "registry/hui/ui/icons/IconEye.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/icons/IconEyeOff.vue",
+      type: "registry:ui",
+      target: ""
+    },{
       path: "registry/hui/ui/icons/IconMove.vue",
       type: "registry:ui",
       target: ""
@@ -2473,6 +2481,31 @@ export const Index: Record<string, any> = {
       target: ""
     },{
       path: "registry/hui/ui/tooltip/index.ts",
+      type: "registry:ui",
+      target: ""
+    }],
+    categories: undefined,
+    meta: undefined,
+  },
+  "tree": {
+    name: "tree",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/hui/ui/tree/Tree.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/tree/TreeGroup.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/tree/TreeItem.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/tree/index.ts",
       type: "registry:ui",
       target: ""
     }],
