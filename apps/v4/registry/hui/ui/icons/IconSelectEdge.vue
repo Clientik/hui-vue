@@ -22,6 +22,6 @@ const props = defineProps<Props>()
     <path d="M20 7.5L12 12V21L20 16.5V7.5Z" fill="#2C2C2E" />
     <path d="M4 7.5L12 12V21L4 16.5V7.5Z" fill="#48484A" />
     <path d="M20 7.5L12 12L4 7.5L12 3L20 7.5Z" fill="#6D6D6D" />
-    <path d="M12 20.5V12M12 12L3.99194 7.54767M12 12L19.5171 7.65996" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" />
+    <path d="M18.8473 9.20782L12.7419 12.4949V20.0477L11.9919 21.0477L11.2419 20.0477V12.4949L5.1364 9.20782L3.99194 7.54767L5.84733 7.88751L11.9919 11.1961L18.1364 7.88751L19.9919 7.54767L18.8473 9.20782Z" fill="var(--primary)" />
   </svg>
 </template>
