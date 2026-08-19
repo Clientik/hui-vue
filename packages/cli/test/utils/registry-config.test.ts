@@ -22,18 +22,11 @@ describe('composeStyleId', () => {
   })
 
   it('composes visual style with base', () => {
-    expect(composeStyleId('reka', 'luma')).toBe('reka-luma')
-    expect(composeStyleId('reka', 'sera')).toBe('reka-sera')
-    expect(composeStyleId('reka', 'vega')).toBe('reka-vega')
     expect(composeStyleId('reka', 'neva')).toBe('reka-neva')
-    expect(composeStyleId('reka', 'maia')).toBe('reka-maia')
-    expect(composeStyleId('reka', 'lyra')).toBe('reka-lyra')
-    expect(composeStyleId('reka', 'mira')).toBe('reka-mira')
   })
 
   it('defaults base to reka when not provided for visual styles', () => {
-    expect(composeStyleId(undefined, 'luma')).toBe('reka-luma')
-    expect(composeStyleId(undefined, 'vega')).toBe('reka-vega')
+    expect(composeStyleId(undefined, 'neva')).toBe('reka-neva')
   })
 
   it('passes through canonical styles unchanged', () => {
@@ -45,7 +38,7 @@ describe('composeStyleId', () => {
   it('passes through already-composed style identifiers unchanged', () => {
     // If `style` already contains a dash (e.g. user pre-composed it or set
     // it directly via --style flag), don't double-prefix.
-    expect(composeStyleId('reka', 'reka-luma')).toBe('reka-luma')
-    expect(composeStyleId('reka', 'reka-vega')).toBe('reka-vega')
+    expect(composeStyleId('reka', 'reka-neva')).toBe('reka-neva')
+    expect(composeStyleId('reka', 'reka-neva')).toBe('reka-neva')
   })
 })

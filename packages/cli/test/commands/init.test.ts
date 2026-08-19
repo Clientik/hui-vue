@@ -174,8 +174,8 @@ describe('initOptionsSchema', () => {
   })
 
   it('accepts valid style', () => {
-    const result = initOptionsSchema.parse({ ...base, style: 'vega' })
-    expect(result.style).toBe('vega')
+    const result = initOptionsSchema.parse({ ...base, style: 'neva' })
+    expect(result.style).toBe('neva')
   })
 
   it('rejects invalid style', () => {
@@ -193,15 +193,8 @@ describe('initOptionsSchema', () => {
 })
 
 describe('default presets', () => {
-  it('exposes all built-in presets', () => {
-    const names = Object.keys(DEFAULT_PRESETS)
-    expect(names).toContain('vega')
-    expect(names).toContain('neva')
-    expect(names).toContain('maia')
-    expect(names).toContain('lyra')
-    expect(names).toContain('mira')
-    expect(names).toContain('luma')
-    expect(names).toContain('sera')
+  it('exposes neva as the only built-in preset', () => {
+    expect(Object.keys(DEFAULT_PRESETS)).toEqual(['neva'])
   })
 
   it('each preset has a complete design system config', () => {
@@ -232,21 +225,21 @@ describe('preset urls', () => {
   })
 
   it('should include pointer when enabled', () => {
-    const url = resolveInitUrl(DEFAULT_PRESETS.nova, { pointer: true })
+    const url = resolveInitUrl(DEFAULT_PRESETS.neva, { pointer: true })
     const parsed = new URL(url)
 
     expect(parsed.searchParams.get('pointer')).toBe('true')
   })
 
   it('should not include pointer when disabled', () => {
-    const url = resolveInitUrl(DEFAULT_PRESETS.nova, { pointer: false })
+    const url = resolveInitUrl(DEFAULT_PRESETS.neva, { pointer: false })
     const parsed = new URL(url)
 
     expect(parsed.searchParams.has('pointer')).toBe(false)
   })
 
   it('should include pointer with preset codes', () => {
-    const url = resolveInitUrl(DEFAULT_PRESETS.nova, { preset: 'a0', pointer: true })
+    const url = resolveInitUrl(DEFAULT_PRESETS.neva, { preset: 'a0', pointer: true })
     const parsed = new URL(url)
 
     expect(parsed.searchParams.get('preset')).toBe('a0')

@@ -52,46 +52,18 @@ describe('registry API', () => {
       expect(styles.length).toBeGreaterThan(0)
     })
 
-    it('includes all seven styles', () => {
+    it('ships neva as the only style', () => {
       const styles = getRegistryVisualStyles()
-      const styleNames = styles.map(s => s.name)
-      expect(styleNames).toContain('vega')
-      expect(styleNames).toContain('neva')
-      expect(styleNames).toContain('maia')
-      expect(styleNames).toContain('lyra')
-      expect(styleNames).toContain('mira')
-      expect(styleNames).toContain('luma')
-      expect(styleNames).toContain('sera')
+      expect(styles.map(s => s.name)).toEqual(['neva'])
     })
   })
 
   describe('getRegistryVisualStyle', () => {
-    it('returns vega style by name', () => {
-      const vega = getRegistryVisualStyle('vega')
-      expect(vega).toBeDefined()
-      expect(vega?.name).toBe('vega')
-      expect(vega?.label).toBe('Vega')
-    })
-
-    it('returns nova style by name', () => {
-      const nova = getRegistryVisualStyle('neva')
-      expect(nova).toBeDefined()
-      expect(nova?.name).toBe('neva')
-      expect(nova?.description).toContain('compact')
-    })
-
-    it('returns luma style by name', () => {
-      const luma = getRegistryVisualStyle('luma')
-      expect(luma).toBeDefined()
-      expect(luma?.name).toBe('luma')
-      expect(luma?.label).toBe('Luma')
-    })
-
-    it('returns sera style by name', () => {
-      const sera = getRegistryVisualStyle('sera')
-      expect(sera).toBeDefined()
-      expect(sera?.name).toBe('sera')
-      expect(sera?.label).toBe('Sera')
+    it('returns neva style by name', () => {
+      const neva = getRegistryVisualStyle('neva')
+      expect(neva).toBeDefined()
+      expect(neva?.name).toBe('neva')
+      expect(neva?.label).toBe('Neva')
     })
 
     it('returns undefined for unknown style', () => {
@@ -183,16 +155,9 @@ describe('registry API', () => {
       expect(presets.length).toBeGreaterThan(0)
     })
 
-    it('includes all expected presets', () => {
+    it('ships neva as the only preset', () => {
       const presets = getRegistryPresets()
-      const presetNames = presets.map(p => p.name)
-      expect(presetNames).toContain('vega')
-      expect(presetNames).toContain('neva')
-      expect(presetNames).toContain('maia')
-      expect(presetNames).toContain('lyra')
-      expect(presetNames).toContain('mira')
-      expect(presetNames).toContain('luma')
-      expect(presetNames).toContain('sera')
+      expect(presets.map(p => p.name)).toEqual(['neva'])
     })
 
     it('all presets have complete configuration', () => {
@@ -213,57 +178,14 @@ describe('registry API', () => {
   })
 
   describe('getRegistryPreset', () => {
-    it('returns vega preset by name', () => {
-      const vega = getRegistryPreset('vega')
-      expect(vega).toBeDefined()
-      expect(vega?.name).toBe('vega')
-      expect(vega?.base).toBe('reka')
-      expect(vega?.style).toBe('vega')
-      expect(vega?.iconLibrary).toBe('lucide')
-      expect(vega?.font).toBe('inter')
-    })
-
-    it('returns nova preset by name', () => {
-      const nova = getRegistryPreset('neva')
-      expect(nova).toBeDefined()
-      expect(nova?.name).toBe('neva')
-      expect(nova?.style).toBe('neva')
-      expect(nova?.iconLibrary).toBe('lucide')
-    })
-
-    it('returns lyra preset by name', () => {
-      const lyra = getRegistryPreset('lyra')
-      expect(lyra).toBeDefined()
-      expect(lyra?.name).toBe('lyra')
-      expect(lyra?.style).toBe('lyra')
-      expect(lyra?.font).toBe('jetbrains-mono')
-    })
-
-    it('returns mira preset by name', () => {
-      const mira = getRegistryPreset('mira')
-      expect(mira).toBeDefined()
-      expect(mira?.name).toBe('mira')
-      expect(mira?.style).toBe('mira')
-    })
-
-    it('returns luma preset by name', () => {
-      const luma = getRegistryPreset('luma')
-      expect(luma).toBeDefined()
-      expect(luma?.name).toBe('luma')
-      expect(luma?.style).toBe('luma')
-      expect(luma?.iconLibrary).toBe('lucide')
-      expect(luma?.font).toBe('inter')
-    })
-
-    it('returns sera preset by name', () => {
-      const sera = getRegistryPreset('sera')
-      expect(sera).toBeDefined()
-      expect(sera?.name).toBe('sera')
-      expect(sera?.style).toBe('sera')
-      expect(sera?.iconLibrary).toBe('lucide')
-      expect(sera?.font).toBe('noto-sans')
-      expect(sera?.fontHeading).toBe('playfair-display')
-      expect(sera?.baseColor).toBe('taupe')
+    it('returns the neva preset by name', () => {
+      const neva = getRegistryPreset('neva')
+      expect(neva).toBeDefined()
+      expect(neva?.name).toBe('neva')
+      expect(neva?.base).toBe('reka')
+      expect(neva?.style).toBe('neva')
+      expect(neva?.iconLibrary).toBe('lucide')
+      expect(neva?.font).toBe('geist-sans')
     })
 
     it('returns undefined for unknown preset', () => {

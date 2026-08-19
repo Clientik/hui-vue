@@ -225,7 +225,7 @@ export const init = new Command()
   )
   .option(
     '--style <style>',
-    'the visual style to use. (vega, nova, maia, lyra, mira)',
+    'the visual style to use. (neva)',
     undefined,
   )
   .option(
@@ -649,8 +649,8 @@ export async function runInit(
 
 async function promptForConfig(defaultConfig: Config | null = null, opts?: z.infer<typeof initOptionsSchema>) {
   let base = opts?.base ?? 'reka'
-  let style = opts?.style ?? 'vega'
-  let font = opts?.font ?? 'inter'
+  let style = opts?.style ?? 'neva'
+  let font = opts?.font ?? 'geist-sans'
   let iconLibrary = opts?.iconLibrary ?? 'lucide'
   let baseColor = opts?.baseColor ?? 'neutral'
   let typescript = defaultConfig?.typescript ?? true
@@ -865,7 +865,7 @@ async function promptForMinimalConfig(
         message: `Which ${highlighter.info('visual style')} would you like to use?`,
         choices: [
           ...STYLES.map(s => ({
-            title: s.name === 'vega' ? 'Vega (Recommended)' : s.label,
+            title: s.label,
             value: s.name,
             description: s.description,
           })),
@@ -910,7 +910,7 @@ async function promptForMinimalConfig(
     ])
 
     base = options.base ?? base
-    style = options.style ?? style ?? 'vega'
+    style = options.style ?? style ?? 'neva'
     iconLibrary = options.iconLibrary ?? iconLibrary
     font = options.font ?? font
     baseColor = options.tailwindBaseColor ?? baseColor

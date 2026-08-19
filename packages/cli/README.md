@@ -22,9 +22,9 @@ The `create` command will:
 | Option | Description |
 |--------|-------------|
 | `-t, --template <template>` | Framework template: `nuxt`, `vite`, or `vite-router` |
-| `-p, --preset <preset>` | Use a preset: `reka-vega`, `reka-neva`, `reka-maia`, `reka-lyra`, `reka-mira` |
+| `-p, --preset <preset>` | Use a preset: `reka-neva` |
 | `--base <base>` | Component library: `reka` |
-| `--style <style>` | Visual style: `vega`, `nova`, `maia`, `lyra`, `mira` |
+| `--style <style>` | Visual style: `neva` |
 | `--icon-library <lib>` | Icon library: `lucide`, `tabler`, `hugeicons`, `phosphor`, `remixicon` |
 | `--font <font>` | Font: `inter`, `figtree`, `jetbrains-mono`, `geist`, `geist-mono` |
 | `-b, --base-color <color>` | Base color: `neutral`, `gray`, `zinc`, `stone`, `slate` |
@@ -40,7 +40,7 @@ npx hui-kit create
 npx hui-kit create --preset reka-neva
 
 # Full customization
-npx hui-kit create --template nuxt --style maia --icon-library hugeicons --font figtree
+npx hui-kit create --template nuxt --style neva --icon-library lucide --font geist-sans
 ```
 
 ### init
@@ -58,7 +58,7 @@ npx hui-kit init
 | Option | Description |
 |--------|-------------|
 | `--base <base>` | Component library: `reka` |
-| `--style <style>` | Visual style: `vega`, `nova`, `maia`, `lyra`, `mira` |
+| `--style <style>` | Visual style: `neva` |
 | `--icon-library <lib>` | Icon library: `lucide`, `tabler`, `hugeicons`, `phosphor`, `remixicon` |
 | `--font <font>` | Font: `inter`, `figtree`, `jetbrains-mono`, `geist`, `geist-mono` |
 | `-b, --base-color <color>` | Base color: `neutral`, `gray`, `zinc`, `stone`, `slate` |
@@ -87,34 +87,20 @@ You can also run the command without any arguments to view a list of all availab
 npx hui-kit add
 ```
 
-## Visual Styles
+## Visual style
 
-hui-kit supports 5 visual styles that transform how components look:
+HUI ships one style, **Neva**: compact spacing, Geist for text, Lucide for icons. It is the default, so neither `--style` nor `--preset` is needed unless you are scripting an explicit setup.
 
-| Style | Description |
-|-------|-------------|
-| **Vega** | The classic hui-kit look. Clean, neutral, and familiar. |
-| **Neva** | Reduced padding and margins for compact layouts. |
-| **Maia** | Soft and rounded, with generous spacing. |
-| **Lyra** | Boxy and sharp. Pairs well with mono fonts. |
-| **Mira** | Compact. Made for dense interfaces. |
-
-## Presets
-
-Presets are pre-configured combinations of style, icons, and fonts:
+The matching preset is `reka-neva`:
 
 | Preset | Style | Icons | Font |
 |--------|-------|-------|------|
-| `reka-vega` | Vega | Lucide | Inter |
-| `reka-neva` | Neva | Hugeicons | Inter |
-| `reka-maia` | Maia | Hugeicons | Figtree |
-| `reka-lyra` | Lyra | Hugeicons | JetBrains Mono |
-| `reka-mira` | Mira | Hugeicons | Inter |
+| `reka-neva` | Neva | Lucide | Geist |
 
 ## Documentation
 
-Visit https://clientik.github.io/hui-vue to view the documentation.
+Visit https://clientik.github.io/hui-vue/docs to view the documentation.
 
 ## License
 
-Licensed under the [MIT license](https://github.com/hui-kit/blob/main/LICENSE.md).
+Licensed under the [MIT license](https://github.com/Clientik/hui-vue/blob/main/LICENSE).

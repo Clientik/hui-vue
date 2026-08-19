@@ -9,22 +9,12 @@
 //   3. Only append new fields to the end of PRESET_FIELDS.
 //   4. Stay under 53 bits total (JS safe integer limit).
 //
-// Ported from hui-ui/packages/hui/src/preset/preset.ts, with
-// value arrays matching hui-kit's registry (see apps/v4/registry/*).
+// Value arrays match the registry in apps/v4/registry/*.
 
 // Value arrays — order matters for backward compat. Never reorder, only append.
 export const PRESET_BASES = ['reka'] as const
 
-export const PRESET_STYLES = [
-  'vega',
-  'neva',
-  'maia',
-  'lyra',
-  'mira',
-  'luma',
-  'sera',
-  'rhea',
-] as const
+export const PRESET_STYLES = ['neva'] as const
 
 export const PRESET_BASE_COLORS = [
   'neutral',

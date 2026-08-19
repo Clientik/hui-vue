@@ -25,7 +25,7 @@ import {
         <DrawerDescription>Set your daily activity goal.</DrawerDescription>
       </DrawerHeader>
       <div class="no-scrollbar overflow-y-auto px-4">
-        <p v-for="value in 10" :key="value" class="mb-4 leading-normal style-lyra:mb-2 style-lyra:leading-relaxed">
+        <p v-for="value in 10" :key="value" class="mb-4 leading-normal">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
           enim ad minim veniam, quis nostrud exercitation ullamco laboris

@@ -22,39 +22,9 @@ export const BASES = [
 // Available visual styles
 export const STYLES = [
   {
-    name: "vega",
-    label: "Vega",
-    description: "The classic hui-kit look. Clean, neutral, and familiar.",
-  },
-  {
     name: "neva",
     label: "Neva",
-    description: "Reduced padding and margins for compact layouts.",
-  },
-  {
-    name: "maia",
-    label: "Maia",
-    description: "Soft and rounded, with generous spacing.",
-  },
-  {
-    name: "lyra",
-    label: "Lyra",
-    description: "Boxy and sharp. Pairs well with mono fonts.",
-  },
-  {
-    name: "mira",
-    label: "Mira",
-    description: "Compact. Made for dense interfaces.",
-  },
-  {
-    name: "luma",
-    label: "Luma",
-    description: "Fluid, luminous, and glassy.",
-  },
-  {
-    name: "sera",
-    label: "Sera",
-    description: "Editorial and typographic.",
+    description: "Compact spacing, Geist type, Lucide icons.",
   },
 ] as const
 

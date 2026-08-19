@@ -35,23 +35,23 @@ describe('resolveApplyPreset', () => {
   })
 
   it('returns the flag preset when only --preset is provided', () => {
-    expect(resolveApplyPreset({ ...baseOptions, preset: 'luma' })).toBe('luma')
+    expect(resolveApplyPreset({ ...baseOptions, preset: 'neva' })).toBe('neva')
   })
 
   it('returns the value when positional and flag agree', () => {
     expect(
       resolveApplyPreset({
         ...baseOptions,
-        positionalPreset: 'vega',
-        preset: 'vega',
+        positionalPreset: 'neva',
+        preset: 'neva',
       }),
-    ).toBe('vega')
+    ).toBe('neva')
   })
 
   it('trims surrounding whitespace from preset values', () => {
     expect(
-      resolveApplyPreset({ ...baseOptions, positionalPreset: '  mira  ' }),
-    ).toBe('mira')
+      resolveApplyPreset({ ...baseOptions, positionalPreset: '  neva  ' }),
+    ).toBe('neva')
   })
 
   it('returns undefined when no preset is provided', () => {
@@ -69,8 +69,8 @@ describe('resolveApplyPreset', () => {
       expect(() =>
         resolveApplyPreset({
           ...baseOptions,
-          positionalPreset: 'vega',
-          preset: 'neva',
+          positionalPreset: 'neva',
+          preset: 'https://example.com/init',
         }),
       ).toThrow('process.exit called')
 
@@ -104,14 +104,14 @@ describe('getInitCommand', () => {
   })
 
   it('appends a simple preset name without quoting', () => {
-    expect(getInitCommand('neva')).toBe('hui-kit init --preset nova')
+    expect(getInitCommand('neva')).toBe('hui-kit init --preset neva')
   })
 
   it('quotes preset values that contain shell-unsafe characters', () => {
     expect(
-      getInitCommand('https://example.com/init?style=nova&base=reka'),
+      getInitCommand('https://example.com/init?style=neva&base=reka'),
     ).toBe(
-      'hui-kit init --preset "https://example.com/init?style=nova&base=reka"',
+      'hui-kit init --preset "https://example.com/init?style=neva&base=reka"',
     )
   })
 })
@@ -167,7 +167,7 @@ describe('resolveApplyInitUrl', () => {
 
   it('passes a remote URL through with base + rtl overrides applied', () => {
     const remote
-      = 'http://localhost:3000/init?base=other&style=mira&font=figtree'
+      = 'http://localhost:3000/init?base=other&style=neva&font=figtree'
     const url = resolveApplyInitUrl(remote, { base: 'reka', rtl: true })
     expect(url).not.toBeNull()
 
@@ -175,21 +175,21 @@ describe('resolveApplyInitUrl', () => {
     expect(parsed.searchParams.get('base')).toBe('reka')
     expect(parsed.searchParams.get('rtl')).toBe('true')
     // Non-overridden params come through unchanged.
-    expect(parsed.searchParams.get('style')).toBe('mira')
+    expect(parsed.searchParams.get('style')).toBe('neva')
     expect(parsed.searchParams.get('font')).toBe('figtree')
     // First-party /init URLs are tracked.
     expect(parsed.searchParams.get('track')).toBe('1')
   })
 
   it('always writes rtl=false on a remote URL when the project is LTR', () => {
-    const remote = 'http://localhost:3000/init?base=reka&style=nova&rtl=true'
+    const remote = 'http://localhost:3000/init?base=reka&style=neva&rtl=true'
     const url = resolveApplyInitUrl(remote, { base: 'reka', rtl: false })
     const parsed = new URL(url!)
     expect(parsed.searchParams.get('rtl')).toBe('false')
   })
 
   it('does not add track=1 to third-party URLs', () => {
-    const remote = 'https://example.com/init?style=nova'
+    const remote = 'https://example.com/init?style=neva'
     const url = resolveApplyInitUrl(remote, { base: 'reka', rtl: false })
     const parsed = new URL(url!)
     expect(parsed.searchParams.has('track')).toBe(false)

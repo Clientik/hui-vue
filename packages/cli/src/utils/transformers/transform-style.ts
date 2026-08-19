@@ -1,89 +1,10 @@
 import type { CodemodPlugin } from 'vue-metamorph'
 import type { TransformOpts } from '.'
 
-// Style-specific CSS class mappings for different visual styles
-const STYLE_CLASS_MAPPINGS: Record<string, Record<string, string>> = {
-  nova: {
-    // Neva style: Reduced padding and margins for compact layouts
-    'p-6': 'p-4',
-    'p-8': 'p-6',
-    'px-6': 'px-4',
-    'px-8': 'px-6',
-    'py-6': 'py-4',
-    'py-8': 'py-6',
-    'm-6': 'm-4',
-    'm-8': 'm-6',
-    'gap-6': 'gap-4',
-    'gap-8': 'gap-6',
-    'space-y-6': 'space-y-4',
-    'space-y-8': 'space-y-6',
-    'space-x-6': 'space-x-4',
-    'space-x-8': 'space-x-6',
-  },
-  maia: {
-    // Maia style: Soft and rounded, with generous spacing
-    'rounded-md': 'rounded-xl',
-    'rounded-lg': 'rounded-2xl',
-    'rounded-sm': 'rounded-md',
-    'p-4': 'p-6',
-    'p-3': 'p-4',
-    'px-4': 'px-6',
-    'py-4': 'py-6',
-    'gap-4': 'gap-6',
-    'gap-3': 'gap-4',
-  },
-  lyra: {
-    // Lyra style: Boxy and sharp, pairs well with mono fonts
-    'rounded-md': 'rounded-none',
-    'rounded-lg': 'rounded-none',
-    'rounded-xl': 'rounded-none',
-    'rounded-2xl': 'rounded-none',
-    'rounded-sm': 'rounded-none',
-    'rounded-full': 'rounded-none',
-  },
-  mira: {
-    // Mira style: Compact, made for dense interfaces
-    'p-4': 'p-2',
-    'p-6': 'p-4',
-    'p-8': 'p-5',
-    'px-4': 'px-2',
-    'px-6': 'px-4',
-    'py-4': 'py-2',
-    'py-6': 'py-4',
-    'm-4': 'm-2',
-    'm-6': 'm-4',
-    'gap-4': 'gap-2',
-    'gap-6': 'gap-4',
-    'space-y-4': 'space-y-2',
-    'space-y-6': 'space-y-4',
-    'space-x-4': 'space-x-2',
-    'space-x-6': 'space-x-4',
-    'text-base': 'text-sm',
-    'text-lg': 'text-base',
-    'text-xl': 'text-lg',
-    'h-10': 'h-8',
-    'h-12': 'h-10',
-    'w-10': 'w-8',
-    'w-12': 'w-10',
-  },
-  luma: {
-    // Luma style: Fluid, luminous, and glassy
-    'rounded-sm': 'rounded-xl',
-    'rounded-md': 'rounded-2xl',
-    'rounded-lg': 'rounded-3xl',
-    'rounded-xl': 'rounded-3xl',
-  },
-  sera: {
-    // Sera style: Editorial and typographic. Hard corners, uppercase accents.
-    // `rounded-full` is intentionally preserved for circular elements (avatars).
-    'rounded-sm': 'rounded-none',
-    'rounded-md': 'rounded-none',
-    'rounded-lg': 'rounded-none',
-    'rounded-xl': 'rounded-none',
-    'rounded-2xl': 'rounded-none',
-    'rounded-3xl': 'rounded-none',
-  },
-}
+// Per-style class rewrites. HUI ships a single style and the registry already
+// serves components in it, so nothing is rewritten on the way in — the map is
+// kept because a future second style would slot in here.
+const STYLE_CLASS_MAPPINGS: Record<string, Record<string, string>> = {}
 
 /**
  * Apply class mappings to a string of CSS classes.
@@ -105,7 +26,7 @@ function applyClassMappings(value: string, classMapping: Record<string, string>)
  * - Dynamic class bindings in templates (:class="cn(...)")
  * - String literals in script (CVA variants, inline classes)
  *
- * Vega is the default style, so no transformations are applied.
+ * With a single style there is nothing to rewrite, so this is a pass-through.
  */
 export function transformStyle(opts: TransformOpts): CodemodPlugin {
   return {
@@ -116,13 +37,7 @@ export function transformStyle(opts: TransformOpts): CodemodPlugin {
       let transformCount = 0
       const { config } = opts
 
-      // Get style from config, default to vega (no transformations)
-      const style = config.style?.split('-')[0] || 'vega'
-
-      // Vega is the default, no transformations needed
-      if (style === 'vega' || style === 'new') {
-        return transformCount
-      }
+      const style = config.style?.split('-')[0] ?? ''
 
       const classMapping = STYLE_CLASS_MAPPINGS[style]
       if (!classMapping) {

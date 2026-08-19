@@ -8,14 +8,14 @@ import { createConfig } from "@/src/utils/get-config"
 // `public/r/styles/{base}-{style}/<comp>.json`. They're produced by the
 // design-system codegen pipeline. The CLI's init/create flow asks the user
 // for a base + visual style separately, then composes them into a single
-// identifier (e.g. `reka-luma`) which is what gets written to components.json
-// and used directly in fetch URLs — matching hui-ui's model.
-const VISUAL_STYLES = new Set(["vega", "neva", "maia", "lyra", "mira", "luma", "sera"])
+// identifier (`reka-neva`) which is what gets written to components.json
+// and used directly in fetch URLs.
+const VISUAL_STYLES = new Set(["neva"])
 
 /**
  * Composes a base + visual style choice into the canonical style identifier
  * stored in `components.json`. For visual styles, returns `${base}-${style}`
- * (e.g. `"reka-luma"`). For non-visual styles like `"hui"`, returns
+ * (`"reka-neva"`). For non-visual styles like `"hui"`, returns
  * the style unchanged.
  */
 export function composeStyleId(
@@ -39,7 +39,7 @@ export function composeStyleId(
  * `styles/{registryStyle}/<comp>.json`.
  *
  * The `style` field in `components.json` is the **full** style identifier
- * (e.g. `"reka-luma"`, `"hui"`), matching hui-ui's model. We just
+ * (`"reka-neva"` or `"hui"`). We just
  * pass it through, falling back to `FALLBACK_STYLE` when unset.
  */
 export function resolveRegistryStyle(style: string | undefined): string {
