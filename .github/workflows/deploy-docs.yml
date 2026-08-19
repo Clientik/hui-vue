@@ -1,9 +1,20 @@
-name: Deploy docs
+name: Release
+
+# The run is titled after the version it publishes, so the Actions list reads
+# as a list of releases rather than a list of commits.
+run-name: Release ${{ inputs.version || github.event.release.tag_name || github.ref_name }}
 
 on:
+  # Only a tagged version publishes: ordinary commits never queue a run.
   push:
-    branches: [main]
+    tags: ['v*']
+  release:
+    types: [published]
   workflow_dispatch:
+    inputs:
+      version:
+        description: Version to publish, e.g. v1.1.0
+        required: false
 
 # Pages deployments are serialised: a queued run waits rather than cancelling
 # the one in flight, so a half-published site is never left behind.
