@@ -61,6 +61,7 @@
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-chart-1: var(--chart-1);
@@ -98,9 +99,11 @@
   --color-graphite-450: #828282;
   --color-graphite-550: #666666;
   --color-graphite-600: #575757;
+  --color-graphite-660: #4c4c4c;
   --color-graphite-700: #454545;
-  --color-graphite-720: #414141;
+  --color-graphite-750: #373737;
   --color-graphite-780: #323232;
+  --color-graphite-790: #2a2a2a;
   --color-graphite-800: #262626;
   --color-graphite-825: #232323;
   --color-graphite-860: #1f1f1f;
@@ -146,6 +149,7 @@
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.97 0.01 17);
   --border: oklch(0.922 0 0);
+  --border-subtle: oklch(0.955 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: var(--color-emerald-300);
@@ -189,11 +193,14 @@
   --accent-foreground: var(--color-graphite-100);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.58 0.22 27);
-  /* Contrast targets, measured against --card (#1b1b1b):
-     --border 1.7:1 for dividers, --input 3:1 because a control's boundary
-     has to clear WCAG 1.4.11, --ring the same so focus stays visible. */
-  --border: var(--color-graphite-720);
-  --input: var(--color-graphite-550);
+  /* Two rungs of border, measured against --card (#1b1b1b): --border at
+     1.45:1 outlines a control, --border-subtle at 1.2:1 wraps large surfaces
+     like a rail or a sidebar, where a bright edge would cut the layout up.
+     --input sits at 2:1 — a field has to read as a field. --ring stays
+     brightest so focus is never in doubt. */
+  --border: var(--color-graphite-750);
+  --border-subtle: var(--color-graphite-790);
+  --input: var(--color-graphite-660);
   --ring: var(--color-graphite-550);
   --chart-1: var(--color-brand-300);
   --chart-2: var(--color-brand-400);
@@ -207,7 +214,7 @@
   --sidebar-primary-foreground: var(--color-graphite-1000);
   --sidebar-accent: var(--color-graphite-780);
   --sidebar-accent-foreground: var(--color-graphite-300);
-  --sidebar-border: var(--color-graphite-720);
+  --sidebar-border: var(--color-graphite-790);
   --sidebar-ring: var(--color-graphite-550);
   --surface: var(--color-graphite-940);
   --surface-foreground: var(--color-graphite-450);
