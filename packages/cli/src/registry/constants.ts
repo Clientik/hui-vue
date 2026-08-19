@@ -4,6 +4,17 @@ import type { registryConfigSchema } from "@/src/schema"
 export const HUI_KIT_URL
   = process.env.HUI_KIT_URL ?? "https://clientik.github.io/hui-vue"
 
+/**
+ * The /init route of the site, as an absolute URL.
+ *
+ * Derived, never written out: the site is served from a GitHub Pages
+ * subpath, so its init route is `/hui-vue/init`, not `/init`. Code that
+ * compared `pathname === "/init"` therefore never recognised our own URLs —
+ * first-party init runs went untracked and the `track` param was never
+ * stripped on the way back.
+ */
+export const HUI_KIT_INIT_URL = `${HUI_KIT_URL}/init`
+
 export const REGISTRY_URL
   = process.env.REGISTRY_URL ?? `${HUI_KIT_URL}/r`
 

@@ -5,7 +5,7 @@ import prompts from 'prompts'
 import { getRegistryItems } from '@/src/registry/api'
 import { buildUrlAndHeadersForRegistryItem } from '@/src/registry/builder'
 import { configWithDefaults } from '@/src/registry/config'
-import { HUI_KIT_URL } from '@/src/registry/constants'
+import { HUI_KIT_INIT_URL, HUI_KIT_URL } from '@/src/registry/constants'
 import { isUrl } from '@/src/registry/utils'
 import { createConfig } from '@/src/utils/get-config'
 import { highlighter } from '@/src/utils/highlighter'
@@ -303,7 +303,10 @@ function isHuiVueInitUrl(url: string) {
     return false
   const parsed = new URL(url)
   const trusted = new URL(HUI_KIT_URL)
-  return parsed.origin === trusted.origin && parsed.pathname === '/init'
+  return (
+    parsed.origin === trusted.origin
+    && parsed.pathname === new URL(HUI_KIT_INIT_URL).pathname
+  )
 }
 
 export { isUrl }

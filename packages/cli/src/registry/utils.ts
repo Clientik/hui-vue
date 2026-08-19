@@ -258,11 +258,19 @@ function determineFileType(
 }
 
 // Additional utility functions for local file support
+/**
+ * Is this address something we fetch over the network?
+ *
+ * The protocol check is not decoration. `new URL()` accepts anything with a
+ * scheme, and a Windows path like `C:\components\item.json` parses cleanly
+ * with protocol `c:`. Without the check, every absolute path on Windows was
+ * classified as a URL, so `add ./item.json` tried to fetch the file instead
+ * of reading it and failed with "Failed to fetch".
+ */
 export function isUrl(path: string) {
   try {
-    // eslint-disable-next-line no-new
-    new URL(path)
-    return true
+    const url = new URL(path)
+    return url.protocol === "http:" || url.protocol === "https:"
   }
   catch (error) {
     return false
