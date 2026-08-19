@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { IconEye, IconEyeOff, IconSelectObject } from '@/registry/hui/ui/icons'
+import { IconAddObjectCube, IconAddObjectCylinder, IconAddObjectHex, IconEye, IconEyeOff } from '@/registry/hui/ui/icons'
 import { TreeGroup, TreeItem } from '@/registry/hui/ui/tree'
 
 interface Node {
   id: string
   label: string
+  /** Preview only — in an app the host program supplies the icon per object. */
+  kind?: 'cube' | 'cylinder' | 'hex'
   children?: Node[]
 }
 
@@ -20,6 +22,12 @@ const emits = defineEmits<{
   select: [id: string]
   visibility: [id: string]
 }>()
+
+const icons = {
+  cube: IconAddObjectCube,
+  cylinder: IconAddObjectCylinder,
+  hex: IconAddObjectHex,
+}
 </script>
 
 <template>
@@ -32,7 +40,7 @@ const emits = defineEmits<{
     @select="emits('select', node.id)"
   >
     <template #icon>
-      <IconSelectObject />
+      <component :is="icons[node.kind ?? 'cube']" />
     </template>
     {{ node.label }}
     <template #actions>

@@ -6,6 +6,8 @@ import TreeNode from './TreeNode.vue'
 interface Node {
   id: string
   label: string
+  /** Preview only — in an app the host program supplies the icon per object. */
+  kind?: 'cube' | 'cylinder' | 'hex'
   children?: Node[]
 }
 
@@ -13,28 +15,31 @@ const nodes: Node[] = [
   {
     id: 'main',
     label: 'Main Group',
+    kind: 'hex',
     children: [
-      { id: 'cylinder', label: 'Cylinder' },
-      { id: 'cylinder-001', label: 'Cylinder.001' },
-      { id: 'shape', label: 'Shape' },
-      { id: 'shape-001', label: 'Shape.001' },
+      { id: 'cylinder', label: 'Cylinder', kind: 'cylinder' },
+      { id: 'cylinder-001', label: 'Cylinder.001', kind: 'cylinder' },
+      { id: 'shape', label: 'Shape', kind: 'hex' },
+      { id: 'shape-001', label: 'Shape.001', kind: 'hex' },
       {
         id: 'group',
         label: 'Group',
+        kind: 'hex',
         children: [
-          { id: 'shape-002', label: 'Shape.002' },
-          { id: 'shape-003', label: 'Shape.003' },
+          { id: 'shape-002', label: 'Shape.002', kind: 'hex' },
+          { id: 'shape-003', label: 'Shape.003', kind: 'hex' },
           {
             id: 'group-001',
             label: 'Group.001',
+            kind: 'hex',
             children: [
-              { id: 'cube', label: 'Cube' },
-              { id: 'cube-001', label: 'Cube.001' },
+              { id: 'cube', label: 'Cube', kind: 'cube' },
+              { id: 'cube-001', label: 'Cube.001', kind: 'cube' },
             ],
           },
         ],
       },
-      { id: 'group-002', label: 'Group.002', children: [{ id: 'circle', label: 'Circle' }] },
+      { id: 'group-002', label: 'Group.002', kind: 'hex', children: [{ id: 'circle', label: 'Circle', kind: 'hex' }] },
     ],
   },
 ]

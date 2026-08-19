@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { IconEye, IconEyeOff, IconOpen, IconSelectFace, IconSelectObject } from '@/registry/hui/ui/icons'
+import { IconAddObjectCube, IconAddObjectCylinder, IconEye, IconEyeOff, IconOpen, IconSelectFace } from '@/registry/hui/ui/icons'
 import { Tree, TreeItem } from '@/registry/hui/ui/tree'
 
 const visible = ref(true)
@@ -10,7 +10,7 @@ const visible = ref(true)
   <Tree class="max-w-sm">
     <TreeItem>
       <template #icon>
-        <IconSelectObject />
+        <IconAddObjectCube />
       </template>
       One toggle
       <template #actions>
@@ -23,7 +23,7 @@ const visible = ref(true)
 
     <TreeItem>
       <template #icon>
-        <IconSelectObject />
+        <IconAddObjectCylinder />
       </template>
       Four toggles
       <template #actions>

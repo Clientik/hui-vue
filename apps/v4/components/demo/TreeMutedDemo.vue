@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { IconEye, IconEyeOff, IconSelectObject } from '@/registry/hui/ui/icons'
+import { IconAddObjectCube, IconEye, IconEyeOff } from '@/registry/hui/ui/icons'
 import { Tree, TreeItem } from '@/registry/hui/ui/tree'
 </script>
 
@@ -7,7 +7,7 @@ import { Tree, TreeItem } from '@/registry/hui/ui/tree'
   <Tree class="max-w-sm">
     <TreeItem>
       <template #icon>
-        <IconSelectObject />
+        <IconAddObjectCube />
       </template>
       Shape
       <template #actions>
@@ -17,7 +17,7 @@ import { Tree, TreeItem } from '@/registry/hui/ui/tree'
 
     <TreeItem muted>
       <template #icon>
-        <IconSelectObject />
+        <IconAddObjectCube />
       </template>
       Shape.001
       <template #actions>
@@ -27,7 +27,7 @@ import { Tree, TreeItem } from '@/registry/hui/ui/tree'
 
     <TreeItem selected>
       <template #icon>
-        <IconSelectObject />
+        <IconAddObjectCube />
       </template>
       Shape.002
       <template #actions>
