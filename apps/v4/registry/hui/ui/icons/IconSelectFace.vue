@@ -12,9 +12,11 @@ const props = defineProps<Props>()
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
     viewBox="0 0 24 24"
     fill="none"
-    :class="cn('size-4 shrink-0', props.class)"
+    :class="cn('shrink-0', props.class)"
     aria-hidden="true"
   >
     <path d="M20 7.5L12 12V21L20 16.5V7.5Z" fill="#2C2C2E" />

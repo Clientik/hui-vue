@@ -38,7 +38,7 @@ const props = withDefaults(defineProps<Props>(), {
       v-if="showArrow"
       data-slot="tool-rail-button-arrow"
       aria-hidden="true"
-      class="border-b-foreground-tertiary absolute right-1 bottom-1 size-0 border-r-4 border-b-4 border-r-transparent"
+      class="border-b-foreground-tertiary absolute right-1 bottom-1 size-0 border-r-[10px] border-b-[10px] border-r-transparent"
     />
   </Primitive>
 </template>
