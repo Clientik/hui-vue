@@ -1115,6 +1115,56 @@
       "type": "registry:ui"
     },
     {
+      "name": "icons",
+      "files": [
+        {
+          "path": "registry/hui/ui/icons/IconAddObjectCube.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/icons/IconAddObjectCylinder.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/icons/IconAddObjectHex.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/icons/IconCursor.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/icons/IconMove.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/icons/IconOpen.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/icons/IconSelectEdge.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/icons/IconSelectFace.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/icons/IconSelectObject.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/icons/IconSelectVertex.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/icons/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
       "name": "input",
       "dependencies": [
         "@vueuse/core"
@@ -1313,6 +1363,27 @@
         },
         {
           "path": "registry/hui/ui/marker/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "menu-bar",
+      "dependencies": [
+        "reka-ui"
+      ],
+      "files": [
+        {
+          "path": "registry/hui/ui/menu-bar/MenuBar.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/menu-bar/MenuBarButton.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/menu-bar/index.ts",
           "type": "registry:ui"
         }
       ],

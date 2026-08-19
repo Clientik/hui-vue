@@ -1070,6 +1070,59 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "icons": {
+    name: "icons",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/hui/ui/icons/IconAddObjectCube.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/icons/IconAddObjectCylinder.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/icons/IconAddObjectHex.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/icons/IconCursor.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/icons/IconMove.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/icons/IconOpen.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/icons/IconSelectEdge.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/icons/IconSelectFace.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/icons/IconSelectObject.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/icons/IconSelectVertex.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/icons/index.ts",
+      type: "registry:ui",
+      target: ""
+    }],
+    categories: undefined,
+    meta: undefined,
+  },
   "input": {
     name: "input",
     description: "",
@@ -1263,6 +1316,27 @@ export const Index: Record<string, any> = {
       target: ""
     },{
       path: "registry/hui/ui/marker/index.ts",
+      type: "registry:ui",
+      target: ""
+    }],
+    categories: undefined,
+    meta: undefined,
+  },
+  "menu-bar": {
+    name: "menu-bar",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/hui/ui/menu-bar/MenuBar.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/menu-bar/MenuBarButton.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/menu-bar/index.ts",
       type: "registry:ui",
       target: ""
     }],

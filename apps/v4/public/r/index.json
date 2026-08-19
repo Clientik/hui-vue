@@ -1080,6 +1080,56 @@
     ]
   },
   {
+    "name": "icons",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/icons/IconAddObjectCube.vue",
+        "type": "registry:ui"
+      },
+      {
+        "path": "ui/icons/IconAddObjectCylinder.vue",
+        "type": "registry:ui"
+      },
+      {
+        "path": "ui/icons/IconAddObjectHex.vue",
+        "type": "registry:ui"
+      },
+      {
+        "path": "ui/icons/IconCursor.vue",
+        "type": "registry:ui"
+      },
+      {
+        "path": "ui/icons/IconMove.vue",
+        "type": "registry:ui"
+      },
+      {
+        "path": "ui/icons/IconOpen.vue",
+        "type": "registry:ui"
+      },
+      {
+        "path": "ui/icons/IconSelectEdge.vue",
+        "type": "registry:ui"
+      },
+      {
+        "path": "ui/icons/IconSelectFace.vue",
+        "type": "registry:ui"
+      },
+      {
+        "path": "ui/icons/IconSelectObject.vue",
+        "type": "registry:ui"
+      },
+      {
+        "path": "ui/icons/IconSelectVertex.vue",
+        "type": "registry:ui"
+      },
+      {
+        "path": "ui/icons/index.ts",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
     "name": "input",
     "type": "registry:ui",
     "dependencies": [
@@ -1279,6 +1329,27 @@
       },
       {
         "path": "ui/marker/index.ts",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "menu-bar",
+    "type": "registry:ui",
+    "dependencies": [
+      "reka-ui"
+    ],
+    "files": [
+      {
+        "path": "ui/menu-bar/MenuBar.vue",
+        "type": "registry:ui"
+      },
+      {
+        "path": "ui/menu-bar/MenuBarButton.vue",
+        "type": "registry:ui"
+      },
+      {
+        "path": "ui/menu-bar/index.ts",
         "type": "registry:ui"
       }
     ]
