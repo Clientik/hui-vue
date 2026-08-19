@@ -1336,27 +1336,6 @@ export const ui: Registry["items"] = [
     ],
   },
   {
-    name: "menu-bar",
-    type: "registry:ui",
-    dependencies: [
-      "reka-ui",
-    ],
-    files: [
-      {
-        path: "ui/menu-bar/MenuBar.vue",
-        type: "registry:ui",
-      },
-      {
-        path: "ui/menu-bar/MenuBarButton.vue",
-        type: "registry:ui",
-      },
-      {
-        path: "ui/menu-bar/index.ts",
-        type: "registry:ui",
-      },
-    ],
-  },
-  {
     name: "menubar",
     type: "registry:ui",
     dependencies: [
@@ -2496,6 +2475,27 @@ export const ui: Registry["items"] = [
       },
       {
         path: "ui/toggle-group/index.ts",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "tool-rail",
+    type: "registry:ui",
+    dependencies: [
+      "reka-ui",
+    ],
+    files: [
+      {
+        path: "ui/tool-rail/ToolRail.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/tool-rail/ToolRailButton.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/tool-rail/index.ts",
         type: "registry:ui",
       },
     ],

@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import type { PrimitiveProps } from "reka-ui"
 import type { HTMLAttributes } from "vue"
-import type { MenuBarVariants } from "."
+import type { ToolRailVariants } from "."
 import { Primitive } from "reka-ui"
 import { cn } from "@/lib/utils"
-import { menuBarVariants } from "."
+import { toolRailVariants } from "."
 
 interface Props extends PrimitiveProps {
-  orientation?: MenuBarVariants["orientation"]
+  orientation?: ToolRailVariants["orientation"]
   class?: HTMLAttributes["class"]
 }
 
@@ -19,13 +19,13 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
   <Primitive
-    data-slot="menu-bar"
+    data-slot="tool-rail"
     :as="as"
     :as-child="asChild"
     role="toolbar"
     :aria-orientation="orientation"
     :data-orientation="orientation"
-    :class="cn(menuBarVariants({ orientation }), props.class)"
+    :class="cn(toolRailVariants({ orientation }), props.class)"
   >
     <slot />
   </Primitive>

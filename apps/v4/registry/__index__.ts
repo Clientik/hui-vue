@@ -1322,27 +1322,6 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "menu-bar": {
-    name: "menu-bar",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/hui/ui/menu-bar/MenuBar.vue",
-      type: "registry:ui",
-      target: ""
-    },{
-      path: "registry/hui/ui/menu-bar/MenuBarButton.vue",
-      type: "registry:ui",
-      target: ""
-    },{
-      path: "registry/hui/ui/menu-bar/index.ts",
-      type: "registry:ui",
-      target: ""
-    }],
-    categories: undefined,
-    meta: undefined,
-  },
   "menubar": {
     name: "menubar",
     description: "",
@@ -2444,6 +2423,27 @@ export const Index: Record<string, any> = {
       target: ""
     },{
       path: "registry/hui/ui/toggle-group/index.ts",
+      type: "registry:ui",
+      target: ""
+    }],
+    categories: undefined,
+    meta: undefined,
+  },
+  "tool-rail": {
+    name: "tool-rail",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/hui/ui/tool-rail/ToolRail.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/tool-rail/ToolRailButton.vue",
+      type: "registry:ui",
+      target: ""
+    },{
+      path: "registry/hui/ui/tool-rail/index.ts",
       type: "registry:ui",
       target: ""
     }],

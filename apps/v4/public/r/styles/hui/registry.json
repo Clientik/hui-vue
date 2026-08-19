@@ -1369,27 +1369,6 @@
       "type": "registry:ui"
     },
     {
-      "name": "menu-bar",
-      "dependencies": [
-        "reka-ui"
-      ],
-      "files": [
-        {
-          "path": "registry/hui/ui/menu-bar/MenuBar.vue",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/hui/ui/menu-bar/MenuBarButton.vue",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/hui/ui/menu-bar/index.ts",
-          "type": "registry:ui"
-        }
-      ],
-      "type": "registry:ui"
-    },
-    {
       "name": "menubar",
       "dependencies": [
         "reka-ui",
@@ -2528,6 +2507,27 @@
         },
         {
           "path": "registry/hui/ui/toggle-group/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "tool-rail",
+      "dependencies": [
+        "reka-ui"
+      ],
+      "files": [
+        {
+          "path": "registry/hui/ui/tool-rail/ToolRail.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/tool-rail/ToolRailButton.vue",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/hui/ui/tool-rail/index.ts",
           "type": "registry:ui"
         }
       ],

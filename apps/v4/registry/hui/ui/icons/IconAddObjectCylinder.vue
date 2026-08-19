@@ -6,7 +6,7 @@ interface Props {
   class?: HTMLAttributes["class"]
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
 </script>
 
 <template>

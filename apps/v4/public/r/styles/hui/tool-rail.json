@@ -1,0 +1,25 @@
+{
+  "$schema": "https://clientik.github.io/hui-vue/schema/registry-item.json",
+  "name": "tool-rail",
+  "dependencies": [
+    "reka-ui"
+  ],
+  "files": [
+    {
+      "path": "registry/hui/ui/tool-rail/ToolRail.vue",
+      "content": "<script setup lang=\"ts\">\nimport type { PrimitiveProps } from \"reka-ui\"\nimport type { HTMLAttributes } from \"vue\"\nimport type { ToolRailVariants } from \".\"\nimport { Primitive } from \"reka-ui\"\nimport { cn } from \"@/lib/utils\"\nimport { toolRailVariants } from \".\"\n\ninterface Props extends PrimitiveProps {\n  orientation?: ToolRailVariants[\"orientation\"]\n  class?: HTMLAttributes[\"class\"]\n}\n\nconst props = withDefaults(defineProps<Props>(), {\n  as: \"div\",\n  orientation: \"vertical\",\n})\n</script>\n\n<template>\n  <Primitive\n    data-slot=\"tool-rail\"\n    :as=\"as\"\n    :as-child=\"asChild\"\n    role=\"toolbar\"\n    :aria-orientation=\"orientation\"\n    :data-orientation=\"orientation\"\n    :class=\"cn(toolRailVariants({ orientation }), props.class)\"\n  >\n    <slot />\n  </Primitive>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/hui/ui/tool-rail/ToolRailButton.vue",
+      "content": "<script setup lang=\"ts\">\nimport type { PrimitiveProps } from \"reka-ui\"\nimport type { HTMLAttributes } from \"vue\"\nimport type { ToolRailButtonVariants } from \".\"\nimport { Primitive } from \"reka-ui\"\nimport { cn } from \"@/lib/utils\"\nimport { toolRailButtonVariants } from \".\"\n\ninterface Props extends PrimitiveProps {\n  position?: ToolRailButtonVariants[\"position\"]\n  active?: boolean\n  /** Shows the corner marker that tells the user a submenu is available. */\n  showArrow?: boolean\n  label: string\n  class?: HTMLAttributes[\"class\"]\n}\n\nconst props = withDefaults(defineProps<Props>(), {\n  as: \"button\",\n  position: \"default\",\n  active: false,\n  showArrow: false,\n})\n</script>\n\n<template>\n  <Primitive\n    data-slot=\"tool-rail-button\"\n    :as=\"as\"\n    :as-child=\"asChild\"\n    :aria-label=\"label\"\n    :aria-pressed=\"active\"\n    :data-active=\"active ? '' : undefined\"\n    :class=\"cn(toolRailButtonVariants({ position, active }), props.class)\"\n  >\n    <slot />\n    <span\n      v-if=\"showArrow\"\n      data-slot=\"tool-rail-button-arrow\"\n      aria-hidden=\"true\"\n      class=\"border-b-foreground-tertiary absolute right-1 bottom-1 size-0 border-r-4 border-b-4 border-r-transparent\"\n    />\n  </Primitive>\n</template>\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/hui/ui/tool-rail/index.ts",
+      "content": "import type { VariantProps } from \"class-variance-authority\"\nimport { cva } from \"class-variance-authority\"\n\nexport { default as ToolRail } from \"./ToolRail.vue\"\nexport { default as ToolRailButton } from \"./ToolRailButton.vue\"\n\nexport const toolRailVariants = cva(\n  \"bg-sidebar border-sidebar-border flex w-fit shrink-0 flex-col overflow-hidden rounded-md border\",\n  {\n    variants: {\n      orientation: {\n        vertical: \"flex-col\",\n        horizontal: \"h-fit w-fit flex-row\",\n      },\n    },\n    defaultVariants: {\n      orientation: \"vertical\",\n    },\n  },\n)\nexport type ToolRailVariants = VariantProps<typeof toolRailVariants>\n\nexport const toolRailButtonVariants = cva(\n  \"group/tool-rail-button relative inline-flex size-13 shrink-0 items-center justify-center outline-none transition-colors select-none focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:border-ring border border-transparent disabled:pointer-events-none disabled:opacity-50 [&_svg:not([class*=size-])]:size-8\",\n  {\n    variants: {\n      // Rounding follows the button's place in the rail so the ends stay soft\n      // and the seams stay square.\n      position: {\n        default: \"rounded-md\",\n        top: \"rounded-t-md\",\n        middle: \"rounded-none\",\n        bottom: \"rounded-b-md\",\n      },\n      active: {\n        true: \"bg-sidebar-accent text-sidebar-accent-foreground\",\n        false: \"bg-sidebar text-sidebar-foreground hover:bg-sidebar-accent\",\n      },\n    },\n    defaultVariants: {\n      position: \"default\",\n      active: false,\n    },\n  },\n)\nexport type ToolRailButtonVariants = VariantProps<typeof toolRailButtonVariants>\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
