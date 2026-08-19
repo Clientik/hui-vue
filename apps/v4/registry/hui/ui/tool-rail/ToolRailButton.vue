@@ -43,7 +43,7 @@ const props = withDefaults(defineProps<Props>(), {
       viewBox="0 0 24 24"
       fill="none"
       aria-hidden="true"
-      class="text-foreground-tertiary absolute right-1 bottom-1 size-2.5"
+      class="text-foreground-tertiary group-data-[active]/tool-rail-button:text-foreground absolute right-1 bottom-1 size-2.5"
     >
       <path
         d="M12 12L20.5858 3.41422C21.8457 2.15429 24 3.04662 24 4.82843V14C24 19.5228 19.5228 24 14 24H4.82843C3.04662 24 2.15428 21.8457 3.41421 20.5858L12 12Z"
