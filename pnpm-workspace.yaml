@@ -1,10 +1,14 @@
 packages:
   - apps/*
   - packages/*
+  # The Nuxt module's playground is a project of its own: pnpm already
+  # installs it, and listing it here is what lets it use the catalog and
+  # link the module by workspace protocol instead of a pinned version.
+  - packages/module/playground
 
 catalog:
   '@internationalized/date': ^3.12.2
-  '@lucide/vue': ^1.28.0
+  '@lucide/vue': 1.28.0
   '@nuxt/fonts': 0.14.0
   '@tailwindcss/vite': ^4.3.3
   '@takumi-rs/core': ^2.5.4
@@ -15,16 +19,17 @@ catalog:
   '@unovis/ts': ^1.6.7
   '@unovis/vue': ^1.6.7
   '@vee-validate/zod': ^4.15.1
-  '@vueuse/core': ^14.4.0
+  '@vueuse/core': 14.4.0
   class-variance-authority: ^0.7.1
   clsx: ^2.1.1
   date-fns: ^4.4.0
+  embla-carousel-vue: ^0.0.0
   giget: ^3.3.1
   open: ^11.0.0
   oxc-parser: ^0.102.0
   pathe: ^2.0.3
   qrcode: ^1.5.4
-  reka-ui: ^2.10.1
+  reka-ui: 2.10.1
   tailwind-merge: ^3.6.0
   tailwindcss: ^4.3.3
   tinyglobby: ^0.2.17

@@ -17,7 +17,17 @@ Components reference semantic CSS variable tokens. Change the variables to chang
 
 ## How It Works
 
-1. CSS variables defined in `:root` (light) and `.dark` (dark mode).
+1. CSS variables ship with the package. Import them once, after Tailwind:
+
+   ```css
+   @import "tailwindcss";
+   @import "hui-kit/tailwind.css";
+   @import "hui-kit/theme.css";
+   ```
+
+   Do not paste the token block into the project — it would stop tracking
+   the design system the moment either side changed. Override individual
+   tokens in your own `:root` / `.dark` after the import instead.
 2. Tailwind maps them to utilities: `bg-primary`, `text-muted-foreground`, etc.
 3. Components use these utilities — changing a variable changes all components that reference it.
 
@@ -66,23 +76,23 @@ export default defineNuxtConfig({
 ## Changing the Theme
 
 ```bash
-# Apply a preset code from localhost:3000.
+# Apply a preset code.
 npx hui-kit@latest apply --preset a2r6bw
 
 # Positional shorthand also works.
 npx hui-kit@latest apply a2r6bw
 
 # Switch to a named preset and overwrite existing components.
-npx hui-kit@latest apply --preset nova
+npx hui-kit@latest apply --preset neva
 
 # Preserve existing components instead.
-npx hui-kit@latest init --preset nova --force --no-reinstall
+npx hui-kit@latest init --preset neva --force --no-reinstall
 
 # Use a custom theme URL.
-npx hui-kit@latest apply --preset "https://clientik.github.io/hui-vue/init?base=reka&style=nova&..."
+npx hui-kit@latest apply --preset "https://clientik.github.io/hui-vue/init?base=reka&style=neva&..."
 ```
 
-Or edit CSS variables directly in `globals.css`.
+Or override individual tokens in your own CSS, after the theme import.
 
 ---
 
