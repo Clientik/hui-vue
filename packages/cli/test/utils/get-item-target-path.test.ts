@@ -1,5 +1,15 @@
-import path from 'node:path'
+import path from 'pathe'
 import { expect, it } from 'vitest'
+
+/*
+ * pathe, not node:path.
+ *
+ * The CLI normalises every path it produces to forward slashes so that a
+ * config written on one platform means the same thing on another. Building
+ * the expectation with node:path made this test assert backslashes on
+ * Windows and pass only on POSIX — it was checking the platform, not the
+ * code.
+ */
 
 import { getItemTargetPath } from '../../src/registry/api'
 import { getConfig } from '../../src/utils/get-config'

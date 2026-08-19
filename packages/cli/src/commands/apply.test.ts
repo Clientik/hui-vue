@@ -1,5 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { encodePreset } from '@/src/preset/preset'
+import { DEFAULT_PRESETS } from '@/src/preset/presets'
+import { HUI_KIT_URL } from '@/src/registry/constants'
 import {
   getBase,
   getInitCommand,
@@ -117,17 +119,29 @@ describe('getInitCommand', () => {
 })
 
 describe('resolveApplyInitUrl', () => {
+  /*
+   * Everything here is derived from the constants, not written out.
+   *
+   * The site lives on a GitHub Pages subpath, so its init URL is
+   * `/hui-vue/init`, and the only shipped preset is `neva`. These tests came
+   * from upstream, where the site sits at a domain root and other presets
+   * exist, and their literals had quietly stopped describing this project.
+   */
+  const INIT_URL = `${HUI_KIT_URL}/init`
+  const [PRESET_NAME] = Object.keys(DEFAULT_PRESETS)
+
   it('builds an init URL for a named preset and forces base + rtl', () => {
-    const url = resolveApplyInitUrl('neva', { base: 'reka', rtl: true })
+    const url = resolveApplyInitUrl(PRESET_NAME!, { base: 'reka', rtl: true })
     expect(url).not.toBeNull()
 
     const parsed = new URL(url!)
-    expect(parsed.pathname).toBe('/init')
+    expect(parsed.pathname).toBe(new URL(INIT_URL).pathname)
     expect(parsed.searchParams.get('base')).toBe('reka')
-    expect(parsed.searchParams.get('style')).toBe('neva')
-    expect(parsed.searchParams.get('iconLibrary')).toBe('lucide')
-    expect(parsed.searchParams.get('font')).toBe('geist-sans')
-    expect(parsed.searchParams.get('baseColor')).toBe('neutral')
+    const preset = DEFAULT_PRESETS[PRESET_NAME as keyof typeof DEFAULT_PRESETS]
+    expect(parsed.searchParams.get('style')).toBe(preset.style)
+    expect(parsed.searchParams.get('iconLibrary')).toBe(preset.iconLibrary)
+    expect(parsed.searchParams.get('font')).toBe(preset.font)
+    expect(parsed.searchParams.get('baseColor')).toBe(preset.baseColor)
     expect(parsed.searchParams.get('rtl')).toBe('true')
   })
 
@@ -135,7 +149,7 @@ describe('resolveApplyInitUrl', () => {
     // Even if a future named preset shipped with a different base, the
     // current project base must win — applying a preset never silently
     // switches the user's component library.
-    const url = resolveApplyInitUrl('vega', { base: 'reka', rtl: false })
+    const url = resolveApplyInitUrl(PRESET_NAME!, { base: 'reka', rtl: false })
     expect(url).not.toBeNull()
     const parsed = new URL(url!)
     expect(parsed.searchParams.get('base')).toBe('reka')
@@ -166,8 +180,8 @@ describe('resolveApplyInitUrl', () => {
   })
 
   it('passes a remote URL through with base + rtl overrides applied', () => {
-    const remote
-      = 'http://localhost:3000/init?base=other&style=neva&font=figtree'
+    // A first-party /init URL: tracking is added only for our own host.
+    const remote = `${INIT_URL}?base=other&style=neva&font=figtree`
     const url = resolveApplyInitUrl(remote, { base: 'reka', rtl: true })
     expect(url).not.toBeNull()
 
