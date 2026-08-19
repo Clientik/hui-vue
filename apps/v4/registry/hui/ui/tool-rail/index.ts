@@ -34,10 +34,11 @@ export const toolRailButtonVariants = cva(
         middle: "rounded-none",
         bottom: "rounded-none group-data-[orientation=vertical]/tool-rail:rounded-b-md group-data-[orientation=horizontal]/tool-rail:rounded-r-md",
       },
-      // Icons ride on currentColor at half strength, so a mono tool reads as
-      // quiet chrome while the coloured ones keep their own palette.
+      // Icons ride on currentColor, so a resting mono tool reads as quiet
+      // chrome at half strength and the selected one comes up to full
+      // foreground. The coloured icons keep their own palette either way.
       active: {
-        true: "bg-sidebar-accent text-sidebar-accent-foreground/50",
+        true: "bg-sidebar-accent text-foreground",
         false: "bg-sidebar text-sidebar-foreground/50 hover:bg-sidebar-accent",
       },
     },
