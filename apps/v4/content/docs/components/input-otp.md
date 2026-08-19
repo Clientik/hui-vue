@@ -48,7 +48,7 @@ npx hui-kit@latest add input-otp
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/input-otp) into your project.
+    Copy and paste the [GitHub source code](https://github.com/Clientik/hui-vue/tree/dev/apps/v4/registry/hui/ui/input-otp) into your project.
     ::
 
     ::step

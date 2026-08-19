@@ -42,7 +42,7 @@ npx hui-kit@latest add item
 ::::tabs-content{value="manual"}
   :::steps
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/item) into your project.
+    Copy and paste the [GitHub source code](https://github.com/Clientik/hui-vue/tree/dev/apps/v4/registry/hui/ui/item) into your project.
     ::
 
     ::step

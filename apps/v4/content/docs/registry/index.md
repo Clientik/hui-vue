@@ -7,7 +7,7 @@ description: Run your own component registry.
 
   **Note:** This feature is currently experimental. Help us improve it by
   testing it out and sending feedback. If you have any questions, please [reach
-  out to us](https://github.com/unovue/hui-kit/discussions).
+  out to us](https://github.com/Clientik/hui-vue/discussions).
 
 </Callout>
 

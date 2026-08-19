@@ -17,7 +17,7 @@ Find and replace all on all files (CMD+SHIFT+F):
 Hui Vue module for Nuxt.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [🏀 Online playground](https://stackblitz.com/github/unovue/hui-kit?file=playground%2Fapp.vue) -->
+<!-- - [🏀 Online playground](https://stackblitz.com/github/Clientik/hui-vue?file=playground%2Fapp.vue) -->
 - [📖 &nbsp;Documentation](https://clientik.github.io/hui-vue/docs/installation/nuxt.html)
 
 ## Features
@@ -84,7 +84,7 @@ export default defineNuxtConfig({
 })
 ```
 
-Each directory is ignored by Nuxt's default auto-import scanning and re-registered through the module, ensuring clean separation without console warnings. See [issue #1593](https://github.com/unovue/hui-kit/issues/1593) for the background.
+Each directory is ignored by Nuxt's default auto-import scanning and re-registered through the module, ensuring clean separation without console warnings.
 
 ## Development
 

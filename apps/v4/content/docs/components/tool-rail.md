@@ -46,7 +46,7 @@ npx hui-kit@latest add tool-rail
     ```
 
     ::step
-    Copy and paste the source code into your project.
+    Copy and paste the [GitHub source code](https://github.com/Clientik/hui-vue/tree/dev/apps/v4/registry/hui/ui/tool-rail) into your project.
     ::
 
     ::step

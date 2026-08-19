@@ -19,7 +19,7 @@ The skill reads your project's `components.json` and provides the assistant with
 ## Install
 
 ```bash
-npx skills add unovue/hui-kit
+npx skills add Clientik/hui-vue
 ```
 
 This installs the hui-kit skill into your project. Once installed, your AI assistant automatically loads it when working with hui-kit components.

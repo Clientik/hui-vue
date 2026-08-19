@@ -14,4 +14,4 @@ Please read the [contributing guide](/CONTRIBUTING.md).
 
 ## License
 
-Licensed under the [MIT license](https://github.com/unovue/hui-kit/blob/dev/LICENSE).
+Licensed under the [MIT license](https://github.com/Clientik/hui-vue/blob/dev/LICENSE).

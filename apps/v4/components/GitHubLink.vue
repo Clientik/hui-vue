@@ -4,7 +4,7 @@ import { siteConfig } from '@/lib/config'
 import { Button } from '@/registry/hui/ui/button'
 import { Skeleton } from '@/registry/hui/ui/skeleton'
 
-const { data, pending } = useLazyFetch('https://ungh.cc/repos/unovue/hui-kit')
+const { data, pending } = useLazyFetch('https://ungh.cc/repos/Clientik/hui-vue')
 
 const stars = computed(() => {
   const count = (data.value as any)?.repo?.stars

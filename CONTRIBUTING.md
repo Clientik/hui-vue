@@ -42,7 +42,7 @@ packages
 ### Start by cloning the repository:
 
 ```
-git clone git@github.com:unovue/hui-kit.git
+git clone git@github.com:Clientik/hui-vue.git
 ```
 
 ### Install dependencies

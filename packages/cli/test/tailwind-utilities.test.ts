@@ -3,7 +3,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
 
-// Regression guard for https://github.com/unovue/hui-kit/issues/1902:
+// Regression guard:
 // utilities like `shimmer` and `scroll-fade` are documented as "shipping with
 // the `hui-kit` package" (the CLI imports `hui-kit/tailwind.css` into the
 // user's global CSS on init). If a utility gets a docs page but is never added

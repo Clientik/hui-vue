@@ -82,7 +82,7 @@ export const add = new Command()
           'The --dry-run, --diff and --view options are not yet supported in hui-kit.',
         )
         logger.info(
-          'Follow https://github.com/unovue/hui-kit for updates.',
+          'Follow https://github.com/Clientik/hui-vue for updates.',
         )
         logger.break()
         process.exit(1)

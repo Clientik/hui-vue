@@ -98,7 +98,7 @@ describe('createProject', () => {
     })
 
     expect(downloadTemplate).toHaveBeenCalledWith(
-      'github:unovue/hui-kit/templates/nuxt#dev',
+      'github:Clientik/hui-vue/templates/nuxt#dev',
       { dir: '/test/my-app' },
     )
   })
@@ -121,7 +121,7 @@ describe('createProject', () => {
     })
 
     expect(downloadTemplate).toHaveBeenCalledWith(
-      'github:unovue/hui-kit/templates/vite#dev',
+      'github:Clientik/hui-vue/templates/vite#dev',
       { dir: '/test/my-vite-app' },
     )
   })
@@ -144,7 +144,7 @@ describe('createProject', () => {
     })
 
     expect(downloadTemplate).toHaveBeenCalledWith(
-      'github:unovue/hui-kit/templates/astro#dev',
+      'github:Clientik/hui-vue/templates/astro#dev',
       { dir: '/test/my-astro-app' },
     )
   })
@@ -167,7 +167,7 @@ describe('createProject', () => {
     })
 
     expect(downloadTemplate).toHaveBeenCalledWith(
-      'github:unovue/hui-kit/templates/laravel#dev',
+      'github:Clientik/hui-vue/templates/laravel#dev',
       { dir: '/test/my-laravel-app' },
     )
   })

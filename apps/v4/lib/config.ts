@@ -6,7 +6,7 @@ export const siteConfig = {
     'A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.',
   links: {
     twitter: 'https://twitter.com/unovue',
-    github: 'https://github.com/unovue/hui-kit',
+    github: 'https://github.com/Clientik/hui-vue',
   },
   navItems: [
     {

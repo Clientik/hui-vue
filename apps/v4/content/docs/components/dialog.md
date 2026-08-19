@@ -53,7 +53,7 @@ npx hui-kit@latest add dialog
     ```
 
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/hui/ui/dialog) into your project.
+    Copy and paste the [GitHub source code](https://github.com/Clientik/hui-vue/tree/dev/apps/v4/registry/hui/ui/dialog) into your project.
     ::
 
     ::step

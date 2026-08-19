@@ -39,7 +39,7 @@ npx hui-kit@latest add marker
 ::::tabs-content{value="manual"}
   :::steps
     ::step
-    Copy and paste the [GitHub source code](https://github.com/unovue/hui-kit/tree/dev/apps/v4/registry/bases/reka/ui/marker) into your project.
+    Copy and paste the [GitHub source code](https://github.com/Clientik/hui-vue/tree/dev/apps/v4/registry/bases/reka/ui/marker) into your project.
     ::
 
     ::step
