@@ -7,7 +7,7 @@ component: true
 ::component-preview
 ---
 name: MessageScrollerDemo
-class: "style-luma rounded-[34px] sm:rounded-4xl"
+class: "rounded-[34px] sm:rounded-4xl"
 previewClass: h-auto theme-green bg-surface dark:bg-background p-4 min-[480px]:p-8 min-[560px]:p-10 sm:px-10 sm:py-16
 ---
 ::
@@ -124,7 +124,7 @@ Scroll anchors are not tied to message role. You can turn any row into an anchor
 ::component-preview
 ---
 name: MessageScrollerAnchoringDemo
-class: "style-luma rounded-[34px] sm:rounded-4xl"
+class: "rounded-[34px] sm:rounded-4xl"
 previewClass: h-auto theme-green bg-surface dark:bg-background p-4 min-[480px]:p-8 min-[560px]:p-10 sm:px-10 sm:py-16
 ---
 ::
@@ -136,7 +136,7 @@ In a group chat, the turn boundary is often the message that asks the model to r
 ::component-preview
 ---
 name: MessageScrollerGroupChatDemo
-class: "style-luma rounded-[34px] sm:rounded-4xl"
+class: "rounded-[34px] sm:rounded-4xl"
 previewClass: h-auto theme-green bg-surface dark:bg-background p-4 min-[480px]:p-8 min-[560px]:p-10 sm:px-10 sm:py-16
 ---
 ::
@@ -148,7 +148,7 @@ When a new turn starts, it should still feel like part of the same continuous th
 ::component-preview
 ---
 name: MessageScrollerPreviousContextDemo
-class: "style-luma rounded-[34px] sm:rounded-4xl"
+class: "rounded-[34px] sm:rounded-4xl"
 previewClass: h-auto theme-green bg-surface dark:bg-background p-4 min-[480px]:p-8 min-[560px]:p-10 sm:px-10 sm:py-16
 ---
 ::
@@ -160,7 +160,7 @@ When the reader is at the live edge, `autoScroll` keeps streamed replies in view
 ::component-preview
 ---
 name: MessageScrollerStreamingDemo
-class: "style-luma rounded-[34px] sm:rounded-4xl"
+class: "rounded-[34px] sm:rounded-4xl"
 previewClass: h-auto theme-green bg-surface dark:bg-background p-4 min-[480px]:p-8 min-[560px]:p-10 sm:px-10 sm:py-16
 ---
 ::
@@ -172,7 +172,7 @@ Reopening a saved thread at the absolute end often drops the reader in without e
 ::component-preview
 ---
 name: MessageScrollerOpeningPositionDemo
-class: "style-luma rounded-[34px] sm:rounded-4xl"
+class: "rounded-[34px] sm:rounded-4xl"
 previewClass: h-auto theme-green bg-surface dark:bg-background p-4 min-[480px]:p-8 min-[560px]:p-10 sm:px-10 sm:py-16
 ---
 ::
@@ -184,7 +184,7 @@ Loading earlier messages should not move the conversation the reader is already 
 ::component-preview
 ---
 name: MessageScrollerLoadHistoryDemo
-class: "style-luma rounded-[34px] sm:rounded-4xl"
+class: "rounded-[34px] sm:rounded-4xl"
 previewClass: h-auto theme-green bg-surface dark:bg-background p-4 min-[480px]:p-8 min-[560px]:p-10 sm:px-10 sm:py-16
 ---
 ::
@@ -196,7 +196,7 @@ A common chat pattern is to animate the user's message when it is sent, then let
 ::component-preview
 ---
 name: MessageScrollerAnimationDemo
-class: "style-luma rounded-[34px] sm:rounded-4xl"
+class: "rounded-[34px] sm:rounded-4xl"
 previewClass: h-auto theme-green bg-surface dark:bg-background p-4 min-[480px]:p-8 min-[560px]:p-10 sm:px-10 sm:py-16
 ---
 ::
@@ -216,7 +216,7 @@ const { scrollToMessage, scrollToEnd, scrollToStart } = useMessageScroller()
 ::component-preview
 ---
 name: MessageScrollerCommandsDemo
-class: "style-luma rounded-[34px] sm:rounded-4xl"
+class: "rounded-[34px] sm:rounded-4xl"
 previewClass: h-auto theme-green bg-surface dark:bg-background p-4 min-[480px]:p-8 min-[560px]:p-10 sm:px-10 sm:py-16
 ---
 ::
@@ -228,7 +228,7 @@ Use `useMessageScrollerVisibility` to track the reader's position — a table-of
 ::component-preview
 ---
 name: MessageScrollerVisibilityDemo
-class: "style-luma rounded-[34px] sm:rounded-4xl"
+class: "rounded-[34px] sm:rounded-4xl"
 previewClass: h-auto theme-green bg-surface dark:bg-background p-4 min-[480px]:p-8 min-[560px]:p-10 sm:px-10 sm:py-16
 ---
 ::
@@ -240,7 +240,7 @@ Use `useMessageScrollerScrollable` when you need scroll state in JavaScript, suc
 ::component-preview
 ---
 name: MessageScrollerScrollableDemo
-class: "style-luma rounded-[34px] sm:rounded-4xl"
+class: "rounded-[34px] sm:rounded-4xl"
 previewClass: h-auto theme-green bg-surface dark:bg-background p-4 min-[480px]:p-8 min-[560px]:p-10 sm:px-10 sm:py-16
 ---
 ::

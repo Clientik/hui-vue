@@ -7,7 +7,6 @@ component: true
 ::component-preview
 ---
 name: MarkerDemo
-class: style-luma
 previewClass: h-auto theme-blue
 ---
 ::
@@ -95,7 +94,6 @@ Use `variant` to switch between an inline marker, bordered row, and labeled sepa
 ::component-preview
 ---
 name: MarkerVariantsDemo
-class: style-luma
 previewClass: h-auto theme-blue
 ---
 ::
@@ -113,7 +111,6 @@ Set `role="status"` and include a [`Spinner`](/docs/components/spinner) for stre
 ::component-preview
 ---
 name: MarkerStatusDemo
-class: style-luma
 previewClass: h-auto theme-blue
 ---
 ::
@@ -128,7 +125,6 @@ Add the [`shimmer`](/docs/utils/shimmer) utility class to `MarkerContent` for an
 ::component-preview
 ---
 name: MarkerShimmerDemo
-class: style-luma
 previewClass: h-auto theme-blue
 ---
 ::
@@ -140,7 +136,6 @@ Use the `separator` variant for labeled dividers, such as dates or section break
 ::component-preview
 ---
 name: MarkerSeparatorDemo
-class: style-luma
 previewClass: h-auto theme-blue
 ---
 ::
@@ -152,7 +147,6 @@ Use the `border` variant for status rows that should keep the default marker ali
 ::component-preview
 ---
 name: MarkerBorderDemo
-class: style-luma
 previewClass: h-auto theme-blue
 ---
 ::
@@ -165,7 +159,6 @@ Use `MarkerIcon` to render an icon alongside the content. Use `flex-col` to stac
 ::component-preview
 ---
 name: MarkerIconDemo
-class: style-luma
 previewClass: h-auto theme-blue
 ---
 ::
@@ -178,7 +171,6 @@ Turn a marker into a link or button with the `render` prop on `Marker`.
 ::component-preview
 ---
 name: MarkerLinkButtonDemo
-class: style-luma
 previewClass: h-auto theme-blue
 ---
 ::

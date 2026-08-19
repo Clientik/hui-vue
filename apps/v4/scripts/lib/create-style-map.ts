@@ -4,14 +4,14 @@
  *
  * The token CSS files in `apps/v4/registry/styles/` are written in a uniform shape:
  *
- *   .style-luma {
+ *   .style-neva {
  *     .cn-button { @apply focus-visible:border-ring ...; }
  *     .cn-button-variant-default { @apply bg-primary ...; }
  *   }
  *
  * Every rule is a single `.cn-<name>` selector containing a single `@apply ...;`
- * directive — confirmed across all 6 style files. A small regex is enough; we don't
- * need PostCSS or postcss-selector-parser like hui-ui's tooling does.
+ * directive, so a small regex is enough — no need for PostCSS or
+ * postcss-selector-parser.
  */
 export type StyleMap = Record<string, string>
 

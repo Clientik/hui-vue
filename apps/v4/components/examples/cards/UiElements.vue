@@ -112,10 +112,10 @@ import { Textarea } from '@/styles/reka-neva/ui/textarea'
         <AlertDialog>
           <AlertDialogTrigger as-child>
             <Button variant="outline">
-              <span class="hidden md:flex style-sera:md:hidden">
+              <span class="hidden md:flex">
                 Alert Dialog
               </span>
-              <span class="flex md:hidden style-sera:md:flex">Dialog</span>
+              <span class="flex md:hidden">Dialog</span>
             </Button>
           </AlertDialogTrigger>
           <AlertDialogContent size="sm" class="theme-neutral">
@@ -134,8 +134,7 @@ import { Textarea } from '@/styles/reka-neva/ui/textarea'
         </AlertDialog>
         <ButtonGroup class="ml-auto">
           <Button variant="outline">
-            <span class="style-sera:hidden">Button Group</span>
-            <span class="hidden style-sera:block">Group</span>
+            <span>Button Group</span>
           </Button>
           <DropdownMenu>
             <DropdownMenuTrigger as-child>
