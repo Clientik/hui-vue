@@ -1082,6 +1082,56 @@ export const ui: Registry["items"] = [
     ],
   },
   {
+    name: "icons",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/icons/IconAddObjectCube.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/icons/IconAddObjectCylinder.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/icons/IconAddObjectHex.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/icons/IconCursor.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/icons/IconMove.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/icons/IconOpen.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/icons/IconSelectEdge.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/icons/IconSelectFace.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/icons/IconSelectObject.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/icons/IconSelectVertex.vue",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/icons/index.ts",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "input",
     type: "registry:ui",
     dependencies: [
