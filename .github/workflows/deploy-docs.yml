@@ -42,7 +42,11 @@ jobs:
           DEPLOY_TARGET: github-pages
           NODE_OPTIONS: --max-old-space-size=8192
 
+      # enablement turns Pages on for the repository if it is not yet enabled,
+      # so a fresh clone of this repo deploys without a manual settings visit.
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
